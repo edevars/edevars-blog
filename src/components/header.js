@@ -5,38 +5,45 @@ import styled from "styled-components"
 import bg_image from "../images/bg-nav.jpg"
 
 const HeaderNav = styled.header`
-  font-family: 'Comfortaa', cursive;
   background-image: url(${bg_image});
   background-size: cover;
-  margin: 0 auto;
-  max-width: 960;
-  padding: 1.45rem 1.0875rem;
-  color: white;
+  margin: 0 auto !important;
+  max-width: 960 !important;
+  padding: 1.45rem 1.0875rem !important;
+  color: white !important;
   display: flex;
   align-items: center;
   flex-flow: column wrap;
 `
 
 const Title = styled.h1`
-  font-size: 3rem;
-  margin: 0;
+  font-family: "Comfortaa", cursive !important;
+  font-size: 3rem !important;
+  margin: 0 !important;
+  padding-bottom: 10px;
+  color: white;
 `
 
 const Subtitle = styled.h2`
-  font-size: 1.3rem;
-  border-bottom: 2px solid white;
-  padding-bottom: 4px;
+  font-family: "Comfortaa", cursive !important;
+  font-size: 1.3rem !important;
+  border-bottom: 2px solid white !important;
+  padding-bottom: 4px !important;
+  color: white;
 `
 
 const HeadLink = styled(Link)`
   color: white;
   text-decoration: none;
-`
 
+  &:hover{
+    text-decoration: none;
+  }
+`
 
 const Header = ({ siteTitle }) => (
   <HeaderNav>
-    <HeadLink to='/' >
+    <HeadLink to="/">
       <Title>{siteTitle}</Title>
     </HeadLink>
     <Subtitle>De tecnología y más...</Subtitle>
