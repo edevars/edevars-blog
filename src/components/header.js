@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import bg_image from "../images/bg-nav.jpg"
 
-const HeaderNav = styled.header`
+const Heading = styled.header`
   background-image: url(${bg_image});
   background-size: cover;
   margin: 0 auto !important;
@@ -42,12 +42,12 @@ const HeadLink = styled(Link)`
 `
 
 const Header = ({ siteTitle }) => (
-  <HeaderNav>
+  <Heading>
     <HeadLink to="/">
       <Title>{siteTitle}</Title>
     </HeadLink>
     <Subtitle>De tecnología y más...</Subtitle>
-  </HeaderNav>
+  </Heading>
 )
 
 Header.propTypes = {
