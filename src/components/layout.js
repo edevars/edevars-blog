@@ -13,11 +13,9 @@ import { createGlobalStyle } from "styled-components"
 import Header from "./header"
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Comfortaa');
-
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Source+Sans+Pro');
 
   body{
-    font-family: 'Comfortaa', cursive;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;

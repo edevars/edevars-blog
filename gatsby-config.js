@@ -21,12 +21,12 @@ module.exports = {
         name: `Edevars Blog`,
         short_name: `edevars`,
         start_url: `/`,
-        background_color: `#00D1FF`,
-        theme_color: `#00D1FF`,
+        background_color: `#07034e`,
+        theme_color: `#07034e`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
   ],
 }

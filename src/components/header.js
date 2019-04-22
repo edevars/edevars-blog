@@ -5,6 +5,7 @@ import styled from "styled-components"
 import bg_image from "../images/bg-nav.jpg"
 
 const HeaderNav = styled.header`
+  font-family: 'Comfortaa', cursive;
   background-image: url(${bg_image});
   background-size: cover;
   margin: 0 auto;
@@ -15,8 +16,14 @@ const HeaderNav = styled.header`
   align-items: center;
   flex-flow: column wrap;
 `
+
+const Title = styled.h1`
+  font-size: 3rem;
+  margin: 0;
+`
+
 const Subtitle = styled.h2`
-  font-size: 14px;
+  font-size: 1.3rem;
   border-bottom: 2px solid white;
   padding-bottom: 4px;
 `
@@ -26,9 +33,7 @@ const HeadLink = styled(Link)`
   text-decoration: none;
 `
 
-const Title = styled.h1`
-  margin: 0;
-`
+
 const Header = ({ siteTitle }) => (
   <HeaderNav>
     <HeadLink to='/' >
