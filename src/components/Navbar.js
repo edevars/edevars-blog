@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Nav = styled.nav`
   display: grid;
-  grid-template: 1fr / 45% 65%;
+  grid-template: 1fr / 40% 60%;
   height: 7.5vh;
 `
 
@@ -28,24 +28,24 @@ const LinkItem = styled(Link)`
   -moz-transition: 0.4s;
   -webkit-transition: 0.4s;
   margin-bottom: 7px;
-  
+
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 3px;
     background: rgba(23, 91, 163, 1);
-    transition: width .3s;
+    transition: width 0.3s;
     text-decoration: none;
   }
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: rgba(23, 91, 163, 1);
   }
-  &:hover::after{
+  &:hover::after {
     font-size: 20px;
     width: 100%;
-    transition: width .3s;
+    transition: width 0.3s;
     text-decoration: none;
   }
 `
@@ -61,13 +61,16 @@ const Navbar = () => (
         <LinkItem to="/">home</LinkItem>
       </Item>
       <Item>
-        <LinkItem to="/about">about me</LinkItem>
+        <LinkItem to="/posts">posts</LinkItem>
       </Item>
       <Item>
-        <LinkItem to="/contact">contact</LinkItem>
+        <LinkItem to="/categorias">categorías</LinkItem>
       </Item>
       <Item>
-        <LinkItem to="/categories">categories</LinkItem>
+        <LinkItem to="/sobre-mi">¿quién soy yo?</LinkItem>
+      </Item>
+      <Item>
+        <LinkItem to="/contactame">¡contactame!</LinkItem>
       </Item>
     </List>
     <SocialMedia>Hola</SocialMedia>
