@@ -10,13 +10,15 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 
-import { library } from "@fortawesome/fontawesome-svg-core"
+import { library, config } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
 import Header from "./header"
 import Nav from "./Navbar"
+import '../../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
 
 library.add(fab)
+config.autoAddCss = false;
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Source+Sans+Pro');
