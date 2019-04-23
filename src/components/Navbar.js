@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Nav = styled.nav`
   display: grid;
@@ -51,7 +52,19 @@ const LinkItem = styled(Link)`
 `
 
 const SocialMedia = styled.div`
-  background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .wrapper {
+    margin: 0px 3rem;
+  }
+
+  .icon {
+    font-size: 21px;
+    margin-right: 36px;
+    color: #050c19;
+  }
 `
 
 const Navbar = () => (
@@ -73,7 +86,14 @@ const Navbar = () => (
         <LinkItem to="/contactame">¡contactame!</LinkItem>
       </Item>
     </List>
-    <SocialMedia>Hola</SocialMedia>
+    <SocialMedia>
+      <div className="wrapper">
+        <FontAwesomeIcon className="icon" icon={["fab", "facebook"]} />
+        <FontAwesomeIcon className="icon" icon={["fab", "twitter"]} />
+        <FontAwesomeIcon className="icon" icon={["fab", "instagram"]} />
+        <FontAwesomeIcon className="icon" icon={["fab", "youtube"]} />
+      </div>
+    </SocialMedia>
   </Nav>
 )
 
