@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Postpreview from "../components/Postpreview"
 
 const Contact = ({ data }) => (
@@ -18,13 +18,17 @@ const Contact = ({ data }) => (
       </p>
       {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <div key={index}>
-          <Link to={node.fields.slug}>
-            <h3>{node.frontmatter.title}</h3>
-          </Link>
-          <p>{node.excerpt}</p>
+          <Postpreview
+            slug={node.fields.slug}
+            key={index}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            tags={node.frontmatter.tags}
+            imageSlug={node.frontmatter.imageSlug.childImageSharp.fluid.src}
+            excerpt={node.excerpt}
+          />
         </div>
       ))}
-      <Postpreview name="Enrique" />
     </div>
   </Layout>
 )
@@ -32,22 +36,33 @@ const Contact = ({ data }) => (
 export default Contact
 
 export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
+  
+query {
+  allMarkdownRemark {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD MMMM, YYYY")
+          tags
+          imageSlug {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
           }
-          fields {
-            slug
-          }
-          excerpt
         }
+        fields {
+          slug
+        }
+        excerpt
       }
     }
   }
+}
+
+
 `
