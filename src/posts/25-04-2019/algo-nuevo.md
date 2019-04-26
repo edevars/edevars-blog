@@ -6,34 +6,48 @@ imageSlug: "./nueva.png"
 ---
 
 Para comprender el flujo de nuestro programa debemos entender un poco sobre estructuras y expresiones booleanas
-``` python{numberLines: true}
-== se refiere a igualdad
-!= no hay igualdad.
-> mayor que
-< menor que
->= mayor o igual
-<= menor o igual 
+``` jsx
+import React from "react";
+import styled from "styled-components";
+
+const MediaContainer = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin-bottom: 0.5em;
+  color: #333;
+  text-decoration: none;
+`;
+
+const Cover = styled.div`
+  background-image: url(${props => props.Src || ''});
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0, 0.15);
+  width: 160px;
+  height: 160px;
+`;
+
+const SubTitle = styled.h2`
+  padding: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+`;
+
+const Media = props => {
+  return (
+      <MediaContainer>
+        <Cover Src={props.src} />
+        <SubTitle>{props.title}</SubTitle>
+      </MediaContainer>
+  );
+};
+
+export default Media;
+ 
  ```
 
-**AND** unicamente es verdadero cuando ambos valores son verdaderos
-**OR** es verdadero cuando uno de los dos valores es verdadero.
-**NOT** es lo contrario al valor. Falso es Verdadero. Verdadero es Falso.
-
-## Tablas de verdad de los operadores lógicos
-
-![Tablas de verdad](/home/edevars/Boostnote/img/comparaciones.jpg)
-
-## Implementación de los operadores en python
-
-Si declaramos las siguientes variables en python
-
-```python
-a=True;
-b=False;
-```
-
-Operador | Keyword | Ejemplo | Retorno
--- | -- | -- | --
-AND | `and` | ``` a and b ```| false |
-OR |`or`| `a or b` | true | 
-NOT |`not` | `not a`| false |
