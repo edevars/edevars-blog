@@ -3,6 +3,7 @@ title: "Este es un post nuevo"
 date: "2019-05-10"
 tags: ["Holi","Crayoli"]
 imageSlug: "./nueva.png"
+slug: "/algo-nuevo"
 ---
 
 Para comprender el flujo de nuestro programa debemos entender un poco sobre estructuras y expresiones booleanas

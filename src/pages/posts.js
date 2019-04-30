@@ -19,7 +19,7 @@ const Contact = ({ data }) => (
       {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <div key={index}>
           <Postpreview
-            slug={node.fields.slug}
+            slug={node.frontmatter.slug}
             key={index}
             title={node.frontmatter.title}
             date={node.frontmatter.date}
@@ -36,33 +36,29 @@ const Contact = ({ data }) => (
 export default Contact
 
 export const query = graphql`
-  
-query {
-  allMarkdownRemark {
-    totalCount
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "DD MMMM, YYYY")
-          tags
-          imageSlug {
-            childImageSharp {
-              fluid {
-                src
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            tags
+            slug
+            imageSlug {
+              childImageSharp {
+                fluid {
+                  src
+                }
               }
             }
           }
+
+          excerpt
         }
-        fields {
-          slug
-        }
-        excerpt
       }
     }
   }
-}
-
-
 `

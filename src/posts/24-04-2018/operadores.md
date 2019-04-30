@@ -3,6 +3,7 @@ title: "Post de prueba"
 date: "2019-04-10"
 tags: ["Python","Desarrollo"]
 imageSlug: "./python.jpg"
+slug: "/operadores"
 ---
 
 Para comprender el flujo de nuestro programa debemos entender un poco sobre estructuras y expresiones booleanas
