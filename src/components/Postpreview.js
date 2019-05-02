@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 
-const Wrapper = styled.div`
+const GridWrapper = styled.div`
   display: grid;
-  grid-template: 200px / 200px 65%;
-  border: 1px solid black;
+  grid-template-rows: 200px auto 100px;
+  grid-template-columns: 1fr;
   margin-bottom: 50px;
+  box-shadow: 0px 0px 8px 0px rgba(168, 168, 168, 1);
+  border-radius: 10px;
 `
 
 const Cover = styled.div`
@@ -15,25 +17,76 @@ const Cover = styled.div`
   background-position: center;
   height: 100%;
   width: 100%;
+  border-radius: 10px 10px 0px 0px;
 `
+
+const Content = styled.div`
+  padding: 16px;
+  p {
+    margin: 0px;
+  }
+  h5{
+    margin-top: 10px;
+  }
+`
+
+const Title = styled.h4`
+  font-size: 21px;
+  font-weight: bold;
+  margin: 10px 0px;
+`
+
+const Info = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`
+
+const Button = styled.div`
+  margin: 10px auto;
+  text-align: center;
+  width: 160px;
+  height: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, rgb(14, 75, 219), rgb(45, 179, 244));
+  border-radius: 10px;
+  transition-property: all;
+  transition-duration: .7s;
+  transition-delay: 0s;
+  &:hover {
+    background: rgba(0, 0, 0, 0);
+    color: rgb(14, 75, 219);
+    box-shadow: inset 0 0 0 3px rgb(14, 75, 219);
+    cursor: pointer;
+  }
+`
+
 const PostPreview = props => {
-  const { title, date, tags, imageSlug, excerpt, slug } = props
+  const { title, date, tags, imageSlug, excerpt, slug, readTime } = props
+
+  const handleClick = () => {
+    navigate(slug)
+  }
+
   return (
-    <Wrapper>
+    <GridWrapper>
       <Cover src={imageSlug} />
-      <div>
-        <Link to={slug}>
-          <h4>{title}</h4>
-        </Link>
+      <Content>
+        <Title>{title}</Title>
+        {tags.map((tag, index) => {
+          return <span key={index}>{" " + tag}</span>
+        })}
         <h5>
-          {date} |
-          {tags.map((tag, index) => {
-            return <span key={index}>{tag}</span>
-          })}
+          {date} <span>•</span> {readTime} min read
         </h5>
         <p>{excerpt}</p>
-      </div>
-    </Wrapper>
+      </Content>
+      <Info>
+        <Button onClick={handleClick}>Leer más</Button>
+      </Info>
+    </GridWrapper>
   )
 }
 
