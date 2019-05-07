@@ -1,7 +1,7 @@
 ---
 title: "Este es un post nuevo con un titulo mucho mas largo"
 date: "2019-05-10"
-tags: ["Holi","Crayoli"]
+tags: ["Holi","Crayoli","Python"]
 imageSlug: "./nueva.png"
 slug: "/algo-nuevo"
 readTime: 10
