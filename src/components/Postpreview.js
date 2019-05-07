@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
+import Tags from "./tags"
 
 const GridWrapper = styled.div`
   display: grid;
@@ -25,7 +26,7 @@ const Content = styled.div`
   p {
     margin: 0px;
   }
-  h5{
+  h5 {
     margin-top: 10px;
   }
 `
@@ -42,6 +43,8 @@ const Info = styled.div`
 `
 
 const Button = styled.div`
+  font-family: "Roboto", cursive;
+  font-weight: semi-bold;
   margin: 10px auto;
   text-align: center;
   width: 160px;
@@ -53,7 +56,7 @@ const Button = styled.div`
   background-image: linear-gradient(45deg, rgb(14, 75, 219), rgb(45, 179, 244));
   border-radius: 10px;
   transition-property: all;
-  transition-duration: .7s;
+  transition-duration: 0.7s;
   transition-delay: 0s;
   &:hover {
     background: rgba(0, 0, 0, 0);
@@ -63,11 +66,17 @@ const Button = styled.div`
   }
 `
 
+const TagContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`
+
 const PostPreview = props => {
   const { title, date, tags, imageSlug, excerpt, slug, readTime } = props
 
   const handleClick = () => {
-    navigate(slug)
+    const nav = "/blog" + slug;
+    navigate(nav)
   }
 
   return (
@@ -75,9 +84,12 @@ const PostPreview = props => {
       <Cover src={imageSlug} />
       <Content>
         <Title>{title}</Title>
-        {tags.map((tag, index) => {
-          return <span key={index}>{" " + tag}</span>
-        })}
+        <TagContainer>
+          {tags.map((tag, index) => {
+            return <Tags key={index} tag={tag} />
+          })}
+        </TagContainer>
+
         <h5>
           {date} <span>•</span> {readTime} min read
         </h5>
