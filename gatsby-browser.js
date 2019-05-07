@@ -1,1 +1,1 @@
-import('./src/styles/prism-duotone-sea.css')
+import('./src/styles/prism-dracula.css')
