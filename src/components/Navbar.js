@@ -74,7 +74,7 @@ const Navbar = () => (
         <LinkItem to="/">home</LinkItem>
       </Item>
       <Item>
-        <LinkItem to="/posts">posts</LinkItem>
+        <LinkItem to="/blog">Blog</LinkItem>
       </Item>
       <Item>
         <LinkItem to="/categorias">categorías</LinkItem>

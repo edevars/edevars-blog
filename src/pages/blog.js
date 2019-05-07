@@ -23,9 +23,9 @@ const ContentWrapper = styled.div`
 const GridPosts = styled.div`
   grid-area: posts;
   display: grid;
-  width: 80%;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 50px;
+  width: 70%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 600px));
+  grid-gap: 25px 50px;
   margin: 0px auto;
   
 `
@@ -87,7 +87,6 @@ export const query = graphql`
               }
             }
           }
-
           excerpt
         }
       }
