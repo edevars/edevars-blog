@@ -39,6 +39,18 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              providers: {
+                settings: {
+                  Instagram: {
+                    hidecaption: true
+                  }
+                }
+              }
+            }
+          },
         ],
       },
     },
