@@ -19,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     let tags_list = []
 
+    //Creating posts pages and generating list of all tags
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       node.frontmatter.tags.forEach(tag => {
         tags_list.push(tag)
@@ -33,12 +34,14 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    //Creating list of non-repeated tags
     let clean_tag_list = []
 
     tags_list.map(
       tag => !clean_tag_list.includes(tag) && clean_tag_list.push(tag)
     )
-
+    
+    //Creating page for each tag
     clean_tag_list.forEach(tag => {
       createPage({
         path: "/tags/" + tag,
