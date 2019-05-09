@@ -26,7 +26,6 @@ module.exports = {
               maxWidth: 800,
               linkImagesToOriginal: true,
               sizeByPixelDensity: true,
-              showCaptions: true,
             },
           },
           {
@@ -45,11 +44,12 @@ module.exports = {
               providers: {
                 settings: {
                   Instagram: {
-                    hidecaption: true
-                  }
-                }
-              }
-            }
+                    hidecaption: true,
+                    maxwidth: 480,
+                  },
+                },
+              },
+            },
           },
         ],
       },
