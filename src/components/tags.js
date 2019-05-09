@@ -5,7 +5,7 @@ import { navigate } from "gatsby"
 const Tag = styled.div`
   font-weight: bolder;
   display: inline-block;
-  background-color: rgb(93, 190, 235);
+  background-color: #2bcccc;
   color: white;
   padding: 2px 8px;
   margin-right: 10px;
