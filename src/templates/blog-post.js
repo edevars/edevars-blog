@@ -4,33 +4,41 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { formatShort } from "../utils/dateFormatter"
-import Tag from '../components/tags'
+import AllTags from "../components/alltags"
 
 const GridWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.4fr 1fr 0.5fr;
+  grid-template-columns: 0.35fr 1fr 0.5fr;
   grid-template-areas: "Info Content Related";
-  iframe{
-    margin: 0px auto;
+  margin: 0px auto;
+  width: 80%;
+  @media only screen and (max-width: 1024px) {
+      width: 100%;
   }
-
-  div{
-    margin: 0 auto;
+  @media only screen and (max-width: 768px) {
+      grid-template-areas: 
+      "Info" 
+      "Content" 
+      "Related";
   }
 `
 
 const InfoContainer = styled.section`
   grid-area: Info;
+  padding: 0px 70px 0px 0px;
+  padding-top: 3rem;
 `
 
 const ContentContainer = styled.section`
   grid-area: Content;
-  padding: 4rem;
+  padding: 0.5rem;
+  padding-top: 4rem;
 `
 
 const RelatedContainer = styled.section`
   grid-area: Related;
-  background-color: green;
+  padding-left: 50px;
+  padding-top: 5rem;
 `
 
 const Title = styled.h1`
@@ -47,19 +55,15 @@ const Title = styled.h1`
 `
 
 const DateBlock = styled.div`
-    background: -webkit-linear-gradient(
-    30deg,
-    #001749 0%,
-    #0e4bdb 70%
-  );
+  background: -webkit-linear-gradient(30deg, #001749 0%, #0e4bdb 70%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  margin: 50px auto;
   line-height: 1;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   text-align: center;
   color: white;
 
@@ -75,9 +79,11 @@ const DateBlock = styled.div`
     font-size: 34px;
     margin-bottom: 5px;
   }
+  
 `
 
 export default ({ data }) => {
+  const { author } = data.site.siteMetadata
   const post = data.markdownRemark
   const { title, tags, date } = post.frontmatter
   const { day, month, year } = formatShort(date)
@@ -91,15 +97,19 @@ export default ({ data }) => {
             <span className="day">{day}</span>
             <span className="year">{year}</span>
           </DateBlock>
-          <div>
-            {tags.map((tag, index)=> <Tag key={index} tag={tag}/>)}
-          </div>
+          <p style={{ fontWeight: "bold" }}>
+            Escrito por:
+            <span style={{ fontWeight: 400 }}>{" " + author}</span>
+          </p>
         </InfoContainer>
         <ContentContainer>
           <Title>{title}</Title>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </ContentContainer>
-        <RelatedContainer>algo</RelatedContainer>
+        <RelatedContainer>
+          <h4>Encuentra más de lo que buscabas...</h4>
+          <AllTags />
+        </RelatedContainer>
       </GridWrapper>
     </Layout>
   )
@@ -107,6 +117,12 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        author
+      }
+    }
+
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
