@@ -32,9 +32,10 @@ const Content = styled.div`
 `
 
 const Title = styled.h4`
-  font-size: 21px;
+  font-size: 32px;
   font-weight: bold;
-  margin: 10px 0px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 `
 
 const Info = styled.div`
