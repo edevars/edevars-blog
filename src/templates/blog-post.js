@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import { formatShort } from "../utils/dateFormatter"
 import AllTags from "../components/alltags"
+import DateBlock from "../components/dateblock"
+import Category from "../components/category"
 
 const GridWrapper = styled.div`
   display: grid;
@@ -13,20 +15,22 @@ const GridWrapper = styled.div`
   margin: 0px auto;
   width: 80%;
   @media only screen and (max-width: 1024px) {
-      width: 100%;
+    width: 100%;
   }
   @media only screen and (max-width: 768px) {
-      grid-template-areas: 
-      "Info" 
-      "Content" 
+    grid-template-areas:
+      "Info"
+      "Content"
       "Related";
   }
 `
 
 const InfoContainer = styled.section`
   grid-area: Info;
-  padding: 0px 70px 0px 0px;
-  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
 `
 
 const ContentContainer = styled.section`
@@ -54,53 +58,23 @@ const Title = styled.h1`
   -webkit-text-fill-color: transparent;
 `
 
-const DateBlock = styled.div`
-  background: -webkit-linear-gradient(30deg, #001749 0%, #0e4bdb 70%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 50px auto;
-  line-height: 1;
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  text-align: center;
-  color: white;
-
-  span {
-    display: block;
-    width: 100%;
-  }
-  .month {
-    font-size: 14px;
-  }
-  .day {
-    font-weight: 600;
-    font-size: 34px;
-    margin-bottom: 5px;
-  }
-  
-`
-
 export default ({ data }) => {
-  const { author } = data.site.siteMetadata
   const post = data.markdownRemark
-  const { title, tags, date } = post.frontmatter
+  const { title, tags, date, readTime, category } = post.frontmatter
   const { day, month, year } = formatShort(date)
   return (
     <Layout>
       <SEO title={title} description={post.excerpt} keywords={tags} />
       <GridWrapper>
         <InfoContainer>
-          <DateBlock>
-            <span className="month">{month}</span>
-            <span className="day">{day}</span>
-            <span className="year">{year}</span>
-          </DateBlock>
-          <p style={{ fontWeight: "bold" }}>
-            Escrito por:
-            <span style={{ fontWeight: 400 }}>{" " + author}</span>
-          </p>
+          <DateBlock day={day} month={month} year={year} />
+          <Category category={category} />
+          <h4 style={{ marginTop: "1em" }}>
+            <span role="img" aria-label="coffee">
+              ☕
+            </span>{" "}
+            {readTime} min read time
+          </h4>
         </InfoContainer>
         <ContentContainer>
           <Title>{title}</Title>
@@ -117,18 +91,14 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    site {
-      siteMetadata {
-        author
-      }
-    }
-
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
+        category
         tags
         date
+        readTime
       }
       excerpt
     }
