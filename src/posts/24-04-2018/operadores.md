@@ -1,21 +1,23 @@
 ---
 title: "Post de prueba"
 date: "2019-04-10"
-tags: ["Python","Desarrollo"]
+tags: ["Python", "Desarrollo"]
 imageSlug: "./python.jpg"
+category: "Desarrollo"
 slug: "/operadores"
 readTime: 5
 ---
 
 Para comprender el flujo de nuestro programa debemos entender un poco sobre estructuras y expresiones booleanas
-``` python{numberLines: true}
+
+```python{numberLines: true}
 == se refiere a igualdad
 != no hay igualdad.
 > mayor que
 < menor que
 >= mayor o igual
-<= menor o igual 
- ```
+<= menor o igual
+```
 
 **AND** unicamente es verdadero cuando ambos valores son verdaderos
 **OR** es verdadero cuando uno de los dos valores es verdadero.
@@ -34,8 +36,8 @@ a=True;
 b=False;
 ```
 
-Operador | Keyword | Ejemplo | Retorno
--- | -- | -- | --
-AND | `and` | ``` a and b ```| false |
-OR |`or`| `a or b` | true | 
-NOT |`not` | `not a`| false |
+| Operador | Keyword | Ejemplo   | Retorno |
+| -------- | ------- | --------- | ------- |
+| AND      | `and`   | `a and b` | false   |
+| OR       | `or`    | `a or b`  | true    |
+| NOT      | `not`   | `not a`   | false   |

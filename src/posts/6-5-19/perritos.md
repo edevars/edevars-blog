@@ -2,6 +2,7 @@
 title: "Perritos 🐶"
 date: "2019-06-05"
 tags: ["Perritos","Cosas bonitas","Alguna cosa mas"]
+category: "Estilo de vida"
 imageSlug: "./cover.jpg"
 slug: "/perritos"
 readTime: 3
