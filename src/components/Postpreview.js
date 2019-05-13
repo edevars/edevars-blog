@@ -7,7 +7,6 @@ const GridWrapper = styled.div`
   display: grid;
   grid-template-rows: 200px auto 100px;
   grid-template-columns: 1fr;
-  margin-bottom: 50px;
   box-shadow: 0px 0px 8px 0px rgba(168, 168, 168, 1);
   border-radius: 10px;
 `
