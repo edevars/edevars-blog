@@ -23,6 +23,10 @@ const GridWrapper = styled.div`
       "Content"
       "Related";
   }
+
+  p{
+    font-size: 21px;
+  }
 `
 
 const InfoContainer = styled.section`
