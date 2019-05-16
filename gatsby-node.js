@@ -1,5 +1,6 @@
 const path = require(`path`)
-const slugify = require('slugify')
+const slugify = require("slugify")
+const { categories } = require("./src/utils/categoriesArray")
 // *!  Create Posts
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions
@@ -53,14 +54,8 @@ exports.createPages = ({ graphql, actions }) => {
             })
         })
 
-        const categories = [
-            "Desarrollo",
-            "Crecimiento Personal",
-            "Tutoriales",
-            "Estilo de vida",
-        ]
-
         //Creating page for each category
+        
         categories.forEach((category) => {
             let slug = '/categorias/' + slugify(category, {
                 replacement: '-',
