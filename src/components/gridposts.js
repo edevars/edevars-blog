@@ -6,7 +6,7 @@ const StyledGrid = styled.section`
     grid-area: posts;
     display: grid;
     width: 70%;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 600px));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
     grid-row-gap: 30px;
     margin: 0px auto;
     justify-content: space-evenly;
@@ -19,7 +19,7 @@ const GridPosts = ({ data }) => {
                 <div key={node.id}>
                     <Postpreview
                         slug={node.frontmatter.slug}
-                        key={index}
+                        key={node.id}
                         title={node.frontmatter.title}
                         date={node.frontmatter.date}
                         tags={node.frontmatter.tags}
