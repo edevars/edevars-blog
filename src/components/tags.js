@@ -18,7 +18,7 @@ const Tag = styled.div`
 
     span {
         font-family: "Comfortaa", cursive;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
         display: inline-block;
         transform: skew(10deg);
