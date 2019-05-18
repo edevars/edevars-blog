@@ -7,7 +7,8 @@ const StyledGrid = styled.section`
     display: grid;
     width: 70%;
     grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
-    grid-row-gap: 30px;
+    grid-row-gap: 60px;
+    grid-column-gap: 35px;
     margin: 0px auto;
     justify-content: space-evenly;
 `
