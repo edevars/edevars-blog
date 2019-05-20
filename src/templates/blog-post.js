@@ -35,6 +35,7 @@ const InfoContainer = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 8rem;
+  padding-right: 40px;
 `
 
 const ContentContainer = styled.section`
