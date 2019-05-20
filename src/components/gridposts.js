@@ -5,7 +5,7 @@ import Postpreview from "./Postpreview"
 const StyledGrid = styled.section`
     grid-area: posts;
     display: grid;
-    width: 70%;
+    width: ${props => props.width ? props.width : "70%"};
     grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
     grid-row-gap: 60px;
     grid-column-gap: 35px;
@@ -13,9 +13,11 @@ const StyledGrid = styled.section`
     justify-content: space-evenly;
 `
 
-const GridPosts = ({ data }) => {
+const GridPosts = (props) => {
+    
+    const { data } = props
     return (
-        <StyledGrid>
+        <StyledGrid width={props.width}>
             {data.allMarkdownRemark.nodes.map(( node , index) => (
                 <div key={node.id}>
                     <Postpreview
