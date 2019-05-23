@@ -37,7 +37,8 @@ const ListCategories = styled.div`
 `
 const PostWrapper = styled.div`
     grid-area: Posts;
-    background-color: cyan;
+    padding-top: 70px;
+    width: 100%;
 `
 
 const PostsbyCategory = category => {
