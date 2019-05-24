@@ -9,36 +9,53 @@ import ToggleCategory from "../components/toggle_category"
 
 const Subtitle = styled.h3`
     display: inline-block;
-    background: -webkit-linear-gradient(
-        -30deg,
-        #001749 0%,
-        #0e4bdb 30%,
-        #2dddf4 85%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-style: italic;
 `
 
 const Wrapper = styled.div`
     display: grid;
     width: 100%;
-    border: 3px solid black;
-    grid-template: 1fr / 0.3fr 0.7fr;
-    grid-template-areas: "Content Posts";
+    grid-template: auto auto / 1fr;
+    grid-template-areas: "Content" "Posts";
     margin: 0px auto;
 `
 
 const ListCategories = styled.div`
     grid-area: Content;
-    background-color: red;
-    li:hover {
-        cursor: pointer;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 `
 const PostWrapper = styled.div`
     grid-area: Posts;
     padding-top: 70px;
     width: 100%;
+`
+
+const CategoryLabel = styled.li`
+    font-weight: bolder;
+    display: inline-block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, rgb(14, 75, 219), rgb(45, 179, 244));
+    color: white;
+    padding: 10px 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    transform: skew(-10deg);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span {
+        font-family: "Comfortaa", cursive;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        transform: skew(10deg);
+        user-select: none;
+    }
 `
 
 const PostsbyCategory = category => {
@@ -62,7 +79,6 @@ class Categories extends Component {
             <Layout>
                 <SEO title="Categorías" />
                 <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-                    <h1>Toma lo que más te guste</h1>
                     <Subtitle>
                         Encuentra increíbles articulos, consejos, tutoriales y
                         mucho más{" "}
@@ -74,24 +90,24 @@ class Categories extends Component {
                 <Wrapper>
                     <ListCategories>
                         <ul>
-                            <li
+                            <CategoryLabel
                                 key={0}
                                 onClick={() => {
                                     this.handleClick(null)
                                 }}
                             >
                                 Más recientes
-                            </li>
+                            </CategoryLabel>
                             {this.state.categories.map((category, index) => {
                                 return (
-                                    <li
+                                    <CategoryLabel
                                         key={index}
                                         onClick={() => {
                                             this.handleClick(category)
                                         }}
                                     >
                                         {category}
-                                    </li>
+                                    </CategoryLabel>
                                 )
                             })}
                         </ul>
