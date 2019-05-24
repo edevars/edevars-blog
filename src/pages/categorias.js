@@ -28,7 +28,7 @@ const ListCategories = styled.div`
 `
 const PostWrapper = styled.div`
     grid-area: Posts;
-    padding-top: 70px;
+    padding-top: 50px;
     width: 100%;
 `
 
