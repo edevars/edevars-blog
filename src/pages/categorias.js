@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { categories } from "../utils/categoriesArray"
-import GridByCategory from "../components/gridByCategory"
+import ToggleCategory from "../components/toggle_category"
 
 // TODO Acabar la seccion categorias
 
@@ -42,7 +42,7 @@ const PostWrapper = styled.div`
 `
 
 const PostsbyCategory = category => {
-    return <GridByCategory category={category}/>
+    return <ToggleCategory category={category} />
 }
 class Categories extends Component {
     state = {
@@ -51,11 +51,10 @@ class Categories extends Component {
     }
 
     handleClick = category => {
-        console.log('Entra la categoria ',category)
+        console.log("Entra la categoria ", category)
         this.setState({
             selectedCategory: category,
         })
-        
     }
 
     render() {
@@ -75,6 +74,14 @@ class Categories extends Component {
                 <Wrapper>
                     <ListCategories>
                         <ul>
+                            <li
+                                key={0}
+                                onClick={() => {
+                                    this.handleClick(null)
+                                }}
+                            >
+                                Más recientes
+                            </li>
                             {this.state.categories.map((category, index) => {
                                 return (
                                     <li
@@ -89,9 +96,9 @@ class Categories extends Component {
                             })}
                         </ul>
                     </ListCategories>
-                    <PostWrapper>{
-                        this.state.selectedCategory ? PostsbyCategory(this.state.selectedCategory) : null
-                    }</PostWrapper>
+                    <PostWrapper>
+                        {PostsbyCategory(this.state.selectedCategory)}
+                    </PostWrapper>
                 </Wrapper>
             </Layout>
         )

@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import GridPosts from "./gridposts"
 
-const GridByCategory = props => {
-    console.log('Entra a una categoria seleccionada con: ', props.category)
+const RecentPost = () => {
+    console.log('Aquí se imprimen todos los posts')
     return (
         <StaticQuery
             query={graphql`
@@ -34,22 +34,10 @@ const GridByCategory = props => {
                 }
             `}
             render={data => {
-                let posts = JSON.parse(JSON.stringify(data))
-
-                let postBycategory = posts.allMarkdownRemark.nodes.filter(
-                    node => {
-                        return node.frontmatter.category === props.category
-                    }
-                )
-
-                posts.allMarkdownRemark.nodes = [...postBycategory]
-
-                return (
-                    <GridPosts data={posts} width="90%" />
-                )
+                return <GridPosts data={data} width="90%" />
             }}
         />
     )
 }
 
-export default GridByCategory
+export default RecentPost
