@@ -87,10 +87,7 @@ const Navbar = () => (
         <LinkItem to="/">home</LinkItem>
       </Item>
       <Item>
-        <LinkItem to="/blog">Blog</LinkItem>
-      </Item>
-      <Item>
-        <LinkItem to="/categorias">categorías</LinkItem>
+        <LinkItem to="/blog">Blog & tutoriales</LinkItem>
       </Item>
       <Item>
         <LinkItem to="/sobre-mi">¿quién soy yo?</LinkItem>

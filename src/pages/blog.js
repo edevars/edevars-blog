@@ -1,68 +1,124 @@
-import React from "react"
+import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
-import GridPosts from "../components/gridposts"
 import styled from "styled-components"
+import { categories } from "../utils/categoriesArray"
+import ToggleCategory from "../components/toggle_category"
 
-const GridWrapper = styled.div`
+// TODO Acabar la seccion categorias
+
+const Subtitle = styled.h3`
+    display: inline-block;
+    font-style: italic;
+`
+
+const Wrapper = styled.div`
     display: grid;
+    width: 100%;
     grid-template: auto auto / 1fr;
-    grid-template-areas:
-        "content"
-        "posts";
+    grid-template-areas: "Content" "Posts";
+    margin: 0px auto;
 `
 
-const ContentWrapper = styled.div`
-    grid-area: content;
-    margin: 2.5rem auto;
-    max-width: 600px;
+const ListCategories = styled.div`
+    grid-area: Content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+`
+const PostWrapper = styled.div`
+    grid-area: Posts;
+    padding-top: 50px;
+    width: 100%;
 `
 
-const Contact = ({ data }) => (
-    <Layout>
-        <SEO title="Posts" />
-        <GridWrapper>
-            <ContentWrapper>
-                <h2>Todas las cosas que piense irán aquí </h2>
-                <h4>
-                    Numero de posts{" "}
-                    <span>{data.allMarkdownRemark.totalCount}</span>
-                </h4>
-                <p>
-                    Tecnolgía, comida, lugares y algun que otro momento de
-                    pitufo filosofo.
-                </p>
-            </ContentWrapper>
-            <GridPosts data={data} />
-        </GridWrapper>
-    </Layout>
-)
+const CategoryLabel = styled.li`
+    font-weight: bolder;
+    display: inline-block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, rgb(14, 75, 219), rgb(45, 179, 244));
+    color: white;
+    padding: 10px 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    transform: skew(-10deg);
 
-export default Contact
+    &:hover {
+        cursor: pointer;
+    }
 
-export const query = graphql`
-    query allPosts {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-            totalCount
-            nodes {
-                id
-                frontmatter {
-                    title
-                    date(formatString: "DD MMMM, YYYY")
-                    tags
-                    slug
-                    readTime
-                    imageSlug {
-                        childImageSharp {
-                            fluid {
-                                src
-                            }
-                        }
-                    }
-                }
-                excerpt
-            }
-        }
+    span {
+        font-family: "Comfortaa", cursive;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        transform: skew(10deg);
+        user-select: none;
     }
 `
+
+const PostsbyCategory = category => {
+    return <ToggleCategory category={category} />
+}
+class Categories extends Component {
+    state = {
+        categories,
+        selectedCategory: null,
+    }
+
+    handleClick = category => {
+        console.log("Entra la categoria ", category)
+        this.setState({
+            selectedCategory: category,
+        })
+    }
+
+    render() {
+        return (
+            <Layout>
+                <SEO title="Categorías" />
+                <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
+                    <Subtitle>
+                        Encuentra increíbles articulos, consejos, tutoriales y
+                        mucho más{" "}
+                        <span role="img" aria-label="wink">
+                            😉
+                        </span>
+                    </Subtitle>
+                </div>
+                <Wrapper>
+                    <ListCategories>
+                        <ul>
+                            <CategoryLabel
+                                key={0}
+                                onClick={() => {
+                                    this.handleClick(null)
+                                }}
+                            >
+                                Más recientes
+                            </CategoryLabel>
+                            {this.state.categories.map((category, index) => {
+                                return (
+                                    <CategoryLabel
+                                        key={index}
+                                        onClick={() => {
+                                            this.handleClick(category)
+                                        }}
+                                    >
+                                        {category}
+                                    </CategoryLabel>
+                                )
+                            })}
+                        </ul>
+                    </ListCategories>
+                    <PostWrapper>
+                        {PostsbyCategory(this.state.selectedCategory)}
+                    </PostWrapper>
+                </Wrapper>
+            </Layout>
+        )
+    }
+}
+
+export default Categories
