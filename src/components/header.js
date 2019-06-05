@@ -2,60 +2,86 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import bg_image from "../images/bg-nav.jpg"
+import HeaderImage from "./header_img"
 
-const Heading = styled.header`
-  background-image: url(${bg_image});
-  background-size: cover;
-  margin: 0 auto !important;
-  max-width: 960 !important;
-  padding: 1.45rem 1.0875rem !important;
-  color: white !important;
-  display: flex;
-  align-items: center;
-  flex-flow: column wrap;
+const Wrapper = styled.header`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 40vh;
+    background: blue;
+`
+
+const Image = styled.div`
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.89;
 `
 
 const Title = styled.h1`
-  font-family: "Comfortaa", cursive !important;
-  font-size: 3rem !important;
-  margin: 0 !important;
-  padding-bottom: 10px;
-  color: white;
+    font-family: "Comfortaa", cursive !important;
+    font-size: 5rem !important;
+    display: inline-block;
+    margin: 0 !important;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    color: white;
 `
 
 const Subtitle = styled.h2`
-  font-family: "Comfortaa", cursive !important;
-  font-size: 1.3rem !important;
-  border-bottom: 2px solid white !important;
-  padding-bottom: 4px !important;
-  color: white;
+    font-family: "Comfortaa", cursive !important;
+    font-size: 2rem !important;
+    border-bottom: 2px solid white !important;
+    padding-bottom: 4px !important;
+    color: white;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 `
 
 const HeadLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-
-  &:hover{
+    color: white;
     text-decoration: none;
-  }
+
+    &:hover {
+        text-decoration: none;
+    }
 `
 
 const Header = ({ siteTitle }) => (
-  <Heading>
-    <HeadLink to="/">
-      <Title>{siteTitle}</Title>
-    </HeadLink>
-    <Subtitle>De tecnología y más...</Subtitle>
-  </Heading>
+    <Wrapper>
+        <Image>
+            <HeaderImage />
+        </Image>
+        <HeadLink to="/">
+            <Title>{siteTitle}</Title>
+        </HeadLink>
+        <HeadLink to="/">
+            <Subtitle>De tecnología y más...</Subtitle>
+        </HeadLink>
+    </Wrapper>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``,
 }
 
 export default Header
