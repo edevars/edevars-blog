@@ -20,7 +20,6 @@ export default () => (
             }
         `}
         render={data => {
-            console.log(data)
             return <Img fluid={data.imageHeader.childImageSharp.fluid} />
         }}
     />

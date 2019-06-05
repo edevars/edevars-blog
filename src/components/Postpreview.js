@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
 import Tags from "./tags"
+import PostImage from "./postImage"
 
 const FlexWrapper = styled.div`
     display: flex;
@@ -12,11 +13,14 @@ const FlexWrapper = styled.div`
 `
 
 const Cover = styled.div`
-    background-image: url(${props => props.src || ""});
-    background-size: cover;
-    background-position: center;
     height: 150px;
-    width: auto;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
     border-radius: 10px 10px 0px 0px;
 `
 
@@ -83,8 +87,7 @@ const TagContainer = styled.div`
 `
 
 const PostPreview = props => {
-    const { title, date, tags, imageSlug, excerpt, slug, readTime } = props
-
+    const { title, date, tags, excerpt, slug, readTime, relativePath } = props
     const handleClick = () => {
         const nav = "/blog" + slug
         navigate(nav)
@@ -92,7 +95,9 @@ const PostPreview = props => {
 
     return (
         <FlexWrapper>
-            <Cover src={imageSlug} />
+            <Cover>
+                <PostImage src={relativePath} />
+            </Cover>
             <Content>
                 <Title>{title}</Title>
                 <h5>

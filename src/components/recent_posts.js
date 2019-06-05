@@ -3,7 +3,6 @@ import { graphql, StaticQuery } from "gatsby"
 import GridPosts from "./gridposts"
 
 const RecentPost = () => {
-    console.log('Aquí se imprimen todos los posts')
     return (
         <StaticQuery
             query={graphql`
@@ -21,6 +20,7 @@ const RecentPost = () => {
                                 readTime
                                 category
                                 imageSlug {
+                                    relativePath
                                     childImageSharp {
                                         fluid {
                                             src
@@ -34,7 +34,7 @@ const RecentPost = () => {
                 }
             `}
             render={data => {
-                return <GridPosts data={data} width="90%" />
+                return <GridPosts data={data} />
             }}
         />
     )

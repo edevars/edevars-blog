@@ -47,6 +47,7 @@ const Tags = ({ data, pageContext }) => {
             title={post.title}
             date={post.date}
             tags={post.tags}
+            relativePath={post.imageSlug.relativePath}
             imageSlug={post.imageSlug.childImageSharp.fluid.src}
             excerpt={excerpt}
             readTime={post.readTime}
@@ -71,6 +72,7 @@ export const query = graphql`
           slug
           readTime
           imageSlug {
+            relativePath
             childImageSharp {
               fluid {
                 src

@@ -3,11 +3,10 @@ import { graphql, StaticQuery } from "gatsby"
 import GridPosts from "./gridposts"
 
 const GridByCategory = props => {
-    console.log('Entra a una categoria seleccionada con: ', props.category)
     return (
         <StaticQuery
             query={graphql`
-                query {
+                query Categories{
                     allMarkdownRemark(
                         sort: { fields: [frontmatter___date], order: DESC }
                     ) {
@@ -21,6 +20,7 @@ const GridByCategory = props => {
                                 readTime
                                 category
                                 imageSlug {
+                                    relativePath
                                     childImageSharp {
                                         fluid {
                                             src
@@ -45,7 +45,7 @@ const GridByCategory = props => {
                 posts.allMarkdownRemark.nodes = [...postBycategory]
 
                 return (
-                    <GridPosts data={posts} width="90%" />
+                    <GridPosts data={posts}/>
                 )
             }}
         />

@@ -5,7 +5,7 @@ import Postpreview from "./Postpreview"
 const StyledGrid = styled.section`
     grid-area: posts;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-row-gap: 60px;
     grid-column-gap: 35px;
     margin: 0px auto;
@@ -25,6 +25,7 @@ const GridPosts = (props) => {
                         title={node.frontmatter.title}
                         date={node.frontmatter.date}
                         tags={node.frontmatter.tags}
+                        relativePath={node.frontmatter.imageSlug.relativePath}
                         imageSlug={
                             node.frontmatter.imageSlug.childImageSharp.fluid.src
                         }

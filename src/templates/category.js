@@ -68,6 +68,7 @@ export const query = graphql`
                     slug
                     readTime
                     imageSlug {
+                        relativePath
                         childImageSharp {
                             fluid {
                                 src
