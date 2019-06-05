@@ -11,18 +11,19 @@ const Tag = styled.div`
     margin-right: 10px;
     margin-bottom: 10px;
     transform: skew(-10deg);
-
+    vertical-align: middle;
+    
     &:hover {
         cursor: pointer;
     }
 
     span {
         font-family: "Comfortaa", cursive;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: bold;
-        display: inline-block;
         transform: skew(10deg);
         user-select: none;
+        text-align: center;
     }
 `
 
