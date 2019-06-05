@@ -14,16 +14,7 @@ const GridWrapper = styled.div`
   grid-template-areas: "Info Content Related";
   margin: 0px auto;
   width: 80%;
-  @media only screen and (max-width: 1024px) {
-    width: 100%;
-  }
-  @media only screen and (max-width: 768px) {
-    grid-template-areas:
-      "Info"
-      "Content"
-      "Related";
-  }
-
+  
   p{
     font-size: 21px;
   }

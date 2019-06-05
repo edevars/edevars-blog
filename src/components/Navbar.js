@@ -17,9 +17,6 @@ const List = styled.ul`
   margin: auto 0px;
   padding: 15px 0px;
   width: 40%;
-  @media only screen and (max-width: 1024px) {
-    width: 70%;
-  }
 `
 const Item = styled.li`
   margin: 0px;
@@ -68,15 +65,6 @@ const SocialMedia = styled.div`
     font-size: 21px;
     margin-right: 36px;
     color: #050c19;
-  }
-  @media only screen and (max-width: 1024px) {
-    width: 30%;
-    .wrapper {
-      margin: 0px 1rem;
-    }
-    .icon {
-      font-size: 16px;
-    }
   }
 `
 
