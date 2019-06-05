@@ -5,26 +5,39 @@ import styled from "styled-components"
 import { categories } from "../utils/categoriesArray"
 import ToggleCategory from "../components/toggle_category"
 
-// TODO Acabar la seccion categorias
-
-const Subtitle = styled.h3`
-    display: inline-block;
-    font-style: italic;
+const Wrapper = styled.div`
+    width: 100%;
+    position: absolute;
 `
 
-const Wrapper = styled.div`
+const ContentWrapper = styled.section`
     display: grid;
-    width: 100%;
+    width: 85%;
     grid-template: auto auto / 1fr;
     grid-template-areas: "Content" "Posts";
     margin: 0px auto;
+    background: white;
+    -webkit-box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    -moz-box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    position: relative;
+    border-radius: 10px;
+    top: -5vh;
 `
 
-const ListCategories = styled.div`
+const MarginContainer = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+`
+
+const ListCategories = styled.ul`
     grid-area: Content;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 `
 const PostWrapper = styled.div`
     grid-area: Posts;
@@ -42,7 +55,6 @@ const CategoryLabel = styled.li`
     margin-right: 15px;
     margin-left: 15px;
     margin-bottom: 10px;
-    transform: skew(-10deg);
 
     &:hover {
         cursor: pointer;
@@ -50,7 +62,7 @@ const CategoryLabel = styled.li`
 
     span {
         font-family: "Comfortaa", cursive;
-        font-size: 14px;
+
         font-weight: bold;
         display: inline-block;
         transform: skew(10deg);
@@ -78,43 +90,41 @@ class Categories extends Component {
         return (
             <Layout>
                 <SEO title="Categorías" />
-                <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-                    <Subtitle>
-                        Encuentra increíbles articulos, consejos, tutoriales y
-                        mucho más{" "}
-                        <span role="img" aria-label="wink">
-                            😉
-                        </span>
-                    </Subtitle>
-                </div>
+
                 <Wrapper>
-                    <ListCategories>
-                        <ul>
-                            <CategoryLabel
-                                key={0}
-                                onClick={() => {
-                                    this.handleClick(null)
-                                }}
-                            >
-                                Más recientes
-                            </CategoryLabel>
-                            {this.state.categories.map((category, index) => {
-                                return (
+                    <ContentWrapper>
+                        <MarginContainer>
+                            <ListCategories>
                                     <CategoryLabel
-                                        key={index}
+                                        key={0}
                                         onClick={() => {
-                                            this.handleClick(category)
+                                            this.handleClick(null)
                                         }}
                                     >
-                                        {category}
+                                        Más recientes
                                     </CategoryLabel>
-                                )
-                            })}
-                        </ul>
-                    </ListCategories>
-                    <PostWrapper>
-                        {PostsbyCategory(this.state.selectedCategory)}
-                    </PostWrapper>
+                                    {this.state.categories.map(
+                                        (category, index) => {
+                                            return (
+                                                <CategoryLabel
+                                                    key={index + 1}
+                                                    onClick={() => {
+                                                        this.handleClick(
+                                                            category
+                                                        )
+                                                    }}
+                                                >
+                                                    {category}
+                                                </CategoryLabel>
+                                            )
+                                        }
+                                    )}
+                            </ListCategories>
+                            <PostWrapper>
+                                {PostsbyCategory(this.state.selectedCategory)}
+                            </PostWrapper>
+                        </MarginContainer>
+                    </ContentWrapper>
                 </Wrapper>
             </Layout>
         )

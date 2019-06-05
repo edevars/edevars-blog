@@ -5,8 +5,7 @@ import Postpreview from "./Postpreview"
 const StyledGrid = styled.section`
     grid-area: posts;
     display: grid;
-    width: ${props => props.width ? props.width : "70%"};
-    grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+    grid-template-columns: repeat(auto-fill, 250px);
     grid-row-gap: 60px;
     grid-column-gap: 35px;
     margin: 0px auto;
