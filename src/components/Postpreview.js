@@ -3,103 +3,114 @@ import styled from "styled-components"
 import { navigate } from "gatsby"
 import Tags from "./tags"
 
-const GridWrapper = styled.div`
-  display: grid;
-  grid-template-rows: 200px auto 100px;
-  grid-template-columns: 1fr;
-  box-shadow: 0px 0px 8px 0px rgba(168, 168, 168, 1);
-  border-radius: 10px;
+const FlexWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px 0px rgba(168, 168, 168, 1);
+    border-radius: 10px;
 `
 
 const Cover = styled.div`
-  background-image: url(${props => props.src || ""});
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
+    background-image: url(${props => props.src || ""});
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: auto;
+    border-radius: 10px 10px 0px 0px;
 `
 
 const Content = styled.div`
-  padding: 16px;
-  p {
-    margin: 0px;
-  }
-  h5 {
-    margin-top: 10px;
-  }
+    padding: 16px 16px 0px 16px;
+    p {
+        margin: 0px;
+        font-size: 14px;
+        margin-top: 1em;
+    }
 `
 
 const Title = styled.h4`
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
 `
 
 const Info = styled.div`
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
 `
 
-const Button = styled.div`
-  font-family: "Roboto", cursive;
-  font-weight: semi-bold;
-  margin: 10px auto;
-  text-align: center;
-  width: 160px;
-  height: 45px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(45deg, rgb(14, 75, 219), rgb(45, 179, 244));
-  border-radius: 10px;
-  transition-property: all;
-  transition-duration: 0.7s;
-  transition-delay: 0s;
-  &:hover {
+const Button = styled.button`
+    font-family: "Roboto", cursive;
+    font-weight: semi-bold;
+    font-size: 14px;
+    text-align: center;
+    margin: 1em auto;
+    width: 10em;
+    height: 2.5em;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition-property: all;
+    transition-duration: 0.7s;
+    transition-delay: 0s;
     background: rgba(0, 0, 0, 0);
-    color: rgb(14, 75, 219);
-    box-shadow: inset 0 0 0 3px rgb(14, 75, 219);
-    cursor: pointer;
-  }
+    color: rgba(10, 60, 179, 0.7);
+    box-shadow: inset 0 0 0 3px rgba(10, 60, 179, 0.7);
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background-image: linear-gradient(
+            45deg,
+            rgb(14, 75, 219),
+            rgb(45, 179, 244)
+        );
+        cursor: pointer;
+        color: white;
+        box-shadow: initial;
+    }
 `
 
 const TagContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 `
 
 const PostPreview = props => {
-  const { title, date, tags, imageSlug, excerpt, slug, readTime } = props
+    const { title, date, tags, imageSlug, excerpt, slug, readTime } = props
 
-  const handleClick = () => {
-    const nav = "/blog" + slug;
-    navigate(nav)
-  }
+    const handleClick = () => {
+        const nav = "/blog" + slug
+        navigate(nav)
+    }
 
-  return (
-    <GridWrapper>
-      <Cover src={imageSlug} />
-      <Content>
-        <Title>{title}</Title>
-        <TagContainer>
-          {tags.map((tag, index) => {
-            return <Tags key={index} tag={tag} />
-          })}
-        </TagContainer>
+    return (
+        <FlexWrapper>
+            <Cover src={imageSlug} />
+            <Content>
+                <Title>{title}</Title>
+                <h5>
+                    {date} <span>•</span> {readTime} min read
+                </h5>
+                <TagContainer>
+                    {tags.map((tag, index) => {
+                        return <Tags key={index} tag={tag} />
+                    })}
+                </TagContainer>
 
-        <h5>
-          {date} <span>•</span> {readTime} min read
-        </h5>
-        <p>{excerpt}</p>
-      </Content>
-      <Info>
-        <Button onClick={handleClick}>Leer más</Button>
-      </Info>
-    </GridWrapper>
-  )
+                <p>{excerpt}</p>
+            </Content>
+            <Info>
+                <Button onClick={handleClick}>Leer más</Button>
+            </Info>
+        </FlexWrapper>
+    )
 }
 
 export default PostPreview
