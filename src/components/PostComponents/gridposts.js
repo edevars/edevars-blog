@@ -6,8 +6,8 @@ import './masonry.css'
 const breakpointColumnsObj = {
     default: 4,
     1100: 3,
-    900: 2,
-    630: 1
+    768: 2,
+    530: 1
   };
 
 const GridPosts = props => {
