@@ -72,7 +72,6 @@ const CategoryLabel = styled.li`
 
 const HiWrapper = styled.div`
     margin: 60px auto;
-    padding: 0 350px;
 `
 
 const PostsbyCategory = category => {

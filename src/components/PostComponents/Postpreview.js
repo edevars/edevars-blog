@@ -13,7 +13,6 @@ const FlexWrapper = styled.div`
 `
 
 const Cover = styled.div`
-    height: 150px;
     position: relative;
     overflow: hidden;
     top: 0;

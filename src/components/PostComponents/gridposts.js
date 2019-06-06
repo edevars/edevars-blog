@@ -1,21 +1,23 @@
 import React from "react"
-import styled from "styled-components"
 import Postpreview from "./Postpreview"
+import Masonry from "react-masonry-css"
+import './masonry.css'
 
-const StyledGrid = styled.section`
-    grid-area: posts;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-row-gap: 60px;
-    grid-column-gap: 35px;
-    margin: 0px auto;
-    justify-content: space-evenly;
-`
+const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    900: 2,
+    630: 1
+  };
 
 const GridPosts = props => {
     const { data } = props
     return (
-        <StyledGrid width={props.width}>
+        <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+        >
             {data.allMarkdownRemark.nodes.map((node, index) => (
                 <div key={node.id}>
                     <Postpreview
@@ -25,15 +27,12 @@ const GridPosts = props => {
                         date={node.frontmatter.date}
                         tags={node.frontmatter.tags}
                         relativePath={node.frontmatter.imageSlug.relativePath}
-                        imageSlug={
-                            node.frontmatter.imageSlug.childImageSharp.fluid.src
-                        }
                         excerpt={node.excerpt}
                         readTime={node.frontmatter.readTime}
                     />
                 </div>
             ))}
-        </StyledGrid>
+        </Masonry>
     )
 }
 
