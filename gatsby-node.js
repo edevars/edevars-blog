@@ -45,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
         //Creating page for each tag
         clean_tag_list.forEach(tag => {
             createPage({
-                path: "/tags/" + tag,
+                path: `/${tag}`,
                 component: path.resolve(`./src/templates/tags.js`),
                 context: {
                     tags: [tag],
