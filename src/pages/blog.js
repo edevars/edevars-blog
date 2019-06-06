@@ -70,6 +70,11 @@ const CategoryLabel = styled.li`
     }
 `
 
+const HiWrapper = styled.div`
+    margin: 60px auto;
+    padding: 0 350px;
+`
+
 const PostsbyCategory = category => {
     return <ToggleCategory category={category} />
 }
@@ -90,35 +95,40 @@ class Categories extends Component {
         return (
             <Layout>
                 <SEO title="Categorías" />
-
                 <Wrapper>
                     <ContentWrapper>
                         <MarginContainer>
+                            <HiWrapper>
+                                <h2>¡Tutoriales, consejos y mucho más!</h2>
+                                <p>
+                                    Encuentra posts de todos los temas, sabores
+                                    y colores. Siempre me ha encantado escribir
+                                    así que espero los disfrutes.
+                                </p>
+                            </HiWrapper>
                             <ListCategories>
-                                    <CategoryLabel
-                                        key={0}
-                                        onClick={() => {
-                                            this.handleClick(null)
-                                        }}
-                                    >
-                                        Más recientes
-                                    </CategoryLabel>
-                                    {this.state.categories.map(
-                                        (category, index) => {
-                                            return (
-                                                <CategoryLabel
-                                                    key={index + 1}
-                                                    onClick={() => {
-                                                        this.handleClick(
-                                                            category
-                                                        )
-                                                    }}
-                                                >
-                                                    {category}
-                                                </CategoryLabel>
-                                            )
-                                        }
-                                    )}
+                                <CategoryLabel
+                                    key={0}
+                                    onClick={() => {
+                                        this.handleClick(null)
+                                    }}
+                                >
+                                    Más recientes
+                                </CategoryLabel>
+                                {this.state.categories.map(
+                                    (category, index) => {
+                                        return (
+                                            <CategoryLabel
+                                                key={index + 1}
+                                                onClick={() => {
+                                                    this.handleClick(category)
+                                                }}
+                                            >
+                                                {category}
+                                            </CategoryLabel>
+                                        )
+                                    }
+                                )}
                             </ListCategories>
                             <PostWrapper>
                                 {PostsbyCategory(this.state.selectedCategory)}
