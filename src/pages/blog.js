@@ -23,6 +23,13 @@ const ContentWrapper = styled.section`
     position: relative;
     border-radius: 10px;
     top: -5vh;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        position: initial;
+        box-shadow: initial;
+        border: none;
+        top: none;
+    }
 `
 
 const MarginContainer = styled.div`
@@ -71,7 +78,8 @@ const CategoryLabel = styled.li`
 `
 
 const HiWrapper = styled.div`
-    margin: 60px auto;
+    max-width: 768px;
+    margin: 3rem auto;
 `
 
 const PostsbyCategory = category => {
@@ -98,7 +106,7 @@ class Categories extends Component {
                     <ContentWrapper>
                         <MarginContainer>
                             <HiWrapper>
-                                <h2>¡Tutoriales, consejos y mucho más!</h2>
+                                <h1>¡Tutoriales, consejos y mucho más!</h1>
                                 <p>
                                     Encuentra posts de todos los temas, sabores
                                     y colores. Siempre me ha encantado escribir

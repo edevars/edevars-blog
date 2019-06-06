@@ -13,15 +13,31 @@ const GridWrapper = styled.div`
         "posts";
 `
 
-const ContentWrapper = styled.div`
-    grid-area: content;
-    margin: 2.5rem auto;
-    max-width: 600px;
+const ContentWrapper = styled.section`
+    display: grid;
+    width: 85%;
+    grid-template: auto auto / 1fr;
+    grid-template-areas: "Content" "Posts";
+    margin: 0px auto;
+    background: white;
+    -webkit-box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    -moz-box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    position: relative;
+    border-radius: 10px;
+    top: -5vh;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        position: initial;
+        box-shadow: initial;
+        border: none;
+        top: none;
+    }
 `
 
 const SearchedCategory = styled.span`
     display: inline-block;
-    font-size: 72px;
+    font-size: 1.2em;
     background: -webkit-linear-gradient(
         -30deg,
         #001749 0%,
@@ -30,6 +46,18 @@ const SearchedCategory = styled.span`
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: .1em;
+`
+
+const TitleContainer = styled.div`
+    max-width: 768px;
+    margin: 3rem auto;
+`
+
+const MarginContainer = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
 `
 
 const Category = ({ data, pageContext }) => {
@@ -39,15 +67,19 @@ const Category = ({ data, pageContext }) => {
             <SEO title="Posts" />
             <GridWrapper>
                 <ContentWrapper>
-                    <h1>
-                        Todos los post relacionados con{" "}
-                        <SearchedCategory>
-                            {pageContext.category}{" "}
-                        </SearchedCategory>
-                    </h1>
+                    <MarginContainer>
+                        <TitleContainer>
+                            <h1>
+                                Todos los post relacionados con:{" "}
+                                <SearchedCategory>
+                                    {pageContext.category}{" "}
+                                </SearchedCategory>
+                            </h1>
+                        </TitleContainer>
+                        <GridPosts data={data} />
+                    </MarginContainer>
                 </ContentWrapper>
             </GridWrapper>
-            <GridPosts data={data} />
         </Layout>
     )
 }
