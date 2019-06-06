@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import GridPosts from "./gridposts"
+import GridPosts from "../PostComponents/gridposts"
 
 const GridByCategory = props => {
     return (

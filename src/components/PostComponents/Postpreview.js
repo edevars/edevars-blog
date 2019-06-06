@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
-import Tags from "./tags"
+import Tags from "../TagsComponents/tags"
 import PostImage from "./postImage"
 
 const FlexWrapper = styled.div`

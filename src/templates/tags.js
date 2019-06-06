@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import Postpreview from "../components/Postpreview"
+import Postpreview from "../components/PostComponents/Postpreview"
 import styled from "styled-components"
 
 const GridWrapper = styled.div`
@@ -29,6 +29,7 @@ const GridPosts = styled.div`
 `
 
 const Tags = ({ data, pageContext }) => {
+  console.log("la data de la tag", data)
   const { info } = data.posts
 
   return (

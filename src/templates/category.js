@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import GridPosts from "../components/gridposts"
+import GridPosts from "../components/PostComponents/gridposts"
 
 const GridWrapper = styled.div`
     display: grid;

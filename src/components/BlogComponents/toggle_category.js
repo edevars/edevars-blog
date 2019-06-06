@@ -1,5 +1,5 @@
 import React from "react"
-import RecentPosts from "./recent_posts"
+import RecentPosts from "../PostComponents/recent_posts"
 import PostsByCategory from "./gridByCategory"
 
 export default props => {

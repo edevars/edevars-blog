@@ -12,12 +12,11 @@ const StyledGrid = styled.section`
     justify-content: space-evenly;
 `
 
-const GridPosts = (props) => {
-    
+const GridPosts = props => {
     const { data } = props
     return (
         <StyledGrid width={props.width}>
-            {data.allMarkdownRemark.nodes.map(( node , index) => (
+            {data.allMarkdownRemark.nodes.map((node, index) => (
                 <div key={node.id}>
                     <Postpreview
                         slug={node.frontmatter.slug}

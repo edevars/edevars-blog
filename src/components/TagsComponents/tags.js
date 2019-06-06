@@ -31,7 +31,7 @@ const Tags = props => {
     const { tag } = props
 
     const handleClick = () => {
-        const nav = "/tags/" + tag
+        const nav = `/${tag}`
         navigate(nav)
     }
 

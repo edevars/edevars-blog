@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { categories } from "../utils/categoriesArray"
-import ToggleCategory from "../components/toggle_category"
+import ToggleCategory from "../components/BlogComponents/toggle_category"
 
 const Wrapper = styled.div`
     width: 100%;

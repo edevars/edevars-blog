@@ -13,7 +13,7 @@ import { createGlobalStyle } from "styled-components"
 import { library, config } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
-import Header from "./header"
+import Header from "./HeaderComponents/header"
 import Nav from "./Navbar"
 import '../../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
 

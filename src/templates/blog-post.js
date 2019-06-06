@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { formatShort } from "../utils/dateFormatter"
-import AllTags from "../components/alltags"
-import DateBlock from "../components/dateblock"
-import Category from "../components/category"
+import AllTags from "../components/TagsComponents/alltags"
+import DateBlock from "../components/BlogComponents/dateblock"
+import Category from "../components/BlogComponents/category"
 
 const GridWrapper = styled.div`
   display: grid;
