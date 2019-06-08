@@ -7,17 +7,21 @@ import HeaderImage from "./header_img"
 const Wrapper = styled.header`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: relative;
-    top: 0;
     overflow: hidden;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: 0;
-    height: 40vh;
-    background: blue;
+    background: #060695;
+    height: 300px;
+    @media screen and (max-width: 1024px){
+        height: 20vh;
+        justify-content: center;
+        min-height: 150px;
+    }
 `
 
 const Image = styled.div`
@@ -28,23 +32,29 @@ const Image = styled.div`
     left: 0;
     bottom: 0;
     z-index: 0;
-    opacity: 0.89;
+    opacity: 0.6;
 `
 
 const Title = styled.h1`
     font-family: "Comfortaa", cursive !important;
-    font-size: 5rem !important;
+    font-size: 3.5rem !important;
     display: inline-block;
     margin: 0 !important;
-    padding-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: .7rem;
     position: relative;
     z-index: 1;
     color: white;
+    
+    @media screen and (max-width: 1024px){
+        padding-top: initial;
+        padding-bottom: initial;
+    }
 `
 
 const Subtitle = styled.h2`
     font-family: "Comfortaa", cursive !important;
-    font-size: 2rem !important;
+    font-size: 1rem !important;
     border-bottom: 2px solid white !important;
     padding-bottom: 4px !important;
     color: white;
