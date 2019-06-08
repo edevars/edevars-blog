@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Nav = styled.nav`
   display: flex;
@@ -11,17 +10,23 @@ const Nav = styled.nav`
 
 const List = styled.ul`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  margin: auto 0px;
-  padding: 15px 0px;
-  width: 40%;
+  padding: 1rem 0px;
+  margin: 0px;
+  width: 100%;
+  @media screen and (max-width: 1024px){
+    justify-content: space-evenly;
+  }
 `
 const Item = styled.li`
   margin: 0px;
   color: black;
   height: 100%;
+  padding-left: 2.5rem;
+  @media screen and (max-width: 1024px){
+    padding: initial;
+  }
 `
 
 const LinkItem = styled(Link)`
@@ -52,21 +57,6 @@ const LinkItem = styled(Link)`
   }
 `
 
-const SocialMedia = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 60%;
-  .wrapper {
-    margin: 0px 3rem;
-  }
-
-  .icon {
-    font-size: 21px;
-    margin-right: 36px;
-    color: #050c19;
-  }
-`
 
 const Navbar = () => (
   <Nav>
@@ -84,14 +74,6 @@ const Navbar = () => (
         <LinkItem to="/contactame">¡contactame!</LinkItem>
       </Item>
     </List>
-    <SocialMedia>
-      <div className="wrapper">
-        <FontAwesomeIcon className="icon" icon={["fab", "facebook"]} />
-        <FontAwesomeIcon className="icon" icon={["fab", "twitter"]} />
-        <FontAwesomeIcon className="icon" icon={["fab", "instagram"]} />
-        <FontAwesomeIcon className="icon" icon={["fab", "youtube"]} />
-      </div>
-    </SocialMedia>
   </Nav>
 )
 
