@@ -1,38 +1,55 @@
 import React from "react"
 import Postpreview from "./Postpreview"
-import Masonry from "react-masonry-css"
-import './masonry.css'
+import MasonryLayout from './masonryLayout'
+import Breakpoint,{ setDefaultBreakpoints, BreakpointProvider } from 'react-socks';
 
-const breakpointColumnsObj = {
-    default: 4,
-    1100: 3,
-    768: 2,
-    530: 1
-  };
+setDefaultBreakpoints([
+    { s: 0 },
+    { m: 468 },
+    { l: 968 },
+    { xl: 1300 }
+]);
+
+
 
 const GridPosts = props => {
     const { data } = props
+    const renderPosts = data.allMarkdownRemark.nodes.map((node, index) => (
+        <Postpreview
+            key={node.id}
+            slug={node.frontmatter.slug}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            tags={node.frontmatter.tags}
+            relativePath={node.frontmatter.imageSlug.relativePath}
+            excerpt={node.excerpt}
+            readTime={node.frontmatter.readTime}
+        />
+    ))
+
     return (
-        <Masonry
-            breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
-        >
-            {data.allMarkdownRemark.nodes.map((node, index) => (
-                <div key={node.id}>
-                    <Postpreview
-                        slug={node.frontmatter.slug}
-                        key={node.id}
-                        title={node.frontmatter.title}
-                        date={node.frontmatter.date}
-                        tags={node.frontmatter.tags}
-                        relativePath={node.frontmatter.imageSlug.relativePath}
-                        excerpt={node.excerpt}
-                        readTime={node.frontmatter.readTime}
-                    />
-                </div>
-            ))}
-        </Masonry>
+        <BreakpointProvider>
+            <Breakpoint xl only>
+                <MasonryLayout columns={4} gap={25} className="elemento-activo">
+                    {renderPosts}
+                </MasonryLayout>
+            </Breakpoint>
+            <Breakpoint l only>
+                <MasonryLayout columns={3} gap={25} className="elemento-activo">
+                    {renderPosts}
+                </MasonryLayout>
+            </Breakpoint>
+            <Breakpoint m only>
+                <MasonryLayout columns={2} gap={25} className="elemento-activo">
+                    {renderPosts}
+                </MasonryLayout>
+            </Breakpoint>
+            <Breakpoint s only>
+                <MasonryLayout columns={1} gap={25} className="elemento-activo">
+                    {renderPosts}
+                </MasonryLayout>
+            </Breakpoint>
+        </BreakpointProvider>
     )
 }
 
