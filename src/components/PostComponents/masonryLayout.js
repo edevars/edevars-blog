@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const MasonryLayout = props => {
     const columnWrapper = {};
     const result = [];
@@ -13,7 +14,7 @@ const MasonryLayout = props => {
     for (let i = 0; i < props.children.length; i++) {
         const columnIndex = i % props.columns;
         columnWrapper[`column${columnIndex}`].push(
-            <div style={{ marginBottom: `${props.gap}px` }}>
+            <div key={i} style={{ marginBottom: `${props.gap}px` }}>
                 {props.children[i]}
             </div>
         );
@@ -25,14 +26,17 @@ const MasonryLayout = props => {
                 style={{
                     marginLeft: `${i > 0 ? props.gap : 0}px`,
                     flex: 1,
-                }}>
+                    minWidth: '250px'
+                }}
+                key={i}
+                >
                 {columnWrapper[`column${i}`]}
             </div>
         );
     }
 
     return (
-        <div style={{ display: 'flex' }}>
+        <div className={props.class}>
             {result}
         </div>
     );

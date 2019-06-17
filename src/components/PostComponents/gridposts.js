@@ -1,16 +1,56 @@
 import React from "react"
 import Postpreview from "./Postpreview"
-import MasonryLayout from './masonryLayout'
-import Breakpoint,{ setDefaultBreakpoints, BreakpointProvider } from 'react-socks';
-
-setDefaultBreakpoints([
-    { s: 0 },
-    { m: 468 },
-    { l: 968 },
-    { xl: 1300 }
-]);
+import MasonryLayout from "./masonryLayout"
+import styled from "styled-components"
 
 
+const Wrapper = styled.div`
+    .extra-big {
+        display: flex;
+    }
+
+    .big {
+        display: none;
+    }
+
+    .medium{
+        display: none;
+    }
+
+    .small{
+        display: none;
+    }
+
+    @media screen and (max-width: 1390px) {
+        .extra-big {
+            display: none;
+        }
+
+        .big{
+            display: flex
+        }
+    }
+
+    @media screen and (max-width: 890px){
+        .big {
+            display: none;
+        }
+
+        .medium{
+            display: flex
+        }
+    }
+
+    @media screen and (max-width: 578px){
+        .medium {
+            display: none;
+        }
+
+        .small{
+            display: flex
+        }
+    }
+`
 
 const GridPosts = props => {
     const { data } = props
@@ -28,28 +68,20 @@ const GridPosts = props => {
     ))
 
     return (
-        <BreakpointProvider>
-            <Breakpoint xl only>
-                <MasonryLayout columns={4} gap={25} className="elemento-activo">
-                    {renderPosts}
-                </MasonryLayout>
-            </Breakpoint>
-            <Breakpoint l only>
-                <MasonryLayout columns={3} gap={25} className="elemento-activo">
-                    {renderPosts}
-                </MasonryLayout>
-            </Breakpoint>
-            <Breakpoint m only>
-                <MasonryLayout columns={2} gap={25} className="elemento-activo">
-                    {renderPosts}
-                </MasonryLayout>
-            </Breakpoint>
-            <Breakpoint s only>
-                <MasonryLayout columns={1} gap={25} className="elemento-activo">
-                    {renderPosts}
-                </MasonryLayout>
-            </Breakpoint>
-        </BreakpointProvider>
+        <Wrapper>
+            <MasonryLayout columns={4} gap={25} class="extra-big">
+                {renderPosts}
+            </MasonryLayout>
+            <MasonryLayout columns={3} gap={25} class="big">
+                {renderPosts}
+            </MasonryLayout>
+            <MasonryLayout columns={2} gap={25} class="medium">
+                {renderPosts}
+            </MasonryLayout>
+            <MasonryLayout columns={1} gap={25} class="small">
+                {renderPosts}
+            </MasonryLayout>
+        </Wrapper>
     )
 }
 
