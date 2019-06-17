@@ -36,7 +36,7 @@ const MasonryLayout = props => {
     }
 
     return (
-        <div className={props.class}>
+        <div style={{display: 'flex'}}>
             {result}
         </div>
     );
