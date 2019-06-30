@@ -46,7 +46,6 @@ const MarginContainer = styled.div`
 `
 
 const Tags = ({ data, pageContext }) => {
-    console.log("la data de la tag", data)
 
     return (
         <Layout>

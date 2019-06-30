@@ -61,7 +61,6 @@ const MarginContainer = styled.div`
 `
 
 const Category = ({ data, pageContext }) => {
-    console.log(data)
     return (
         <Layout>
             <SEO title="Posts" />

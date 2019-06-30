@@ -92,7 +92,6 @@ class Categories extends Component {
     }
 
     handleClick = category => {
-        console.log("Entra la categoria ", category)
         this.setState({
             selectedCategory: category,
         })
