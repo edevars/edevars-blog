@@ -3,6 +3,6 @@ module.exports = {
         "Tecnología",
         "Crecimiento Personal",
         "Tutoriales",
-        "Estilo de vida",
+        "Hacks",
     ],
 }
