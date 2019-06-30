@@ -6,6 +6,8 @@ const Nav = styled.nav`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  width: 100%;
+  background-color: #0F3572;
 `
 
 const List = styled.ul`
@@ -15,13 +17,14 @@ const List = styled.ul`
   padding: 1rem 0px;
   margin: 0px;
   width: 100%;
+  font-weight: bold;
   @media screen and (max-width: 1024px){
     justify-content: space-evenly;
   }
 `
 const Item = styled.li`
   margin: 0px;
-  color: black;
+  color: white;
   height: 100%;
   padding-left: 2.5rem;
   @media screen and (max-width: 1024px){
@@ -35,19 +38,20 @@ const LinkItem = styled(Link)`
   -moz-transition: 0.4s;
   -webkit-transition: 0.4s;
   margin-bottom: 7px;
+  color: white;
 
   &::after {
     content: "";
     display: block;
     width: 0;
     height: 3px;
-    background: rgba(23, 91, 163, 1);
+    background: white;
     transition: width 0.3s;
     text-decoration: none;
   }
   &:hover {
     text-decoration: none;
-    color: rgba(23, 91, 163, 1);
+    color: white;
   }
   &:hover::after {
     font-size: 20px;
@@ -56,7 +60,6 @@ const LinkItem = styled(Link)`
     text-decoration: none;
   }
 `
-
 
 const Navbar = () => (
   <Nav>
