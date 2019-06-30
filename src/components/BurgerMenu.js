@@ -3,22 +3,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { relative } from "upath"
 
+const Wrapper = styled.div`
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+`
 
 const StyledBurger = styled.button`
     display: none;
     border: none;
     width: 40px;
     height: 40px;
+    position: fixed;
     top: 10px;
     left: 5px;
     background: red;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    z-index: 4;
+    z-index: 3;
     @media screen and (max-width: 768px) {
         display: flex;
     }
@@ -27,7 +34,7 @@ const StyledBurger = styled.button`
 const Menu = styled.nav`
     position: fixed;
     background: rgba(5, 111, 255, 0.9);
-    z-index: 3;
+    z-index: 2;
     top: 0;
     bottom: 0;
     right: 0;
@@ -61,9 +68,8 @@ class BurgerMenu extends Component {
     }
 
     render() {
-        console.log(this.state.isActive)
         return (
-            <>
+            <Wrapper>
                 <StyledBurger onClick={this.handleClick}>
                     <FontAwesomeIcon
                         icon={faBars}
@@ -71,15 +77,15 @@ class BurgerMenu extends Component {
                     />
                 </StyledBurger>
                 <Menu isActive={this.state.isActive}>
-                        <LinkItem to="/">home</LinkItem>
+                    <LinkItem to="/">home</LinkItem>
 
-                        <LinkItem to="/blog">Blog & tutoriales</LinkItem>
+                    <LinkItem to="/blog">Blog & tutoriales</LinkItem>
 
-                        <LinkItem to="/sobre-mi">¿quién soy yo?</LinkItem>
+                    <LinkItem to="/sobre-mi">¿quién soy yo?</LinkItem>
 
-                        <LinkItem to="/contactame">¡contactame!</LinkItem>
-                    </Menu>
-            </>
+                    <LinkItem to="/contactame">¡contactame!</LinkItem>
+                </Menu>
+            </Wrapper>
         )
     }
 }

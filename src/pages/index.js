@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layoutHome"
+import Layout from "../components/Homelayout"
 import SEO from "../components/seo"
 import HomeImage from "../components/HomeImage"
-import HomeNav from "../components/HomeNav"
 import programmer from "../images/programmer.png"
 
 // Font Awesome
@@ -197,7 +196,6 @@ const IndexPage = () => (
     <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Hero>
-            <HomeNav />
             <HomeImage />
             <TitleWrapper>
                 <Title>edevars</Title>
