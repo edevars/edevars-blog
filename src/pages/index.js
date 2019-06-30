@@ -41,7 +41,11 @@ const TitleWrapper = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-top: -10rem;
+
+
+    @media screen and (max-width: 425px) {
+        margin-top: -7rem;
+    }
 `
 
 const Title = styled.h1`
@@ -51,15 +55,31 @@ const Title = styled.h1`
     display: inline-block;
     padding: 0;
     margin: 0;
+
+    @media screen and (max-width: 425px) {
+        font-size: 5rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 4rem;
+    }
 `
 
 const Subtitle = styled.h2`
     font-family: "Comfortaa", cursive !important;
-    font-size: 2.8rem !important;
+    font-size: 2.8rem;
     border-bottom: 2px solid white !important;
     padding-bottom: 4px !important;
     color: white;
     display: inline-block;
+
+    @media screen and (max-width: 425px) {
+        font-size: 1.736rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 1.4rem;
+    }
 `
 
 const Content = styled.section`
@@ -85,32 +105,57 @@ const Content = styled.section`
         padding: 25px 20px;
         color: #0f3572;
     }
+
+    @media screen and (max-width: 425px) {
+        .quote {
+            font-size: 1.8rem;
+            margin: 120px 0px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .quote {
+            font-size: 1.3rem;
+            padding: 15px 10px;
+        }
+    }
 `
 
 const Welcome = styled.div`
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
     background-color: #001749;
     -webkit-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     -moz-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
 
-    picture {
-        height: 100%;
+    .programmer {
+        height: 580px;
+        width: 580px;
+        margin: 0px;
     }
 
-    .programmer {
-        margin-left: 150px;
-        height: 580px;
+    @media screen and (max-width: 768px) {
+        .programmer {
+            height: 425px;
+            width: 425px;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .programmer {
+            height: 320px;
+            width: 320px;
+        }
     }
 `
 
 const Message = styled.div`
-    padding-left: 4rem;
-    padding-top: 4rem;
-    width: 40%;
+    width: 30%;
     color: white;
-
+    padding: 3rem 0px;
+    line-height: 2rem;
     span {
         font-weight: 400;
     }
@@ -123,6 +168,25 @@ const Message = styled.div`
     h3 {
         font-size: 3rem;
         color: white;
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding-top: 1rem;
+        width: 70%;
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+        h3 {
+            font-size: 2rem;
+            color: white;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
     }
 `
 
@@ -139,6 +203,15 @@ const InformativeIcons = styled.div`
         color: #0f3572;
         margin-top: 100px;
         margin-bottom: 120px;
+    }
+
+    @media screen and (max-width: 768px) {
+        h3 {
+            font-size: 2rem;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            text-align: center;
+        }
     }
 `
 
@@ -167,6 +240,7 @@ const GridContainer = styled.div`
             max-width: 320px;
             font-size: 21px;
             text-align: center;
+            line-height: 2rem;
         }
 
         .IconContainer {
@@ -175,7 +249,6 @@ const GridContainer = styled.div`
             align-items: center;
             width: 320px;
             height: 320px;
-            background: red;
             border-radius: 50%;
             background: -webkit-linear-gradient(
                 -30deg,
@@ -187,6 +260,49 @@ const GridContainer = styled.div`
             .Icon {
                 color: white;
                 font-size: 150px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 425px) {
+        grid-row-gap: 50px;
+        .Description {
+            h4 {
+                color: #0f3572;
+                font-size: 1.2rem;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 2rem;
+                max-width: 240px;
+                font-size: 1rem;
+            }
+
+            .IconContainer {
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: -webkit-linear-gradient(
+                    -30deg,
+                    #001749 0%,
+                    #0e4bdb 30%,
+                    #2dddf4 85%
+                );
+
+                .Icon {
+                    color: white;
+                    font-size: 100px;
+                }
             }
         }
     }
