@@ -27,7 +27,7 @@ const Hero = styled.div`
     bottom: 0;
     z-index: 0;
     height: 100vh;
-    background: #0f3572;
+    background: #060695;
     box-shadow: 0px 10px 23px -23px rgba(219, 219, 219, 1);
     -webkit-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     -moz-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
