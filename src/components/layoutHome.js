@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
+import BurgerMenu from "./BurgerMenu"
 import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 
 const GlobalStyle = createGlobalStyle`
@@ -29,6 +30,7 @@ const HomeLayout = ({ children }) => (
         render={data => (
             <>
                 <GlobalStyle />
+                <BurgerMenu />
                 <main>{children}</main>
             </>
         )}
