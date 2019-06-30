@@ -9,7 +9,7 @@ const FlexWrapper = styled.div`
     justify-content: center;
     flex-direction: column;
     box-shadow: 0px 0px 8px 0px rgba(168, 168, 168, 1);
-    border-radius: 10px;
+    background-color: #001749;
 `
 
 const Cover = styled.div`
@@ -20,19 +20,24 @@ const Cover = styled.div`
     left: 0;
     bottom: 0;
     z-index: 0;
-    border-radius: 10px 10px 0px 0px;
 `
 
 const Content = styled.div`
+    color: #dddddd;
     padding: 16px 16px 0px 16px;
     p {
         margin: 0px;
         font-size: 14px;
         margin-top: 1em;
     }
+
+    h5 {
+        color: #dddddd;
+    }
 `
 
 const Title = styled.h4`
+    color: white;
     font-size: 24px;
     font-weight: bold;
     margin-top: 15px;
@@ -62,12 +67,10 @@ const Button = styled.button`
     transition-property: all;
     transition-duration: 0.7s;
     transition-delay: 0s;
-    background: rgba(0, 0, 0, 0);
-    color: rgba(10, 60, 179, 0.7);
-    box-shadow: inset 0 0 0 3px rgba(10, 60, 179, 0.7);
+    background: white;
+    color: #001749;
     border: none;
     border-radius: 5px;
-
     &:hover {
         background-image: linear-gradient(
             45deg,
