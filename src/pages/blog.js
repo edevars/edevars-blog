@@ -22,7 +22,7 @@ const ContentWrapper = styled.section`
     box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
     position: relative;
     border-radius: 10px;
-    top: -15vh;
+    top: -100px;
     @media screen and (max-width: 1024px) {
         width: 100%;
         position: initial;
