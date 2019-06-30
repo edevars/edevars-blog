@@ -104,7 +104,7 @@ const PostPreview = props => {
 
                 <p>{excerpt}</p>
             </Content>
-            <Button onClick={handleClick}>Leer más</Button>
+            <Button onClick={handleClick} name="Leer más">Leer más</Button>
         </FlexWrapper>
     )
 }
