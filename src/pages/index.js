@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import Media from "react-media"
 import Layout from "../components/Homelayout"
 import SEO from "../components/seo"
 import HomeImage from "../components/HomeImage"
+import HomeImageMobile from "../components/HomeImageMobile"
 import programmer from "../images/programmer.png"
 
 // Font Awesome
@@ -306,7 +308,10 @@ const IndexPage = () => (
     <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Hero>
-            <HomeImage />
+            <Media query="(max-width: 768px)">
+                {matches => (matches ? <HomeImageMobile /> : <HomeImage />)}
+            </Media>
+
             <TitleWrapper>
                 <Title>edevars</Title>
                 <Subtitle>De tecnología y más...</Subtitle>
