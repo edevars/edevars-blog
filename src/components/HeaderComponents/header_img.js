@@ -9,8 +9,8 @@ export default () => (
                 imageHeader: file(relativePath: { eq: "bg-nav.jpg" }) {
                     childImageSharp {
                         fluid(
-                            maxWidth: 1920
-                            quality: 100
+                            maxWidth: 1080
+                            quality: 80
                             traceSVG: { color: "rgb(45, 179, 244)" }
                         ) {
                             ...GatsbyImageSharpFluid_withWebp_tracedSVG

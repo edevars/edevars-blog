@@ -2,14 +2,14 @@ import React from "react"
 import Img from "gatsby-image/withIEPolyfill"
 import { StaticQuery, graphql } from "gatsby"
 
-const HomeImage = () => (
+const HomeImageMobileMedium = () => (
     <StaticQuery
         query={graphql`
             query {
                 file(name: { eq: "bg-nav" }) {
                     childImageSharp {
                         fluid(
-                            maxWidth: 1080
+                            maxWidth: 768
                             quality: 80
                             traceSVG: { color: "rgb(45, 179, 244)" }
                         ) {
@@ -35,4 +35,4 @@ const HomeImage = () => (
     />
 )
 
-export default HomeImage
+export default HomeImageMobileMedium
