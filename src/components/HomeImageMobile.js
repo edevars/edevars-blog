@@ -9,7 +9,7 @@ const HomeImageMobile = () => (
                 file(name: { eq: "bg-nav" }) {
                     childImageSharp {
                         fixed(width: 768, quality: 80) {
-                            ...GatsbyImageSharpFixed
+                            ...GatsbyImageSharpFixed_withWebp
                         }
                     }
                 }
