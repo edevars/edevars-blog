@@ -45,7 +45,7 @@ const Title = styled.h1`
     position: relative;
     z-index: 1;
     color: white;
-    
+
     @media screen and (max-width: 1024px){
         padding-top: initial;
         padding-bottom: initial;
