@@ -12,7 +12,7 @@ import {
     faCode,
     faFileAlt,
     faSeedling,
-    faTasks,
+    faFlask,
 } from "@fortawesome/free-solid-svg-icons"
 import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 
@@ -167,6 +167,7 @@ const GridContainer = styled.div`
             margin-top: 2rem;
             max-width: 320px;
             font-size: 21px;
+            text-align: center;
         }
 
         .IconContainer {
@@ -229,20 +230,18 @@ const IndexPage = () => (
                 <h3>¿Qué podrás encontrar aquí?</h3>
                 <GridContainer>
                     <div className="Description">
-                        <h4>Proyectos</h4>
+                        <h4>¡Mucho código!</h4>
                         <div className="IconContainer">
                             <FontAwesomeIcon icon={faCode} className="Icon" />
                         </div>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam voluptas cumque soluta doloribus
-                            eligendi facilis ipsum, nobis nam in labore,
-                            nesciunt totam facere rem dolor. Provident,
-                            distinctio sequi! Voluptates, magnam.
+                            ¿Alguna vez te has preguntado cómo es que funciona
+                            todo Internet? Ve cómo funcionan tus tecnologías
+                            favoritas de una manera sencilla y amigable.
                         </p>
                     </div>
                     <div className="Description">
-                        <h4>Proyectos</h4>
+                        <h4>Tutoriales</h4>
                         <div className="IconContainer">
                             <FontAwesomeIcon
                                 icon={faFileAlt}
@@ -250,15 +249,13 @@ const IndexPage = () => (
                             />
                         </div>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam voluptas cumque soluta doloribus
-                            eligendi facilis ipsum, nobis nam in labore,
-                            nesciunt totam facere rem dolor. Provident,
-                            distinctio sequi! Voluptates, magnam.
+                            La programación no tiene que ser difícil. Aprendamos
+                            a hacer proyectos divertidos completamente desde
+                            cero
                         </p>
                     </div>
                     <div className="Description">
-                        <h4>Proyectos</h4>
+                        <h4>Crecimiento personal</h4>
                         <div className="IconContainer">
                             <FontAwesomeIcon
                                 icon={faSeedling}
@@ -266,24 +263,19 @@ const IndexPage = () => (
                             />
                         </div>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam voluptas cumque soluta doloribus
-                            eligendi facilis ipsum, nobis nam in labore,
-                            nesciunt totam facere rem dolor. Provident,
-                            distinctio sequi! Voluptates, magnam.
+                            No todo en esta vida es código. Interioriza y mejora
+                            quien eres para disfrutar este mundo al máximo.
                         </p>
                     </div>
                     <div className="Description">
-                        <h4>Proyectos</h4>
+                        <h4>Hacks</h4>
                         <div className="IconContainer">
-                            <FontAwesomeIcon icon={faTasks} className="Icon" />
+                            <FontAwesomeIcon icon={faFlask} className="Icon" />
                         </div>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam voluptas cumque soluta doloribus
-                            eligendi facilis ipsum, nobis nam in labore,
-                            nesciunt totam facere rem dolor. Provident,
-                            distinctio sequi! Voluptates, magnam.
+                            Pequeños consejos de como mejorar tu entorno de
+                            desarrollo. Incrementa tu creatividad y
+                            productividad.
                         </p>
                     </div>
                 </GridContainer>
