@@ -8,7 +8,6 @@ const FlexWrapper = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0px 0px 8px 0px rgba(168, 168, 168, 1);
     background-color: #001749;
 `
 
@@ -24,10 +23,12 @@ const Cover = styled.div`
 
 const Content = styled.div`
     color: #dddddd;
+    width: 85%;
+    margin: 0 auto;
     padding: 16px 16px 0px 16px;
     p {
         margin: 0px;
-        font-size: 14px;
+        font-size: 1.1rem;
         margin-top: 1em;
     }
 
@@ -42,35 +43,26 @@ const Title = styled.h4`
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 20px;
-`
-
-const Info = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
+    line-height: 2rem;
 `
 
 const Button = styled.button`
     font-family: "Roboto", cursive;
     font-weight: semi-bold;
-    font-size: 14px;
+    font-size: 1rem;
     text-align: center;
-    margin: 1em auto;
-    width: 10em;
-    height: 2.5em;
+    margin-top: 3rem;
+    width: 100%;
+    height: 3rem;
     outline: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    transition-property: all;
-    transition-duration: 0.7s;
-    transition-delay: 0s;
-    background: white;
+    background: rgb(7, 185, 199, 0.95);
     color: #001749;
     border: none;
-    border-radius: 5px;
+    color: white;
+    font-weight: bold;
     &:hover {
         background-image: linear-gradient(
             45deg,
@@ -78,7 +70,6 @@ const Button = styled.button`
             rgb(45, 179, 244)
         );
         cursor: pointer;
-        color: white;
         box-shadow: initial;
     }
 `
@@ -113,9 +104,7 @@ const PostPreview = props => {
 
                 <p>{excerpt}</p>
             </Content>
-            <Info>
-                <Button onClick={handleClick}>Leer más</Button>
-            </Info>
+            <Button onClick={handleClick}>Leer más</Button>
         </FlexWrapper>
     )
 }
