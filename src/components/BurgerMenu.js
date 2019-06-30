@@ -34,7 +34,7 @@ const StyledBurger = styled.button`
 
 const Menu = styled.nav`
     position: fixed;
-    background: rgba(5, 111, 255, 0.9);
+    background: rgb(7, 185, 199, .95);
     z-index: 2;
     top: 0;
     bottom: 0;
@@ -52,6 +52,10 @@ const Menu = styled.nav`
 const LinkItem = styled(Link)`
     text-decoration: none;
     color: white;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 20px;
+    border: 1px solid white;
 `
 
 class BurgerMenu extends Component {
@@ -78,7 +82,7 @@ class BurgerMenu extends Component {
                     />
                 </StyledBurger>
                 <Menu isActive={this.state.isActive}>
-                    <LinkItem to="/">home</LinkItem>
+                    <LinkItem to="/">Home</LinkItem>
 
                     <LinkItem to="/blog">Blog & tutoriales</LinkItem>
 
