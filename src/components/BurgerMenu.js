@@ -20,12 +20,13 @@ const StyledBurger = styled.button`
     height: 40px;
     position: fixed;
     top: 10px;
-    left: 5px;
-    background: red;
+    left: 10px;
+    background: #060695;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     z-index: 3;
+    outline: 0;
     @media screen and (max-width: 768px) {
         display: flex;
     }
