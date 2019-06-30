@@ -17,9 +17,9 @@ const ContentWrapper = styled.section`
     grid-template-areas: "Content" "Posts";
     margin: 0px auto;
     background: white;
-    -webkit-box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
-    -moz-box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
-    box-shadow: 0px 0px 38px 3px rgba(109, 145, 139, 0.38);
+    -webkit-box-shadow: 0px 31px 31px 9px rgba(102, 102, 102, 1);
+    -moz-box-shadow: 0px 31px 31px 9px rgba(102, 102, 102, 1);
+    box-shadow: 0px 31px 31px 9px rgba(102, 102, 102, 1);
     position: relative;
     border-radius: 10px;
     top: -100px;
