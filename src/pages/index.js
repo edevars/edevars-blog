@@ -18,6 +18,7 @@ import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 const Hero = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     top: 0;
@@ -36,16 +37,9 @@ const Hero = styled.div`
 const TitleWrapper = styled.div`
     position: absolute;
     z-index: 2;
-    top: 50%;
-    bottom: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
-
-
-    @media screen and (max-width: 425px) {
-        margin-top: -7rem;
-    }
 `
 
 const Title = styled.h1`
