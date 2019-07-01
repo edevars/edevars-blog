@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import GridPosts from "../components/PostComponents/gridposts"
+import CategoriesList from "../components/PostComponents/CategoriesList"
 
 const Wrapper = styled.div`
     width: 100%;
@@ -32,14 +33,15 @@ const ContentWrapper = styled.section`
         border: none;
         top: none;
     }
-
 `
 
 const HiWrapper = styled.div`
     max-width: 768px;
     margin: 3rem auto;
+    margin-bottom: 2rem;
     h1 {
         font-weight: bold;
+        text-align: center;
     }
 
     p {
@@ -76,7 +78,7 @@ class Blog extends Component {
                 },
             },
             start: 0,
-            end: 3,
+            end: 6,
             visibilityButton: true,
             limit: 3,
         }
@@ -158,7 +160,7 @@ class Blog extends Component {
                                 que espero los disfrutes.
                             </p>
                         </HiWrapper>
-
+                        <CategoriesList />
                         <GridPosts data={this.state.data} />
 
                         <Button
