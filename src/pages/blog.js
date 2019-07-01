@@ -50,7 +50,7 @@ const HiWrapper = styled.div`
 `
 
 const Button = styled.button`
-    display: ${props => (props.visibility ? "flex" : "none")};
+    display: ${props => (props.visibility === "true" ? "flex" : "none")};
     width: 40%;
     padding: 20px 0px;
     margin: 60px auto 0px;
@@ -93,13 +93,18 @@ class Blog extends Component {
             },
             start: 0,
             end: 6,
-            visibilityButton: true,
+            visibilityButton: "true",
             limit: 3,
         }
     }
 
     componentDidMount() {
         this.renderPosts()
+        if (this.props.data.allMarkdownRemark.nodes.length === 0) {
+            this.setState({
+                visibilityButton: "false",
+            })
+        }
     }
 
     addPosts = () => {
@@ -148,7 +153,7 @@ class Blog extends Component {
                 this.state.end
             ) {
                 this.setState({
-                    visibilityButton: false,
+                    visibilityButton: "false",
                     loading: false,
                 })
             }
@@ -164,31 +169,28 @@ class Blog extends Component {
         return (
             <Layout>
                 <SEO title="Categorías" />
-                    <ContentWrapper>
-                        <HiWrapper>
-                            <h1>¡Tutoriales, consejos y mucho más!</h1>
-                            <p>
-                                Encuentra posts de todos los temas, sabores y
-                                colores. Siempre me ha encantado escribir así
-                                que espero los disfrutes.
-                            </p>
-                        </HiWrapper>
-                        <CategoriesList />
-                        <GridPosts data={this.state.data} />
+                <ContentWrapper>
+                    <HiWrapper>
+                        <h1>¡Tutoriales, consejos y mucho más!</h1>
+                        <p>
+                            Encuentra posts de todos los temas, sabores y
+                            colores. Siempre me ha encantado escribir así que
+                            espero los disfrutes.
+                        </p>
+                    </HiWrapper>
+                    <CategoriesList />
+                    <GridPosts data={this.state.data} />
 
-                        <Button
-                            onClick={() => {
-                                this.renderPosts()
-                            }}
-                            visibility={this.state.visibilityButton}
-                        >
-                            Ver más posts
-                            <FontAwesomeIcon
-                                icon={faSyncAlt}
-                                className="Icon"
-                            />
-                        </Button>
-                    </ContentWrapper>
+                    <Button
+                        onClick={() => {
+                            this.renderPosts()
+                        }}
+                        visibility={this.state.visibilityButton}
+                    >
+                        Ver más posts
+                        <FontAwesomeIcon icon={faSyncAlt} className="Icon" />
+                    </Button>
+                </ContentWrapper>
             </Layout>
         )
     }

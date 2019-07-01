@@ -61,7 +61,7 @@ const HiWrapper = styled.div`
 `
 
 const Button = styled.button`
-    display: ${props => (props.visibility ? "flex" : "none")};
+    display: ${props => (props.visibility === "true" ? "flex" : "none")};
     width: 40%;
     padding: 20px 0px;
     margin: 60px auto 0px;
@@ -104,13 +104,18 @@ class Category extends Component {
             },
             start: 0,
             end: 6,
-            visibilityButton: true,
-            limit: 3,
+            visibilityButton: "true",
+            limit: 15,
         }
     }
 
     componentDidMount() {
         this.renderPosts()
+        if (this.props.data.allMarkdownRemark.nodes.length === 0) {
+            this.setState({
+                visibilityButton: "false",
+            })
+        }
     }
 
     addPosts = () => {
@@ -159,7 +164,7 @@ class Category extends Component {
                 this.state.end
             ) {
                 this.setState({
-                    visibilityButton: false,
+                    visibilityButton: "false",
                     loading: false,
                 })
             }
@@ -172,7 +177,6 @@ class Category extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <Layout>
                 <SEO title="Categorías" />
