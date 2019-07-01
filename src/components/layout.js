@@ -5,6 +5,7 @@ import Media from "react-media"
 import Header from "./HeaderComponents/header"
 import Nav from "./Navbar"
 import BurgerMenu from "./BurgerMenu"
+import Footer from "./footer"
 
 import "../styles/globalStyles.css"
 
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
                 </Media>
                 <Header siteTitle={data.site.siteMetadata.title} />
                 <main>{children}</main>
+                <Footer />
             </>
         )}
     />

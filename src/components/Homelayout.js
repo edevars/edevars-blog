@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from "gatsby"
 import Media from "react-media"
 import Nav from "./Navbar"
 import BurgerMenu from "./BurgerMenu"
+import Footer from "./footer"
+
 import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 
 import "../styles/globalStyles.css"
@@ -24,8 +26,8 @@ const Layout = ({ children }) => (
                 <Media query="(max-width: 768px)">
                     {matches => (matches ? <BurgerMenu /> : <Nav />)}
                 </Media>
-
                 <main>{children}</main>
+                <Footer />
             </>
         )}
     />

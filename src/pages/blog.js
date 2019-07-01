@@ -11,11 +11,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons"
 import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 
-const Wrapper = styled.div`
-    width: 100%;
-    position: absolute;
-`
-
 const ContentWrapper = styled.section`
     display: grid;
     width: 90%;
@@ -72,16 +67,16 @@ const Button = styled.button`
         cursor: pointer;
     }
 
-    .Icon{
+    .Icon {
         align-self: center;
         margin-left: 20px;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         width: 80%;
     }
 
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 425px) {
         width: 90%;
         font-size: 1.2rem;
     }
@@ -169,7 +164,6 @@ class Blog extends Component {
         return (
             <Layout>
                 <SEO title="Categorías" />
-                <Wrapper>
                     <ContentWrapper>
                         <HiWrapper>
                             <h1>¡Tutoriales, consejos y mucho más!</h1>
@@ -189,10 +183,12 @@ class Blog extends Component {
                             visibility={this.state.visibilityButton}
                         >
                             Ver más posts
-                            <FontAwesomeIcon icon={faSyncAlt} className="Icon"/>
+                            <FontAwesomeIcon
+                                icon={faSyncAlt}
+                                className="Icon"
+                            />
                         </Button>
                     </ContentWrapper>
-                </Wrapper>
             </Layout>
         )
     }
