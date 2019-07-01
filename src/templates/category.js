@@ -11,11 +11,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons"
 import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 
-const Wrapper = styled.div`
-    width: 100%;
-    position: absolute;
-`
-
 const ContentWrapper = styled.section`
     display: grid;
     width: 90%;
@@ -52,6 +47,17 @@ const HiWrapper = styled.div`
     p {
         font-size: 1.5rem;
     }
+
+    .category {
+        background: -webkit-linear-gradient(
+            -30deg,
+            #001749 0%,
+            #0e4bdb 30%,
+            #2dddf4 85%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 `
 
 const Button = styled.button`
@@ -72,16 +78,16 @@ const Button = styled.button`
         cursor: pointer;
     }
 
-    .Icon{
+    .Icon {
         align-self: center;
         margin-left: 20px;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         width: 80%;
     }
 
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 425px) {
         width: 90%;
         font-size: 1.2rem;
     }
@@ -166,33 +172,32 @@ class Category extends Component {
     }
 
     render() {
+        console.log(this.props)
         return (
             <Layout>
                 <SEO title="Categorías" />
-                <Wrapper>
-                    <ContentWrapper>
-                        <HiWrapper>
-                            <h1>¡Tutoriales, consejos y mucho más!</h1>
-                            <p>
-                                Encuentra posts de todos los temas, sabores y
-                                colores. Siempre me ha encantado escribir así
-                                que espero los disfrutes.
-                            </p>
-                        </HiWrapper>
-                        <CategoriesList />
-                        <GridPosts data={this.state.data} />
+                <ContentWrapper>
+                    <HiWrapper>
+                        <h1>
+                            Todos los posts de{" "}
+                            <span className="category">
+                                {this.props.pageContext.category}
+                            </span>
+                        </h1>
+                    </HiWrapper>
+                    <CategoriesList />
+                    <GridPosts data={this.state.data} />
 
-                        <Button
-                            onClick={() => {
-                                this.renderPosts()
-                            }}
-                            visibility={this.state.visibilityButton}
-                        >
-                            Ver más posts
-                            <FontAwesomeIcon icon={faSyncAlt} className="Icon"/>
-                        </Button>
-                    </ContentWrapper>
-                </Wrapper>
+                    <Button
+                        onClick={() => {
+                            this.renderPosts()
+                        }}
+                        visibility={this.state.visibilityButton}
+                    >
+                        Ver más posts
+                        <FontAwesomeIcon icon={faSyncAlt} className="Icon" />
+                    </Button>
+                </ContentWrapper>
             </Layout>
         )
     }
