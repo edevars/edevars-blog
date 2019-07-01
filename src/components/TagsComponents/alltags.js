@@ -17,6 +17,10 @@ const getAllTags = data => {
     tag => !clean_tag_list.includes(tag) && clean_tag_list.push(tag)
   )
 
+  if(clean_tag_list.length > 20){
+    clean_tag_list = clean_tag_list.slice(0,20)
+  }
+
   return clean_tag_list
 }
 
