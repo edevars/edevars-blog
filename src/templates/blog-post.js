@@ -16,6 +16,17 @@ const GridWrapper = styled.div`
     p {
         font-size: 21px;
     }
+
+    @media screen and (max-width: 768px) {
+        grid-template-areas: "Info" "Content" "Related";
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 425px) {
+        p {
+            font-size: 1rem;
+        }
+    }
 `
 
 const InfoContainer = styled.div`
@@ -31,12 +42,24 @@ const InfoElements = styled.section`
     position: sticky;
     z-index: 0;
     top: 50px;
+    @media screen and (max-width: 768px) {
+        margin-top: 50px;
+        position: static;
+    }
 `
 
 const ContentContainer = styled.section`
     grid-area: Content;
     padding: 0.5rem;
     padding-top: 4rem;
+    @media screen and (max-width: 768px) {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    @media screen and (max-width: 425px) {
+        width: 90%;
+    }
 `
 
 const RelatedContainer = styled.section`
@@ -47,6 +70,15 @@ const RelatedContainer = styled.section`
     position: sticky;
     z-index: 0;
     top: 50px;
+    @media screen and (max-width: 768px) {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 20px;
+    }
+    @media screen and (max-width: 425px) {
+        width: 90%;
+    }
 `
 
 const Title = styled.h1`
@@ -60,6 +92,9 @@ const Title = styled.h1`
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 425px) {
+        font-size: 2.5rem;
+    }
 `
 
 export default ({ data }) => {
