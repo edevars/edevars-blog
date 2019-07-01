@@ -14,9 +14,13 @@ const StyledFooter = styled.footer`
     margin-top: 100px;
     display: grid;
     grid-template-areas: "Logo Message Icons";
-    grid-template-columns: 1fr 1fr 1fr;
-    font-family: "Comfortaa", cursive;
-    font-size: 2rem;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        grid-template-areas: "Logo" "Message" "Icons";
+        grid-template-columns: 1fr;
+    }
 `
 
 const Logo = styled.div`
@@ -25,17 +29,23 @@ const Logo = styled.div`
     align-items: center;
     justify-content: space-around;
     color: white;
+    font-family: "Comfortaa", cursive;
+    font-size: 2rem;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
     -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    @media screen and (max-width: 768px) {
+        padding: 50px;
+    }
 `
 
 const Message = styled.div`
     grid-area: Message;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -47,8 +57,32 @@ const Message = styled.div`
         padding: 0;
     }
 
+    p {
+        padding-top: 5px;
+        color: #bcd9dd;
+        margin: 0;
+
+        a {
+            color: #2dddf4;
+        }
+    }
+
     .icon {
         color: #2dddf4;
+    }
+
+    .rights {
+        padding-top: 15px;
+        color: white;
+        position: absolute;
+        bottom: 15px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: 50px;
+        h6 {
+            font-size: 1.1rem;
+        }
     }
 `
 
@@ -61,6 +95,12 @@ const IconsContainer = styled.div`
         font-size: 2rem;
         color: white;
     }
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: 70px;
+        width: 280px;
+        margin: 0 auto;
+    }
 `
 
 const Footer = () => (
@@ -69,12 +109,23 @@ const Footer = () => (
         <Message>
             <h6>
                 {" "}
-                Desarrollado con &nbsp;
+                Hecho con &nbsp;
                 <span role="img" aria-label="blue heart">
                     <FontAwesomeIcon className="icon" icon={faHeart} />
                 </span>
                 &nbsp; por Enrique Devars
             </h6>
+            <p>
+                Desarrollado con{" "}
+                <a
+                    href="https://www.gatsbyjs.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Gatsby
+                </a>
+            </p>
+            <p className="rights">@2019 | Todos los derechos reservados</p>
         </Message>
         <IconsContainer>
             <a
