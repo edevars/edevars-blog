@@ -42,7 +42,7 @@ const StyledLink = styled(Link)`
 
 const CategoriesList = () => (
     <List>
-        {categories.map(category => {
+        {categories.map((category, index) => {
             let slug = slugify(category, {
                 replacement: "-",
                 remove: null,
@@ -50,7 +50,7 @@ const CategoriesList = () => (
             })
 
             return (
-                <StyledLink to={`/blog/${slug}`}>
+                <StyledLink to={`/blog/${slug}`} key={index}>
                     <Item>
                         <span>{category}</span>
                     </Item>
