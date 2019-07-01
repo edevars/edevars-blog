@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.section`
     display: grid;
-    width: 85%;
+    width: 90%;
     grid-template: auto auto / 1fr;
     grid-template-areas: "Content" "Posts";
     margin: 0px auto;
@@ -24,6 +24,7 @@ const ContentWrapper = styled.section`
     border-radius: 10px;
     top: -100px;
     padding: 0 10%;
+    padding-bottom: 150px;
     @media screen and (max-width: 1024px) {
         width: 100%;
         position: initial;
@@ -31,21 +32,38 @@ const ContentWrapper = styled.section`
         border: none;
         top: none;
     }
-`
 
-const PostWrapper = styled.div`
-    grid-area: Posts;
-    padding-top: 50px;
-    width: 100%;
 `
 
 const HiWrapper = styled.div`
     max-width: 768px;
     margin: 3rem auto;
+    h1 {
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
 `
 
 const Button = styled.button`
-    display: ${props => (props.visibility ? "initial" : "none")};
+    display: ${props => (props.visibility ? "flex" : "none")};
+    width: 40%;
+    padding: 20px 0px;
+    margin: 60px auto 0px;
+    background: #060695;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    justify-content: center;
+    border: none;
+    outline: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 class Blog extends Component {
@@ -58,8 +76,9 @@ class Blog extends Component {
                 },
             },
             start: 0,
-            end: 10,
+            end: 3,
             visibilityButton: true,
+            limit: 3,
         }
     }
 
@@ -71,10 +90,10 @@ class Blog extends Component {
         let difference =
             this.props.data.allMarkdownRemark.nodes.length - this.state.end
 
-        if (difference > 10) {
+        if (difference > this.state.limit) {
             this.setState({
                 start: this.state.end,
-                end: this.state.end + 10,
+                end: this.state.end + this.state.limit,
             })
         } else {
             this.setState({
@@ -126,25 +145,29 @@ class Blog extends Component {
     }
 
     render() {
-        const lenghtData = this.state.data.allMarkdownRemark.nodes.length
-        console.log(this.state.loading)
         return (
             <Layout>
                 <SEO title="Categorías" />
                 <Wrapper>
                     <ContentWrapper>
-                        {this.state.loading ? (
-                            <h1>Esta cargando</h1>
-                        ) : (
-                            <GridPosts data={this.state.data} />
-                        )}
+                        <HiWrapper>
+                            <h1>¡Tutoriales, consejos y mucho más!</h1>
+                            <p>
+                                Encuentra posts de todos los temas, sabores y
+                                colores. Siempre me ha encantado escribir así
+                                que espero los disfrutes.
+                            </p>
+                        </HiWrapper>
+
+                        <GridPosts data={this.state.data} />
+
                         <Button
                             onClick={() => {
                                 this.renderPosts()
                             }}
                             visibility={this.state.visibilityButton}
                         >
-                            Cargar más
+                            Ver más posts
                         </Button>
                     </ContentWrapper>
                 </Wrapper>
