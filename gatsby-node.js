@@ -55,9 +55,9 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         //Creating page for each category
-        
+
         categories.forEach((category) => {
-            let slug = '/categorias/' + slugify(category, {
+            let slug = '/blog/' + slugify(category, {
                 replacement: '-',
                 remove: null,
                 lower: true

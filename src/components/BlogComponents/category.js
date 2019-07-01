@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { navigate } from "gatsby"
 import slugify from 'slugify'
 
-
 const StyledCategory = styled.div`
     font-size: 24px;
     margin-top: 3.5rem;
@@ -31,7 +30,7 @@ const Category = props => {
             remove: null,
             lower: true
           })
-        const finalSlug = '/categorias/' + slug
+        const finalSlug = '/blog/' + slug
         navigate(finalSlug)
     }
 
