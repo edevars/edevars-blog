@@ -28,12 +28,13 @@ const Content = styled.div`
     padding: 16px 16px 0px 16px;
     p {
         margin: 0px;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         margin-top: 1em;
     }
 
     h5 {
         color: #dddddd;
+        font-weight: normal;
     }
 `
 
@@ -47,22 +48,21 @@ const Title = styled.h4`
 `
 
 const Button = styled.button`
-    font-family: "Roboto", cursive;
-    font-weight: semi-bold;
+    font-family: "Comfortaa", cursive !important;
+    font-weight: 300;
     font-size: 1rem;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 100%;
     height: 3rem;
+    margin-bottom: 2rem;
     outline: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgb(7, 185, 199, 0.95);
-    color: #001749;
     border: none;
     color: white;
-    font-weight: bold;
     &:hover {
         background-image: linear-gradient(
             45deg,
@@ -104,7 +104,9 @@ const PostPreview = props => {
 
                 <p>{excerpt}</p>
             </Content>
-            <Button onClick={handleClick} name="Leer más">Leer más</Button>
+            <Button onClick={handleClick} name="Leer más">
+                Leer más
+            </Button>
         </FlexWrapper>
     )
 }
