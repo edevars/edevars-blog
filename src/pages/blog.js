@@ -6,6 +6,11 @@ import styled from "styled-components"
 import GridPosts from "../components/PostComponents/gridposts"
 import CategoriesList from "../components/PostComponents/CategoriesList"
 
+//Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSyncAlt } from "@fortawesome/free-solid-svg-icons"
+import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
+
 const Wrapper = styled.div`
     width: 100%;
     position: absolute;
@@ -65,6 +70,20 @@ const Button = styled.button`
 
     &:hover {
         cursor: pointer;
+    }
+
+    .Icon{
+        align-self: center;
+        margin-left: 20px;
+    }
+
+    @media screen and (max-width: 768px){
+        width: 80%;
+    }
+
+    @media screen and (max-width: 425px){
+        width: 90%;
+        font-size: 1.2rem;
     }
 `
 
@@ -170,6 +189,7 @@ class Blog extends Component {
                             visibility={this.state.visibilityButton}
                         >
                             Ver más posts
+                            <FontAwesomeIcon icon={faSyncAlt} className="Icon"/>
                         </Button>
                     </ContentWrapper>
                 </Wrapper>
