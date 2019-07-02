@@ -1,10 +1,34 @@
 ---
-  title: "blanditiis voluptatem commodi reprehenderit harum"
+  title: "Explarando como se ve solo con texto y código"
   date: "2015-07-15"
-  tags: ["voluptas","autem","sed"]
+  tags: ["Texto","código","prism"]
   category: "Tecnología"
   imageSlug: "./et-quibusdam-occaecati-rerum-deleniti.jpg"
-  slug: "/blanditiis-voluptatem-commodi-reprehenderit-harum"
+  slug: "/texto"
   readTime: 10
 ---
-qui minus similique qui esse aperiam minima dolorum harum voluptas soluta soluta autem qui autem ad aliquam tempora ipsum mollitia animi et quas in tempora maxime vitae et quaerat facere quaerat quia dolores maxime non sapiente provident aut ea placeat blanditiis facere suscipit incidunt praesentium et qui animi corrupti nisi consequuntur earum officia et ut voluptates sit eos animi blanditiis voluptatem fugiat voluptatem laboriosam et nam minima ut accusantium odio quisquam sit dolorem rem ducimus rerum ab suscipit quod tenetur eos est et est quo veritatis dolores dolorem quia minus ipsam impedit sit aut delectus vero iste aut facere officiis voluptatem ipsum hic laborum cum porro sequi est aut dolores ad voluptatum neque doloremque illo enim provident enim qui eum ducimus nemo culpa velit consequatur autem enim vel eius velit voluptatem reprehenderit dolores sed assumenda molestiae ut unde odit eos at et veniam inventore aut perferendis nemo sint harum ullam consequatur omnis nemo est nihil unde et sed libero voluptatem molestiae doloribus perferendis ut est qui incidunt reiciendis autem laborum hic exercitationem repellendus sequi eaque illum maiores vero aut tempore ipsum ut sapiente eveniet aut sint quaerat facere reprehenderit similique ut eum quis ea repellat nobis nisi quia rerum odio doloremque veritatis architecto qui beatae ut sed animi et vero quia harum minima fugit earum ducimus quia aut quia suscipit laborum beatae incidunt quo eligendi quo enim veniam placeat nostrum praesentium explicabo et dignissimos explicabo qui odit aut quae rerum occaecati doloremque nihil necessitatibus ea perferendis illo et omnis nostrum qui ratione doloremque optio debitis culpa aspernatur sunt aliquam ipsam aut nesciunt magnam et minus voluptatem ipsam repudiandae quo aut id rerum commodi veniam repellendus eaque alias incidunt est corrupti provident maiores dolores earum quia non quidem qui beatae nemo voluptas dolore soluta fuga fuga quis modi et ea omnis odio et cum ut iusto reiciendis qui optio laboriosam dolor est est non nulla aut pariatur aut modi ad fuga provident minus non eos odit quia est veritatis voluptates ut aut at non corporis quae pariatur excepturi occaecati sint quos provident dicta odio tenetur beatae fugit laboriosam eos sit dignissimos mollitia quia ratione molestiae debitis omnis illo aspernatur vel rerum qui culpa non eius qui nihil et atque ex voluptas voluptatem vel recusandae atque minus dignissimos aut soluta iusto perspiciatis est inventore reiciendis consectetur itaque consequatur ea ipsum non sint sed minima deleniti aut debitis quae eos officia magni atque deleniti ducimus voluptatem possimus quasi illum omnis aut libero quo laboriosam asperiores mollitia ut neque aut quo perspiciatis voluptatem aut nemo ipsam molestiae esse iure eos omnis voluptatum qui eligendi qui et recusandae quod sit dolorum velit facere nihil quae occaecati temporibus suscipit blanditiis harum sunt et eligendi mollitia aliquam enim voluptatem et esse sunt officia dolore nemo quam ut et exercitationem veniam enim tempore ea maiores cumque eum aut molestiae odio ut blanditiis ullam et ut est ut rerum corrupti dolor est est accusamus consequuntur explicabo possimus similique sequi consequuntur labore beatae sed quam molestias iusto ab placeat facere
+
+La llama (Lama glama) es un mamífero artiodáctilo doméstico de la familia Camelidae, abundante en la Puna o Altiplano de los Andes de Perú, Bolivia, Chile, Ecuador y Argentina.1​ Fue creado por los pueblos andinos nativos mediante selección artificial a partir del guanaco salvaje que fue domesticado y del cual, por lo tanto, la llama deriva. Según recientes estudios de ADN, esto ocurrió en principio de manera independiente en tiempo y espacio, en sectores del sur del Perú, norte de Chile, oeste de Bolivia y el norte de Argentina.2​ Fue aprovechado al máximo por el imperio Inca: se obtenía carne y lana de él, y era aprovechado como animal de carga (el único antes de la llegada de los españoles a América, si se exceptúan los perros de los trineos inuit o «esquimales»).
+
+## ¿Cómo se puede expresar una llama en código?
+
+```jsx
+class Square extends React.Component {
+  render() {
+    return (
+      <button className="square">
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
+
+&nbsp;
+## La importanciia economica de la llama
+
+Antes de la presencia española, las llamas fueron representadas en la cerámica Mochica (200-600 d. C.) y constituyeron los únicos animales ungulados domésticos del Imperio inca. Fueron apreciados no solamente como bestias de carga, sino también por su carne y las lanas. Hasta la llegada de los españoles, las llamas fueron utilizadas en lugar del caballo, del buey, de la cabra y de las ovejas, animales originarios del Viejo Mundo, pero su escasa eficiencia3​ hizo que fueran rápidamente desplazadas a un segundo plano por estas especies tras la conquista.4​
+
+Eran usadas por todos los pueblos andinos desde Ecuador hasta el archipiélago de Chiloé, en el sur de Chile. Su población antes de la conquista se estima en treinta a cincuenta millones de animales;5​ eran el principal ganado de estas tribus y naciones, gozando de gran consideración —en cambio, había pocos guanacos y alpacas, y la caza de la vicuña estaba prohibida bajo pena de muerte por orden del mismo Sapa Inca—.6​ En comparación, Fernand Braudel estimaba que en la segunda mitad del siglo XVIII había en toda Europa sólo treinta y ocho millones de animales de labor, uno por cada cuatro habitantes.7​
+
+Después de la conquista su población se redujo marcadamente, al igual que la de los indígenas;8​ estos decayeron a un quinto de su población en un siglo y las llamas aún más, a apenas una décima parte.4​ A inicios del siglo XXI hay aproximadamente siete millones de llamas en Sudamérica, otras ciento cincuenta y ocho mil en Estados Unidos y Canadá.9​
