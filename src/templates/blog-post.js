@@ -13,19 +13,19 @@ const GridWrapper = styled.div`
     grid-template-columns: 1fr 50% 1fr;
     grid-template-areas: "Info Content Related";
     margin: 0px auto;
-    p {
-        font-size: 21px;
+
+    p{
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    h2,h3,h4,h5,h6{
+        font-weight: 400;
     }
 
     @media screen and (max-width: 768px) {
         grid-template-areas: "Info" "Content" "Related";
         grid-template-columns: 1fr;
-    }
-
-    @media screen and (max-width: 425px) {
-        p {
-            font-size: 1rem;
-        }
     }
 `
 
@@ -42,9 +42,17 @@ const InfoElements = styled.section`
     position: sticky;
     z-index: 0;
     top: 50px;
+    .mobile {
+        display: none;
+    }
     @media screen and (max-width: 768px) {
+        margin: 0 auto;
         margin-top: 50px;
         position: static;
+        width: 80%;
+        .mobile {
+            display: block;
+        }
     }
 `
 
@@ -55,7 +63,11 @@ const ContentContainer = styled.section`
     @media screen and (max-width: 768px) {
         width: 80%;
         margin: 0 auto;
+        padding: 0;
         padding-top: 20px;
+        .desktop {
+            display: none;
+        }
     }
     @media screen and (max-width: 425px) {
         width: 90%;
@@ -70,6 +82,9 @@ const RelatedContainer = styled.section`
     position: sticky;
     z-index: 0;
     top: 50px;
+    h4{
+        font-weight: bold;
+    }
     @media screen and (max-width: 768px) {
         width: 80%;
         margin: 0 auto;
@@ -83,17 +98,22 @@ const RelatedContainer = styled.section`
 
 const Title = styled.h1`
     display: inline-block;
-    font-size: 72px;
+    font-size: 3rem;
     background: -webkit-linear-gradient(
         -30deg,
         #001749 0%,
         #0e4bdb 30%,
         #2dddf4 85%
     );
+    padding-bottom: 1rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 2.5rem;
+    }
     @media screen and (max-width: 425px) {
         font-size: 2.5rem;
+        margin-bottom: 1.5rem;
     }
 `
 
@@ -107,6 +127,7 @@ export default ({ data }) => {
             <GridWrapper>
                 <InfoContainer>
                     <InfoElements>
+                        <Title className="mobile">{title}</Title>
                         <DateBlock day={day} month={month} year={year} />
                         <Category category={category} />
                         <h4 style={{ marginTop: "1em" }}>
@@ -119,7 +140,7 @@ export default ({ data }) => {
                 </InfoContainer>
 
                 <ContentContainer>
-                    <Title>{title}</Title>
+                    <Title className="desktop">{title}</Title>
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </ContentContainer>
                 <div>
