@@ -7,7 +7,6 @@ module.exports = {
         author: `Enrique Devars`,
     },
     plugins: [
-        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -71,5 +70,7 @@ module.exports = {
                 pathToConfigModule: `src/utils/typography`,
             },
         },
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-offline`,
     ],
 }
