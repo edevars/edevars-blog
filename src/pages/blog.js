@@ -32,6 +32,7 @@ const ContentWrapper = styled.section`
         box-shadow: initial;
         border: none;
         top: none;
+        padding: 0 5%;
     }
 `
 
