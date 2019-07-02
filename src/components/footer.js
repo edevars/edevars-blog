@@ -132,6 +132,7 @@ const Footer = () => (
                 href="https://github.com/edevars"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Conoce mi Github"
             >
                 <FontAwesomeIcon className="icon" icon={faGithub} />
             </a>
@@ -139,6 +140,7 @@ const Footer = () => (
                 href="https://twitter.com/enrique_devars"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Sigueme en twitter"
             >
                 <FontAwesomeIcon className="icon" icon={faTwitter} />
             </a>
@@ -146,6 +148,7 @@ const Footer = () => (
                 href="https://www.instagram.com/edevars/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Sigueme en Instagram"
             >
                 <FontAwesomeIcon className="icon" icon={faInstagram} />
             </a>
