@@ -47,6 +47,7 @@ module.exports = {
                             noInlineHighlight: false,
                         },
                     },
+                    `gatsby-remark-responsive-iframe`,
                 ],
             },
         },
