@@ -75,7 +75,7 @@ class BurgerMenu extends Component {
     render() {
         return (
             <Wrapper>
-                <StyledBurger onClick={this.handleClick} name="Menu">
+                <StyledBurger onClick={this.handleClick} aria-label="Menu" role="button">
                     <FontAwesomeIcon
                         icon={faBars}
                         style={{ fontSize: "21px", color: "white" }}

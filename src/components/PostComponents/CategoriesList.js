@@ -20,11 +20,14 @@ const Item = styled.li`
     font-size: 16px;
     text-align: center;
     padding: 5px 20px;
-    border: 1px solid #737c90;
+    background: #0000ff;
+    border: none;
     border-radius: 100px;
-    color: #737c90;
-    list-style-type: none;
+    list-style-type: none;    color: #ffffff;
 
+    span {
+        font-weight: bold;
+    }
     &:hover {
         cursor: pointer;
         background: #47c9e5;
@@ -35,8 +38,10 @@ const Item = styled.li`
 `
 
 const StyledLink = styled(Link)`
+    color: #ffffff;
     &:hover {
         text-decoration: none;
+        color: #ffffff;
     }
 `
 
@@ -50,11 +55,11 @@ const CategoriesList = () => (
             })
 
             return (
-                <StyledLink to={`/blog/${slug}`} key={index}>
-                    <Item>
+                <Item>
+                    <StyledLink to={`/blog/${slug}`} key={index}>
                         <span>{category}</span>
-                    </Item>
-                </StyledLink>
+                    </StyledLink>
+                </Item>
             )
         })}
     </List>

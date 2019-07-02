@@ -60,9 +60,9 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(7, 185, 199, 0.95);
+    background: rgba(7, 185, 199, 0.95);
     border: none;
-    color: white;
+    color: #FFFFFF;
     &:hover {
         background-image: linear-gradient(
             45deg,
@@ -71,6 +71,7 @@ const Button = styled.button`
         );
         cursor: pointer;
         box-shadow: initial;
+        color: white;
     }
 `
 
