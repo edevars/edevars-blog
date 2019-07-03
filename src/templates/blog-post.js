@@ -77,6 +77,7 @@ const ContentContainer = styled.section`
 const RelatedContainer = styled.section`
     grid-area: Related;
     padding-left: 50px;
+    padding-right: 50px;
     margin-top: 5rem;
     position: -webkit-sticky;
     position: sticky;
