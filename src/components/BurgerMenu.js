@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 
 const Wrapper = styled.div`
     position: relative;
@@ -34,7 +34,7 @@ const StyledBurger = styled.button`
 
 const Menu = styled.nav`
     position: fixed;
-    background: rgb(7, 185, 199, .95);
+    background: rgb(7, 185, 199, 0.95);
     z-index: 2;
     top: 0;
     bottom: 0;
@@ -49,13 +49,14 @@ const Menu = styled.nav`
     transition: 0.3s;
 `
 
-const LinkItem = styled(Link)`
+const Button = styled.button`
     text-decoration: none;
     color: white;
     font-size: 2rem;
     margin: 2rem 0;
     padding: 20px;
     border: 1px solid white;
+    background: none;
 `
 
 class BurgerMenu extends Component {
@@ -75,20 +76,64 @@ class BurgerMenu extends Component {
     render() {
         return (
             <Wrapper>
-                <StyledBurger onClick={this.handleClick} aria-label="Menu" role="button">
+                <StyledBurger
+                    onClick={this.handleClick}
+                    aria-label="Menu"
+                    role="button"
+                >
                     <FontAwesomeIcon
                         icon={faBars}
                         style={{ fontSize: "21px", color: "white" }}
                     />
                 </StyledBurger>
                 <Menu isActive={this.state.isActive}>
-                    <LinkItem to="/">Home</LinkItem>
+                    <Button
+                        onClick={event => {
+                            event.preventDefault()
+                            this.setState({
+                                isActive: false,
+                            })
+                            navigate("/")
+                        }}
+                    >
+                        Home
+                    </Button>
 
-                    <LinkItem to="/blog">Blog & tutoriales</LinkItem>
+                    <Button
+                        onClick={event => {
+                            event.preventDefault()
+                            this.setState({
+                                isActive: false,
+                            })
+                            navigate("/blog")
+                        }}
+                    >
+                        Blog & tutoriales
+                    </Button>
 
-                    <LinkItem to="/sobre-mi">¿quién soy yo?</LinkItem>
+                    <Button
+                        onClick={event => {
+                            event.preventDefault()
+                            this.setState({
+                                isActive: false,
+                            })
+                            navigate("/sobre-mi")
+                        }}
+                    >
+                        ¿quién soy yo?
+                    </Button>
 
-                    <LinkItem to="/contactame">¡contactame!</LinkItem>
+                    <Button
+                        onClick={event => {
+                            event.preventDefault()
+                            this.setState({
+                                isActive: false,
+                            })
+                            navigate("/contactame")
+                        }}
+                    >
+                        ¡contactame!
+                    </Button>
                 </Menu>
             </Wrapper>
         )
