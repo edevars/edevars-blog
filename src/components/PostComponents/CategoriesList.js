@@ -16,15 +16,13 @@ const List = styled.ul`
         margin-bottom: 50px;
     }
 `
-const Item = styled.li`
+const Item = styled.div`
     font-size: 16px;
     text-align: center;
-    padding: 5px 20px;
     background: #0000ff;
     border: none;
     border-radius: 100px;
-    list-style-type: none;    color: #ffffff;
-
+    list-style-type: none;
     span {
         font-weight: bold;
     }
@@ -39,6 +37,8 @@ const Item = styled.li`
 
 const StyledLink = styled(Link)`
     color: #ffffff;
+    display: inline-block;
+    padding: 5px 15px;
     &:hover {
         text-decoration: none;
         color: #ffffff;
