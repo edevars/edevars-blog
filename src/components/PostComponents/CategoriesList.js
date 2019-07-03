@@ -16,7 +16,7 @@ const List = styled.ul`
         margin-bottom: 50px;
     }
 `
-const Item = styled.div`
+const Item = styled.li`
     font-size: 16px;
     text-align: center;
     background: #0000ff;
