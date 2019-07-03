@@ -54,7 +54,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "production": "gatsby build && gatsby serve"
+    "production": "gatsby build && gatsby serve",
+    "populate":  "node ./src/populate/index.js"
   },
   "repository": {
     "type": "git",

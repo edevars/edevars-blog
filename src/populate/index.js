@@ -6,7 +6,7 @@ const download = require("./download")
 const mainDirectory = "posts"
 create.mainDirectory(mainDirectory)
 
-const LIMIT = 50
+const LIMIT = 1
 let markdownObjects = []
 
 for (let index = 0; index < LIMIT; index++) {
@@ -34,7 +34,7 @@ async function DescargarImagenes(){
 }
 
 CrearDirectorios()
-CrearMarkdowns()
 DescargarImagenes()
+CrearMarkdowns()
 
 
