@@ -7,7 +7,7 @@ const Nav = styled.nav`
     flex-flow: row wrap;
     align-items: center;
     width: 100%;
-    background-color: #0f3572;
+    background-color: #060695;
     @media screen and (max-width: 768px) {
         display: none;
     }
