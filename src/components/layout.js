@@ -9,7 +9,7 @@ import Footer from "./footer"
 
 import "../styles/globalStyles.css"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, header }) => (
     <StaticQuery
         query={graphql`
             query SiteTitleQuery {
@@ -25,7 +25,9 @@ const Layout = ({ children }) => (
                 <Media query="(max-width: 768px)">
                     {matches => (matches ? <BurgerMenu /> : <Nav />)}
                 </Media>
-                <Header siteTitle={data.site.siteMetadata.title} />
+                {header ? (
+                    <Header siteTitle={data.site.siteMetadata.title} />
+                ) : null}
                 <main>{children}</main>
                 <Footer />
             </>

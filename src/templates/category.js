@@ -57,7 +57,7 @@ const HiWrapper = styled.div`
 class Category extends Component {
     render() {
         return (
-            <Layout>
+            <Layout header={true}>
                 <SEO title="Categorías" />
                 <ContentWrapper>
                     <HiWrapper>

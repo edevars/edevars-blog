@@ -123,7 +123,7 @@ export default ({ data }) => {
     const { title, tags, date, readTime, category } = post.frontmatter
     const { day, month, year } = formatShort(date)
     return (
-        <Layout>
+        <Layout header={true}>
             <SEO title={title} description={post.excerpt} keywords={tags} />
             <GridWrapper>
                 <InfoContainer>

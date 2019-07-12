@@ -48,7 +48,7 @@ const MarginContainer = styled.div`
 const Tags = ({ data, pageContext }) => {
 
     return (
-        <Layout>
+        <Layout header={true}>
             <SEO title="Tags" />
             <GridWrapper>
             <ContentWrapper>

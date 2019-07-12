@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/Homelayout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components';
 import logo from '../images/404.png'
