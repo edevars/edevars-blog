@@ -42,7 +42,7 @@ const StyledLink = styled(Link)`
     align-items: center;
     p {
         font-size: 12px;
-        color: ${props => (props.active ? "white" : "#bebebec5")};
+        color: ${props => (props.active === "true" ? "white" : "#bebebec5")};
         margin-bottom: 0;
     }
 `
@@ -53,52 +53,50 @@ class BurgerMenu extends Component {
         switch (this.props.isActive) {
             case "Home":
                 this.state = {
-                    Home: true,
-                    Blog: false,
-                    About: false,
-                    Contact: false,
+                    Home: "true",
+                    Blog: null,
+                    About: null,
+                    Contact: null,
                 }
                 break
 
             case "Blog":
                 this.state = {
-                    Home: false,
-                    Blog: true,
-                    About: false,
-                    Contact: false,
+                    Home: null,
+                    Blog: "true",
+                    About: null,
+                    Contact: null,
                 }
                 break
             case "Sobre-mi":
                 this.state = {
-                    Home: false,
-                    Blog: false,
-                    About: true,
-                    Contact: false,
+                    Home: null,
+                    Blog: null,
+                    About: "true",
+                    Contact: null,
                 }
                 break
 
             case "Contactame":
                 this.state = {
-                    Home: false,
-                    Blog: false,
-                    About: false,
-                    Contact: true,
+                    Home: null,
+                    Blog: null,
+                    About: null,
+                    Contact: "true",
                 }
                 break
 
             default:
                 this.state = {
-                    Home: false,
-                    Blog: false,
-                    About: false,
-                    Contact: false,
+                    Home: null,
+                    Blog: null,
+                    About: null,
+                    Contact: null,
                 }
                 break
         }
     }
     render() {
-        console.log("Es desde el navbar", this.props.isActive)
-        console.log("Este es el estado", this.state)
         return (
             <Wrapper>
                 <Menu>
