@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faHome,
-    faFeatherAlt,
+    faEdit,
     faUser,
     faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
@@ -32,7 +32,7 @@ const Menu = styled.nav`
 const StyledFontAwesome = styled(FontAwesomeIcon)`
     margin-top: 5px;
     font-size: 32px;
-    color: ${props => (props.active ? "white" : "#bebebec5")};
+    color: ${props => (props.active ? "white" : "#daebff62")};
 `
 
 const StyledLink = styled(Link)`
@@ -42,7 +42,7 @@ const StyledLink = styled(Link)`
     align-items: center;
     p {
         font-size: 12px;
-        color: ${props => (props.active === "true" ? "white" : "#bebebec5")};
+        color: ${props => (props.active === "true" ? "white" : "#daebff62")};
         margin-bottom: 0;
     }
 `
@@ -99,7 +99,7 @@ class BurgerMenu extends Component {
     render() {
         return (
             <Wrapper>
-                <Menu>
+               <Menu>
                     <StyledLink to="/" active={this.state.Home}>
                         <StyledFontAwesome
                             size="lg"
@@ -111,7 +111,7 @@ class BurgerMenu extends Component {
                     <StyledLink to="/blog" active={this.state.Blog}>
                         <StyledFontAwesome
                             size="lg"
-                            icon={faFeatherAlt}
+                            icon={faEdit}
                             active={this.state.Blog}
                         />
                         <p>Blog</p>
