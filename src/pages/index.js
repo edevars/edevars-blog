@@ -306,7 +306,7 @@ const GridContainer = styled.div`
 `
 
 const IndexPage = () => (
-    <Layout>
+    <Layout isActive="Home">
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Hero>
             <Media query="(max-width: 768px)">
