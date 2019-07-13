@@ -20,6 +20,7 @@ const StyledFooter = styled.footer`
         height: auto;
         grid-template-areas: "Logo" "Message" "Icons";
         grid-template-columns: 1fr;
+        margin-bottom: 64px;
     }
 `
 
