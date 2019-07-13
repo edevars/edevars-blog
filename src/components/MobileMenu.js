@@ -24,14 +24,12 @@ const Menu = styled.nav`
     z-index: 2;
     bottom: 0;
     width: 100vw;
-    height: 64px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 12px;
 `
 const StyledFontAwesome = styled(FontAwesomeIcon)`
-    margin-top: 5px;
-    font-size: 32px;
     color: ${props => (props.active ? "white" : "#daebff62")};
 `
 
@@ -102,7 +100,7 @@ class BurgerMenu extends Component {
                <Menu>
                     <StyledLink to="/" active={this.state.Home}>
                         <StyledFontAwesome
-                            size="lg"
+                            size="sm"
                             icon={faHome}
                             active={this.state.Home}
                         />
@@ -110,7 +108,7 @@ class BurgerMenu extends Component {
                     </StyledLink>
                     <StyledLink to="/blog" active={this.state.Blog}>
                         <StyledFontAwesome
-                            size="lg"
+                            size="sm"
                             icon={faEdit}
                             active={this.state.Blog}
                         />
@@ -118,7 +116,7 @@ class BurgerMenu extends Component {
                     </StyledLink>
                     <StyledLink to="/sobre-mi" active={this.state.About}>
                         <StyledFontAwesome
-                            size="lg"
+                            size="sm"
                             icon={faUser}
                             active={this.state.About}
                         />
@@ -126,7 +124,7 @@ class BurgerMenu extends Component {
                     </StyledLink>
                     <StyledLink to="/contactame" active={this.state.Contact}>
                         <StyledFontAwesome
-                            size="lg"
+                            size="sm"
                             icon={faEnvelope}
                             active={this.state.Contact}
                         />
