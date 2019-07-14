@@ -55,8 +55,8 @@ const CategoriesList = () => (
             })
 
             return (
-                <Item>
-                    <StyledLink to={`/blog/${slug}`} key={index}>
+                <Item key={slug}>
+                    <StyledLink to={`/blog/${slug}`}>
                         <span>{category}</span>
                     </StyledLink>
                 </Item>
