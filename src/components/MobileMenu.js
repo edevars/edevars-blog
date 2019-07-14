@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import nprogress from "nprogress"
 
 const Wrapper = styled.div`
     position: relative;
@@ -94,11 +95,24 @@ class BurgerMenu extends Component {
                 break
         }
     }
+
+    handleChangePage = () => {
+        nprogress.start()
+    }
+
+    componentWillUnmount() {
+        nprogress.done()
+    }
+
+    componentWillUpdate() {
+        nprogress.done()
+    }
+
     render() {
         return (
             <Wrapper>
-               <Menu>
-                    <StyledLink to="/" active={this.state.Home}>
+                <Menu>
+                    <StyledLink to="/" active={this.state.Home} onClick={this.handleChangePage}>
                         <StyledFontAwesome
                             size="sm"
                             icon={faHome}
@@ -106,7 +120,7 @@ class BurgerMenu extends Component {
                         />
                         <p>Inicio</p>
                     </StyledLink>
-                    <StyledLink to="/blog" active={this.state.Blog}>
+                    <StyledLink to="/blog" active={this.state.Blog} onClick={this.handleChangePage}>
                         <StyledFontAwesome
                             size="sm"
                             icon={faEdit}
@@ -114,7 +128,7 @@ class BurgerMenu extends Component {
                         />
                         <p>Blog</p>
                     </StyledLink>
-                    <StyledLink to="/sobre-mi" active={this.state.About}>
+                    <StyledLink to="/sobre-mi" active={this.state.About} onClick={this.handleChangePage}>
                         <StyledFontAwesome
                             size="sm"
                             icon={faUser}
@@ -122,7 +136,7 @@ class BurgerMenu extends Component {
                         />
                         <p>Sobre mi</p>
                     </StyledLink>
-                    <StyledLink to="/contactame" active={this.state.Contact}>
+                    <StyledLink to="/contactame" active={this.state.Contact} onClick={this.handleChangePage}>
                         <StyledFontAwesome
                             size="sm"
                             icon={faEnvelope}
