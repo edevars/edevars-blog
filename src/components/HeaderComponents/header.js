@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
@@ -17,7 +16,7 @@ const Wrapper = styled.header`
     z-index: 0;
     background: #060695;
     height: 300px;
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) {
         height: 20vh;
         justify-content: center;
         min-height: 150px;
@@ -41,12 +40,12 @@ const Title = styled.h1`
     display: inline-block;
     margin: 0 !important;
     padding-top: 40px;
-    padding-bottom: .7rem;
+    padding-bottom: 0.7rem;
     position: relative;
     z-index: 1;
     color: white;
 
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) {
         padding-top: initial;
         padding-bottom: initial;
     }
@@ -63,26 +62,13 @@ const Subtitle = styled.h2`
     z-index: 1;
 `
 
-const HeadLink = styled(Link)`
-    color: white;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
-`
-
 const Header = ({ siteTitle }) => (
     <Wrapper>
         <Image>
             <HeaderImage />
         </Image>
-        <HeadLink to="/">
-            <Title>{siteTitle}</Title>
-        </HeadLink>
-        <HeadLink to="/">
-            <Subtitle>De tecnología y más...</Subtitle>
-        </HeadLink>
+        <Title>{siteTitle}</Title>
+        <Subtitle>De tecnología y más...</Subtitle>
     </Wrapper>
 )
 
