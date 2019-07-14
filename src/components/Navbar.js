@@ -1,6 +1,7 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import nprogress from "nprogress"
 
 const Nav = styled.nav`
     display: flex;
@@ -64,23 +65,53 @@ const LinkItem = styled(Link)`
     }
 `
 
-const Navbar = () => (
-    <Nav>
-        <List>
-            <Item>
-                <LinkItem to="/">home</LinkItem>
-            </Item>
-            <Item>
-                <LinkItem to="/blog">Blog & tutoriales</LinkItem>
-            </Item>
-            <Item>
-                <LinkItem to="/sobre-mi">¿quién soy yo?</LinkItem>
-            </Item>
-            <Item>
-                <LinkItem to="/contactame">¡contactame!</LinkItem>
-            </Item>
-        </List>
-    </Nav>
-)
+class Navbar extends Component {
+    handleChangePage = () => {
+        nprogress.start()
+    }
+
+    componentWillUnmount() {
+        nprogress.done()
+    }
+
+    componentWillUpdate(){
+        nprogress.done()
+    }
+
+    render() {
+        return (
+            <Nav>
+                <List>
+                    <Item>
+                        <LinkItem to="/" onClick={this.handleChangePage}>
+                            home
+                        </LinkItem>
+                    </Item>
+                    <Item>
+                        <LinkItem to="/blog" onClick={this.handleChangePage}>
+                            Blog & tutoriales
+                        </LinkItem>
+                    </Item>
+                    <Item>
+                        <LinkItem
+                            to="/sobre-mi"
+                            onClick={this.handleChangePage}
+                        >
+                            ¿quién soy yo?
+                        </LinkItem>
+                    </Item>
+                    <Item>
+                        <LinkItem
+                            to="/contactame"
+                            onClick={this.handleChangePage}
+                        >
+                            ¡contactame!
+                        </LinkItem>
+                    </Item>
+                </List>
+            </Nav>
+        )
+    }
+}
 
 export default Navbar
