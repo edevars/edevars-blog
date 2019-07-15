@@ -19,7 +19,7 @@ const List = styled.ul`
 const Item = styled.li`
     font-size: 16px;
     text-align: center;
-    background: #0000ff;
+    background: #070E8C;
     border: none;
     border-radius: 100px;
     list-style-type: none;
