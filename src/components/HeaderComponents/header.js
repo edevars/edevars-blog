@@ -9,6 +9,7 @@ const Wrapper = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     top: 0;
@@ -16,9 +17,9 @@ const Wrapper = styled.header`
     left: 0;
     bottom: 0;
     z-index: 0;
-    background: #060695;
-    height: 300px;
-    @media screen and (max-width: 1024px) {
+    background-color: #000;
+    height: 400px;
+    @media screen and (max-width: 768px) {
         height: 20vh;
         justify-content: center;
         min-height: 150px;
@@ -33,48 +34,54 @@ const Image = styled.div`
     left: 0;
     bottom: 0;
     z-index: 0;
-    opacity: 0.6;
+    opacity: 0.3;
+`
+
+const TitleWrapper = styled.div`
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `
 
 const Title = styled.h1`
     font-family: "Comfortaa", cursive !important;
-    font-size: 3.5rem !important;
-    display: inline-block;
-    margin: 0 !important;
-    padding-top: 40px;
-    padding-bottom: 0.7rem;
-    position: relative;
-    z-index: 1;
     color: white;
-
-    @media screen and (max-width: 1024px) {
-        padding-top: initial;
-        padding-bottom: initial;
-    }
+    font-size: 3.5rem;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 `
 
 const Subtitle = styled.h2`
     font-family: "Comfortaa", cursive !important;
-    font-size: 1rem !important;
-    border-bottom: 2px solid white !important;
+    font-size: 1.225rem;
+    border-bottom: 1px solid white !important;
     padding-bottom: 4px !important;
     color: white;
     display: inline-block;
-    position: relative;
-    z-index: 1;
 `
 
 const Header = ({ siteTitle }) => (
     <Wrapper>
         <Image>
-            <Media query="(max-width: 768px)">
+            <Media query="(max-width: 600px)">
                 {matches =>
                     matches ? <HeaderImageMobile /> : <HeaderImageDesktop />
                 }
             </Media>
         </Image>
-        <Title>{siteTitle}</Title>
-        <Subtitle>De tecnología y más...</Subtitle>
+        <TitleWrapper>
+            <Title>{siteTitle}</Title>
+            <Subtitle>De tecnología y más...</Subtitle>
+        </TitleWrapper>
     </Wrapper>
 )
 

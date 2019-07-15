@@ -8,7 +8,12 @@ const Nav = styled.nav`
     flex-flow: row wrap;
     align-items: center;
     width: 100%;
-    background-color: #060695;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(6, 6, 149, 0.376);;
     @media screen and (max-width: 768px) {
         display: none;
     }
