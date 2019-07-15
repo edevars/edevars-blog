@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
 const Menu = styled.nav`
     position: fixed;
-    background: #001749;
+    background: #070e8c;
     z-index: 2;
     bottom: 0;
     width: 100vw;
@@ -112,7 +112,11 @@ class BurgerMenu extends Component {
         return (
             <Wrapper>
                 <Menu>
-                    <StyledLink to="/" active={this.state.Home} onClick={this.handleChangePage}>
+                    <StyledLink
+                        to="/"
+                        active={this.state.Home}
+                        onClick={this.handleChangePage}
+                    >
                         <StyledFontAwesome
                             size="sm"
                             icon={faHome}
@@ -120,7 +124,11 @@ class BurgerMenu extends Component {
                         />
                         <p>Inicio</p>
                     </StyledLink>
-                    <StyledLink to="/blog" active={this.state.Blog} onClick={this.handleChangePage}>
+                    <StyledLink
+                        to="/blog"
+                        active={this.state.Blog}
+                        onClick={this.handleChangePage}
+                    >
                         <StyledFontAwesome
                             size="sm"
                             icon={faEdit}
@@ -128,7 +136,11 @@ class BurgerMenu extends Component {
                         />
                         <p>Blog</p>
                     </StyledLink>
-                    <StyledLink to="/sobre-mi" active={this.state.About} onClick={this.handleChangePage}>
+                    <StyledLink
+                        to="/sobre-mi"
+                        active={this.state.About}
+                        onClick={this.handleChangePage}
+                    >
                         <StyledFontAwesome
                             size="sm"
                             icon={faUser}
@@ -136,7 +148,11 @@ class BurgerMenu extends Component {
                         />
                         <p>Sobre mi</p>
                     </StyledLink>
-                    <StyledLink to="/contactame" active={this.state.Contact} onClick={this.handleChangePage}>
+                    <StyledLink
+                        to="/contactame"
+                        active={this.state.Contact}
+                        onClick={this.handleChangePage}
+                    >
                         <StyledFontAwesome
                             size="sm"
                             icon={faEnvelope}
