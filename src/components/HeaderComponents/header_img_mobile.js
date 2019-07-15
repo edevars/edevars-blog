@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 export default () => (
     <StaticQuery
         query={graphql`
-            query HeaderImage {
+            query HeaderImageMobile {
                 imageHeader: file(relativePath: { eq: "bg-nav.jpg" }) {
                     childImageSharp {
                         fluid(

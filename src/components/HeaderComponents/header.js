@@ -1,7 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import HeaderImage from "./header_img"
+import Media from "react-media"
+import HeaderImageMobile from "./header_img_mobile"
+import HeaderImageDesktop from "./header_img_desktop"
 
 const Wrapper = styled.header`
     display: flex;
@@ -65,7 +67,11 @@ const Subtitle = styled.h2`
 const Header = ({ siteTitle }) => (
     <Wrapper>
         <Image>
-            <HeaderImage />
+            <Media query="(max-width: 768px)">
+                {matches =>
+                    matches ? <HeaderImageMobile /> : <HeaderImageDesktop />
+                }
+            </Media>
         </Image>
         <Title>{siteTitle}</Title>
         <Subtitle>De tecnología y más...</Subtitle>
