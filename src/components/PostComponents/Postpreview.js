@@ -62,19 +62,10 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(7, 185, 199, 0.95);
+    background: linear-gradient(to right, #030640 0%, #0A13BF 30%);
     border: none;
     color: #FFFFFF;
-    &:hover {
-        background-image: linear-gradient(
-            45deg,
-            rgb(14, 75, 219),
-            rgb(45, 179, 244)
-        );
-        cursor: pointer;
-        box-shadow: initial;
-        color: white;
-    }
+    cursor: pointer;
 `
 
 const TagContainer = styled.div`
