@@ -56,7 +56,7 @@ module.exports = {
                 name: `edevars Blog`,
                 short_name: `edevars`,
                 start_url: `/`,
-                background_color: `#07034e`,
+                background_color: `#ffffff`,
                 theme_color: `#07034e`,
                 display: "standalone",
                 icon: `src/images/icon.png`,
