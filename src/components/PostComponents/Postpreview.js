@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
+import nprogress from "nprogress"
 import Tags from "../TagsComponents/tags"
 import PostImage from "./postImage"
+
 
 const FlexWrapper = styled.div`
     display: flex;
@@ -84,6 +86,7 @@ const PostPreview = props => {
     const { title, date, tags, excerpt, slug, readTime, relativePath } = props
     const handleClick = () => {
         const nav = "/blog" + slug
+        nprogress.start()
         navigate(nav)
     }
 
