@@ -9,7 +9,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 
 const StyledFooter = styled.footer`
-    background: #060695;
+    background: #030526;
     height: 200px;
     margin-top: 100px;
     display: grid;
