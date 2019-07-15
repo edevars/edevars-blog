@@ -128,11 +128,12 @@ const Welcome = styled.div`
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    background-color: #001749;
+    background: linear-gradient( #030640, #0A13BF);
     -webkit-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     -moz-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
 
+    
     .programmer {
         height: 580px;
         width: 580px;
@@ -140,6 +141,7 @@ const Welcome = styled.div`
     }
 
     @media screen and (max-width: 768px) {
+        background: #030640;
         .programmer {
             height: 425px;
             width: 425px;
