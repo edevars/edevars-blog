@@ -6,8 +6,16 @@ import Header from "./HeaderComponents/header"
 import Nav from "./NavComponents/Navbar"
 import MobileMenu from "./NavComponents/MobileMenu"
 import Footer from "./footer"
+import styled from 'styled-components';
 
 import "../styles/globalStyles.css"
+
+const StyledLayout = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; 
+`;
 
 class Layout extends Component {
     render() {
@@ -24,7 +32,7 @@ class Layout extends Component {
                     }
                 `}
                 render={data => (
-                    <>
+                    <StyledLayout>
                         <Media query="(max-width: 768px)">
                             {matches =>
                                 matches ? (
@@ -41,7 +49,7 @@ class Layout extends Component {
                         ) : null}
                         <main>{children}</main>
                         <Footer />
-                    </>
+                    </StyledLayout>
                 )}
             />
         )
