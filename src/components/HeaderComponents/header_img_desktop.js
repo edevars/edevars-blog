@@ -11,9 +11,8 @@ export default () => (
                         fluid(
                             maxWidth: 1920
                             quality: 80
-                            traceSVG: { color: "rgb(45, 179, 244)" }
                         ) {
-                            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                            ...GatsbyImageSharpFluid
                         }
                     }
                 }
