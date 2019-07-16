@@ -3,14 +3,13 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Media from "react-media"
 import Header from "./HeaderComponents/header"
-import Nav from "./Navbar"
-import MobileMenu from "./MobileMenu"
+import Nav from "./NavComponents/Navbar"
+import MobileMenu from "./NavComponents/MobileMenu"
 import Footer from "./footer"
 
 import "../styles/globalStyles.css"
 
 class Layout extends Component {
-
     render() {
         const { children, header } = this.props
         return (
