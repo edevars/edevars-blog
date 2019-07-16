@@ -43,14 +43,7 @@ const HiWrapper = styled.div`
     }
 
     .category {
-        background: -webkit-linear-gradient(
-            -30deg,
-            #001749 0%,
-            #0e4bdb 30%,
-            #2dddf4 85%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #0a13bf;
     }
 `
 
