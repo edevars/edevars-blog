@@ -7,6 +7,7 @@ import HomeImage from "../components/HomeComponents/HomeImage"
 import HomeImageMobileMedium from "../components/HomeComponents/HomeImageMobileMedium"
 import HomeImageMobileSmall from "../components/HomeComponents/HomeImageMobileSmall"
 import programmer from "../images/programmer.png"
+import { Link } from "gatsby"
 
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -21,7 +22,6 @@ import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
 const Hero = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
     overflow: hidden;
     top: 0;
@@ -42,12 +42,35 @@ const TitleWrapper = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: 100%;
+    height: 100%;
+
+    h3 {
+        color: white;
+        font-size: 3.5rem;
+        user-select: text;
+        max-width: 90%;
+        align-self: center;
+    }
+
+    @media screen and (max-width: 425px) {
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
 `
 
 const Title = styled.h1`
@@ -60,13 +83,14 @@ const Title = styled.h1`
     margin-bottom: 15px;
 
     #letter-d {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px   #2dddf4,
-            0 0 30px   #2dddf4, 0 0 30px   #2dddf4, 0 0 40px   #2dddf4,
-            0 0 60px   #2dddf4;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #2dddf4,
+            0 0 30px #2dddf4, 0 0 30px #2dddf4, 0 0 40px #2dddf4,
+            0 0 60px #2dddf4;
     }
 
     @media screen and (max-width: 425px) {
         font-size: 5rem;
+        margin-top: 0px;
     }
 
     @media screen and (max-width: 320px) {
@@ -81,10 +105,12 @@ const Subtitle = styled.h2`
     padding-bottom: 4px !important;
     color: white;
     letter-spacing: 10px;
+    margin-bottom: 150px;
 
     @media screen and (max-width: 425px) {
         font-size: 1.12rem;
         letter-spacing: 4px;
+        margin-bottom: 100px;
     }
 
     @media screen and (max-width: 320px) {
@@ -169,7 +195,7 @@ const Message = styled.div`
         font-weight: 300;
         text-align: justify;
     }
-    h3 {
+    h4 {
         font-size: 3rem;
         color: white;
     }
@@ -183,7 +209,7 @@ const Message = styled.div`
             font-weight: 300;
             text-align: justify;
         }
-        h3 {
+        h4 {
             font-size: 2rem;
             color: white;
         }
@@ -198,7 +224,7 @@ const InformativeIcons = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    h3 {
+    h4 {
         font-family: "Comfortaa", cursive !important;
         display: inline-block;
         font-size: 3rem;
@@ -210,7 +236,7 @@ const InformativeIcons = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        h3 {
+        h4 {
             font-size: 2rem;
             margin-top: 70px;
             margin-bottom: 70px;
@@ -231,7 +257,7 @@ const GridContainer = styled.div`
         display: flex;
         flex-direction: column;
 
-        h4 {
+        h5 {
             color: #0f3572;
             font-size: 1.5rem;
             max-width: 320px;
@@ -339,6 +365,7 @@ const IndexPage = () => (
                     e<span id="letter-d">d</span>evars
                 </Title>
                 <Subtitle>de tecnología y más</Subtitle>
+                <h3>Mejora tus habilidades como developer cada día</h3>
             </TitleWrapper>
         </Hero>
         <Content>
@@ -352,39 +379,55 @@ const IndexPage = () => (
                     />
                 </picture>
                 <Message>
-                    <h3>Nada es tan difícil como parece</h3>
+                    <h4>Nada es tan difícil como parece</h4>
                     <p>
-                        Sé que iniciar en el camino para convertirte en
+                        Sé que iniciar el camino para convertirte en
                         desarrollador puede ser complicado y algunas veces
-                        frustrante. Para eso he creado este espacio en el que
-                        espero poder <span>ayudarte</span> con tips, tutoriales
-                        y proyectos, que me han servido a lo largo del tiempo
-                        para amar la asombrosa industria de la tecnología.
+                        frustrante, pero no estás solo en esto. He creado este
+                        espacio para poder <span>ayudarte</span> con cosas que
+                        he aprendido del mundo de la tecnología.
                     </p>
                 </Message>
             </Welcome>
             <InformativeIcons>
-                <h3>¿Qué podrás encontrar aquí?</h3>
+                <h4>¿Qué podrás encontrar aquí?</h4>
                 <GridContainer>
                     <div className="Description">
-                        <h4>¡Mucho código!</h4>
-                        <div className="IconContainer">
-                            <FontAwesomeIcon icon={faCode} className="Icon" />
-                        </div>
+                        <h5>¡Mucho código!</h5>
+                        <Link
+                            style={{
+                                alignSelf: "center",
+                            }}
+                            to="/blog"
+                        >
+                            <div className="IconContainer">
+                                <FontAwesomeIcon
+                                    icon={faCode}
+                                    className="Icon"
+                                />
+                            </div>
+                        </Link>
                         <p>
                             ¿Alguna vez te has preguntado cómo es que funciona
-                            todo Internet? Ve cómo funcionan tus tecnologías
-                            favoritas de una manera sencilla y amigable.
+                            todo Internet? Conoce tus tecnologías favoritas de
+                            una manera sencilla y amigable.
                         </p>
                     </div>
                     <div className="Description">
-                        <h4>Tutoriales</h4>
-                        <div className="IconContainer">
-                            <FontAwesomeIcon
-                                icon={faFileAlt}
-                                className="Icon"
-                            />
-                        </div>
+                        <h5>Tutoriales</h5>
+                        <Link
+                            style={{
+                                alignSelf: "center",
+                            }}
+                            to="/blog"
+                        >
+                            <div className="IconContainer">
+                                <FontAwesomeIcon
+                                    icon={faFileAlt}
+                                    className="Icon"
+                                />
+                            </div>
+                        </Link>
                         <p>
                             La programación no tiene que ser difícil. Aprendamos
                             a hacer proyectos divertidos completamente desde
@@ -392,27 +435,45 @@ const IndexPage = () => (
                         </p>
                     </div>
                     <div className="Description">
-                        <h4>Crecimiento personal</h4>
-                        <div className="IconContainer">
-                            <FontAwesomeIcon
-                                icon={faSeedling}
-                                className="Icon"
-                            />
-                        </div>
+                        <h5>Crecimiento personal</h5>
+                        <Link
+                            style={{
+                                alignSelf: "center",
+                            }}
+                            to="/blog"
+                        >
+                            <div className="IconContainer">
+                                <FontAwesomeIcon
+                                    icon={faSeedling}
+                                    className="Icon"
+                                />
+                            </div>
+                        </Link>
                         <p>
-                            No todo en esta vida es código. Interioriza y mejora
-                            quien eres para disfrutar este mundo al máximo.
+                            No todo en esta vida es código. Incrementa tus
+                            habilidades blandas para mejorar tu carrera
+                            profesional.
                         </p>
                     </div>
                     <div className="Description">
-                        <h4>Hacks</h4>
-                        <div className="IconContainer">
-                            <FontAwesomeIcon icon={faFlask} className="Icon" />
-                        </div>
+                        <h5>Hacks</h5>
+                        <Link
+                            style={{
+                                alignSelf: "center",
+                            }}
+                            to="/blog"
+                        >
+                            <div className="IconContainer">
+                                <FontAwesomeIcon
+                                    icon={faFlask}
+                                    className="Icon"
+                                />
+                            </div>
+                        </Link>
                         <p>
                             Pequeños consejos de como mejorar tu entorno de
                             desarrollo. Incrementa tu creatividad y
-                            productividad.
+                            productividad en cada aspecto.
                         </p>
                     </div>
                 </GridContainer>
