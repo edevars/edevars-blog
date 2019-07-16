@@ -54,7 +54,7 @@ const TitleWrapper = styled.div`
 const Title = styled.h1`
     font-family: "Comfortaa", cursive !important;
     color: white;
-    font-size: 3.5rem;
+    font-size: 4rem;
     display: inline-block;
     padding: 0;
     margin: 0;
@@ -64,6 +64,20 @@ const Title = styled.h1`
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #2dddf4,
             0 0 20px #2dddf4, 0 0 15px #2dddf4, 0 0 20px #2dddf4,
             0 0 40px #2dddf4;
+    }
+`
+
+const Subtitle = styled.h2`
+    font-family: "Comfortaa", cursive !important;
+    font-size: 1rem;
+    padding-bottom: 4px !important;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: 3px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 `
 
@@ -80,6 +94,7 @@ const Header = ({ siteTitle }) => (
             <Title>
                 e<span id="letter-d">d</span>evars
             </Title>
+            <Subtitle>de tecnología y más</Subtitle>
         </TitleWrapper>
     </Wrapper>
 )
