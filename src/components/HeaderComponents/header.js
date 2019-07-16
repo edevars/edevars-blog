@@ -58,15 +58,13 @@ const Title = styled.h1`
     display: inline-block;
     padding: 0;
     margin: 0;
-`
+    margin-bottom: 5px;
 
-const Subtitle = styled.h2`
-    font-family: "Comfortaa", cursive !important;
-    font-size: 1.225rem;
-    border-bottom: 1px solid white !important;
-    padding-bottom: 4px !important;
-    color: white;
-    display: inline-block;
+    #letter-d {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #2dddf4,
+            0 0 20px #2dddf4, 0 0 15px #2dddf4, 0 0 20px #2dddf4,
+            0 0 40px #2dddf4;
+    }
 `
 
 const Header = ({ siteTitle }) => (
@@ -79,8 +77,9 @@ const Header = ({ siteTitle }) => (
             </Media>
         </Image>
         <TitleWrapper>
-            <Title>{siteTitle}</Title>
-            <Subtitle>De tecnología y más...</Subtitle>
+            <Title>
+                e<span id="letter-d">d</span>evars
+            </Title>
         </TitleWrapper>
     </Wrapper>
 )
