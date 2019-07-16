@@ -3,9 +3,9 @@ import styled from "styled-components"
 import Media from "react-media"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HomeImage from "../components/HomeImage"
-import HomeImageMobileMedium from "../components/HomeImageMobileMedium"
-import HomeImageMobileSmall from "../components/HomeImageMobileSmall"
+import HomeImage from "../components/HomeComponents/HomeImage"
+import HomeImageMobileMedium from "../components/HomeComponents/HomeImageMobileMedium"
+import HomeImageMobileSmall from "../components/HomeComponents/HomeImageMobileSmall"
 import programmer from "../images/programmer.png"
 
 // Font Awesome
