@@ -7,12 +7,10 @@ const Tag = styled.div`
     display: inline-block;
     background-color: #0073D7;
     color: white;
-    padding: 2px 8px;
-    margin-right: 10px;
+    padding: 0px 10px;
+    border-radius: 45px;
     margin-bottom: 10px;
-    transform: skew(-10deg);
-    vertical-align: middle;
-
+    margin-right: 10px;
     &:hover {
         cursor: pointer;
     }
@@ -21,9 +19,9 @@ const Tag = styled.div`
         font-family: "Comfortaa", cursive;
         font-size: 12px;
         font-weight: bold;
-        transform: skew(10deg);
         user-select: none;
         text-align: center;
+        margin: 0;
     }
 `
 

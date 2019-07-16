@@ -62,7 +62,7 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #030640 0%, #0A13BF 30%);
+    background: linear-gradient(to right, #030640 0%, #0A13BF 30%, #0A13BF 70%, #030640 100%);
     border: none;
     color: #FFFFFF;
     cursor: pointer;
