@@ -100,15 +100,7 @@ const RelatedContainer = styled.section`
 const Title = styled.h1`
     display: inline-block;
     font-size: 3rem;
-    background: -webkit-linear-gradient(
-        -30deg,
-        #001749 0%,
-        #0e4bdb 30%,
-        #2dddf4 85%
-    );
-    padding-bottom: 1rem;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0a13bf;
     @media screen and (max-width: 768px) {
         margin-bottom: 2.5rem;
     }
