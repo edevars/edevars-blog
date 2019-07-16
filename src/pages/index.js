@@ -31,7 +31,6 @@ const Hero = styled.div`
     z-index: 0;
     height: 100vh;
     background: #000;
-    box-shadow: 0px 10px 23px -23px rgba(219, 219, 219, 1);
     -webkit-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     -moz-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
@@ -58,6 +57,13 @@ const Title = styled.h1`
     display: inline-block;
     padding: 0;
     margin: 0;
+    margin-bottom: 15px;
+
+    #letter-d {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px   #2dddf4,
+            0 0 30px   #2dddf4, 0 0 30px   #2dddf4, 0 0 40px   #2dddf4,
+            0 0 60px   #2dddf4;
+    }
 
     @media screen and (max-width: 425px) {
         font-size: 5rem;
@@ -69,19 +75,21 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.h2`
-    font-family: "Comfortaa", cursive !important;
-    font-size: 2.8rem;
-    border-bottom: 2px solid white !important;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: inline-block;
     padding-bottom: 4px !important;
     color: white;
-    display: inline-block;
+    letter-spacing: 10px;
 
     @media screen and (max-width: 425px) {
-        font-size: 1.736rem;
+        font-size: 1.12rem;
+        letter-spacing: 4px;
     }
 
     @media screen and (max-width: 320px) {
-        font-size: 1.4rem;
+        font-size: 1rem;
+        letter-spacing: 3px;
     }
 `
 
@@ -95,16 +103,8 @@ const Content = styled.section`
         margin: 170px 0px;
         font-size: 3rem;
         align-self: center;
-        background: -webkit-linear-gradient(
-            -30deg,
-            #001749 0%,
-            #0e4bdb 30%,
-            #2dddf4 85%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        border-bottom: 3px solid #0f3572;
-        border-top: 3px solid #0f3572;
+        border-bottom: 3px solid #2dddf4;
+        border-top: 3px solid #2dddf4;
         padding: 25px 20px;
         color: #0f3572;
     }
@@ -128,12 +128,11 @@ const Welcome = styled.div`
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    background: linear-gradient( #030640, #0A13BF);
+    background: linear-gradient(#030640, #0a13bf);
     -webkit-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     -moz-box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
     box-shadow: 0px 0px 40px -10px rgba(15, 53, 114, 1);
 
-    
     .programmer {
         height: 580px;
         width: 580px;
@@ -336,8 +335,10 @@ const IndexPage = () => (
             </Media>
 
             <TitleWrapper>
-                <Title>edevars</Title>
-                <Subtitle>De tecnología y más...</Subtitle>
+                <Title>
+                    e<span id="letter-d">d</span>evars
+                </Title>
+                <Subtitle>de tecnología y más</Subtitle>
             </TitleWrapper>
         </Hero>
         <Content>
