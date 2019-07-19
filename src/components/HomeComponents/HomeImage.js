@@ -9,7 +9,7 @@ const HomeImage = () => (
                 file(name: { eq: "bg-nav" }) {
                     childImageSharp {
                         fluid(
-                            maxWidth: 1080
+                            maxWidth: 1920
                             quality: 80
                         ) {
                             ...GatsbyImageSharpFluid
