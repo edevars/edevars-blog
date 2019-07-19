@@ -106,12 +106,10 @@ const Subtitle = styled.h2`
     padding-bottom: 4px !important;
     color: white;
     letter-spacing: 10px;
-    margin-bottom: 150px;
 
     @media screen and (max-width: 425px) {
         font-size: 1.12rem;
         letter-spacing: 4px;
-        margin-bottom: 100px;
     }
 
     @media screen and (max-width: 320px) {
@@ -124,30 +122,26 @@ const Content = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    .quote {
-        font-family: "Comfortaa", cursive !important;
-        display: inline-block;
-        margin: 170px 0px;
-        font-size: 3rem;
-        align-self: center;
-        border-bottom: 3px solid #2dddf4;
-        border-top: 3px solid #2dddf4;
-        padding: 25px 20px;
-        color: #0f3572;
-    }
+`
+const Quote = styled.span`
+    font-family: "Comfortaa", cursive !important;
+    display: inline-block;
+    margin: 170px 0px;
+    font-size: 3rem;
+    align-self: center;
+    border-bottom: 3px solid #2dddf4;
+    border-top: 3px solid #2dddf4;
+    padding: 25px 20px;
+    color: #0f3572;
 
     @media screen and (max-width: 425px) {
-        .quote {
-            font-size: 1.8rem;
-            margin: 120px 0px;
-        }
+        font-size: 1.8rem;
+        margin: 120px 0px;
     }
 
     @media screen and (max-width: 375px) {
-        .quote {
-            font-size: 1.3rem;
-            padding: 15px 10px;
-        }
+        font-size: 1.3rem;
+        padding: 15px 10px;
     }
 `
 
@@ -438,17 +432,15 @@ const IndexPage = () => (
                     )
                 }
             </Media>
-
             <TitleWrapper>
                 <Title>
                     e<span id="letter-d">d</span>evars
                 </Title>
                 <Subtitle>de tecnología y más</Subtitle>
-                <h3>Mejora tus habilidades como developer cada día</h3>
             </TitleWrapper>
         </Hero>
         <Content>
-            <h2 className="quote">Eres lo que aprendes</h2>
+            <Quote>Eres lo que aprendes</Quote>
             <Welcome>
                 <picture>
                     <img
