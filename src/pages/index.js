@@ -338,7 +338,7 @@ const About = styled.div`
     width: 100%;
     margin-top: 120px;
     color: white;
-    background: rgba(15, 53, 114, 1);
+    background: #030640;
     display: grid;
     grid-template-areas: "ProfileImage Title" "ProfileImage Description";
     padding: 50px 0%;
