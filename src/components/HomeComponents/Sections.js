@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 
-const StyledSections = styled.section`
+const StyledSections = styled.article`
     display: flex;
     flex-direction: column;
     width: 100%;

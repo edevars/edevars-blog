@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import programmer from "../../images/programmer.png"
 
-const WelcomeContainer = styled.div`
+const WelcomeContainer = styled.article`
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
