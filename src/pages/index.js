@@ -8,6 +8,7 @@ import HomeImageMobileMedium from "../components/HomeComponents/HomeImageMobileM
 import HomeImageMobileSmall from "../components/HomeComponents/HomeImageMobileSmall"
 import programmer from "../images/programmer.png"
 import { Link } from "gatsby"
+import ProfileImage from "../components/profileImage"
 
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -182,12 +183,13 @@ const Welcome = styled.div`
 `
 
 const Message = styled.div`
-    width: 30%;
+    width: 40%;
     color: white;
     padding: 3rem 0px;
     line-height: 2rem;
     span {
         font-weight: 400;
+        margin: auto 0;
     }
 
     p {
@@ -248,8 +250,8 @@ const InformativeIcons = styled.div`
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 200px;
-    grid-row-gap: 100px;
+    grid-column-gap: 20vw;
+    grid-row-gap: 5vw;
     align-self: center;
 
     .Description {
@@ -299,7 +301,7 @@ const GridContainer = styled.div`
     }
 
     @media screen and (max-width: 425px) {
-        grid-row-gap: 50px;
+        grid-rdescriptionow-gap: 50px;
         .Description {
             h4 {
                 color: #0f3572;
@@ -335,6 +337,83 @@ const GridContainer = styled.div`
                 }
             }
         }
+    }
+`
+
+const About = styled.div`
+    width: 100%;
+    margin-top: 120px;
+    color: white;
+    background: rgba(15, 53, 114, 1);
+    display: grid;
+    grid-template-areas: "ProfileImage Title" "ProfileImage Description";
+    padding: 50px 0%;
+    grid-template-columns: 40% auto;
+    h5 {
+        grid-area: Title;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    a {
+        color: #2dddf4;
+    }
+
+    .Description {
+        grid-area: Description;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 425px) {
+        grid-template-areas:
+            "Title"
+            "ProfileImage"
+            "Description";
+        grid-template-columns: 1fr;
+        h5 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+    }
+`
+
+const ProfileBox = styled.div`
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    min-width: 300px;
+    min-height: 300px;
+    @media screen and (max-width: 425px) {
+        min-width: 200px;
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+`
+
+const ProfileFlex = styled.div`
+    grid-area: ProfileImage;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (max-width: 425px) {
+        justify-content: center;
     }
 `
 
@@ -379,13 +458,18 @@ const IndexPage = () => (
                     />
                 </picture>
                 <Message>
-                    <h4>Nada es tan difícil como parece</h4>
+                    <h4>¿Te gustaría ser un developer? </h4>
                     <p>
-                        Sé que iniciar el camino para convertirte en
-                        desarrollador puede ser complicado y algunas veces
-                        frustrante, pero no estás solo en esto. He creado este
-                        espacio para poder <span>ayudarte</span> con cosas que
-                        he aprendido del mundo de la tecnología.
+                        Iniciemos juntos este viaje para dominar una de las
+                        profesiones más solicitadas del mundo. Créeme, no es tan
+                        difícil como parece. Así que innova, desarrolla y crea
+                        con todo lo que he hecho para ti.
+                        <br />
+                        <br /> Y si ya eres developer, siempre se puede aprender
+                        algo nuevo.
+                        <br />
+                        <br />
+                        <span>¡Empieza ahora mismo!</span>
                     </p>
                 </Message>
             </Welcome>
@@ -478,6 +562,39 @@ const IndexPage = () => (
                     </div>
                 </GridContainer>
             </InformativeIcons>
+            <About>
+                <ProfileFlex>
+                    <ProfileBox>
+                        <ProfileImage />
+                    </ProfileBox>
+                </ProfileFlex>
+                <h5>¿Por qué edevars?</h5>
+                <div className="Description">
+                    <p>
+                        ¡Hola! Mi nombre es <strong>Enrique Devars</strong>, y
+                        mi nickname en todo lo relacionado con la web es{" "}
+                        <strong>edevars</strong>, llevo más de 7 años
+                        dedicándome a desarrollar software en diferentes
+                        lenguajes de programación. Amo el mundo de la tecnología
+                        y me encantaría poder compartir esta pasión contigo.
+                    </p>
+                    <p>
+                        Es por eso que he creado este espacio, para que
+                        encuentres muchas utilidades, consejos y trucos sobre
+                        cómo ser un mejor desarrollador.
+                    </p>
+                    <p>
+                        De todo corazón espero poderte ayudarte a que tu camino
+                        para ser programador sea mucho más sencillo. Si hay algo
+                        en lo que te pueda ayudar, no dudes en
+                        <a href="mailto:enrique.devars@gmail.com">
+                            {" "}
+                            escribirme
+                        </a>
+                        .
+                    </p>
+                </div>
+            </About>
         </Content>
     </Layout>
 )
