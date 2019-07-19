@@ -10,18 +10,15 @@ import Category from "../components/BlogComponents/category"
 
 const GridWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 50% 1fr;
+    grid-template-columns: 1fr 630px 1fr;
     grid-template-areas: "Info Content Related";
     margin: 0px auto;
-
+    grid-column-gap: 100px;
     p{
-        font-size: 1.1rem;
+        font-size: 21px;
         line-height: 2rem;
     }
 
-    h2,h3,h4,h5,h6{
-        font-weight: 400;
-    }
 
     @media screen and (max-width: 768px) {
         grid-template-areas: "Info" "Content" "Related";
@@ -30,18 +27,21 @@ const GridWrapper = styled.div`
 `
 
 const InfoContainer = styled.div`
-    grid-area: Info;
+
 `
 
 const InfoElements = styled.section`
     margin-top: 100px;
+    margin-left:auto; 
+    margin-right:0;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: -webkit-sticky;
     position: sticky;
     z-index: 0;
-    top: 50px;
+    width: 300px;
+    top: 70px;
     .mobile {
         display: none;
     }
@@ -60,29 +60,26 @@ const ContentContainer = styled.section`
     grid-area: Content;
     padding: 0.5rem;
     padding-top: 4rem;
+    width: 630px;
+    margin: 0 auto;
+    width: 100%;
     @media screen and (max-width: 768px) {
-        width: 80%;
-        margin: 0 auto;
-        padding: 0;
+        padding: 24px;
         padding-top: 20px;
         .desktop {
             display: none;
         }
     }
-    @media screen and (max-width: 425px) {
-        width: 90%;
-    }
 `
 
 const RelatedContainer = styled.section`
     grid-area: Related;
-    padding-left: 50px;
-    padding-right: 50px;
     margin-top: 5rem;
     position: -webkit-sticky;
     position: sticky;
     z-index: 0;
     top: 50px;
+    width: 400px;
     h4{
         font-weight: bold;
     }
