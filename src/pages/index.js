@@ -7,10 +7,11 @@ import Welcome from "../components/HomeComponents/Welcome"
 import Sections from "../components/HomeComponents/Sections"
 import About from "../components/HomeComponents/About"
 
-const Content = styled.main`
+const Content = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 250px;
 `
 const Quote = styled.p`
     font-family: "Comfortaa", cursive !important;
