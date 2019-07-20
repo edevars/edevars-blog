@@ -28,6 +28,12 @@ Es impresionante el nivel de modificaciones que le puedes hacer. En Windows usua
 
 Al contrario Linux te permite modificar cada aspecto. ¿No te gusta cómo se ve? Entonces lo puedes modificar tú mismo hasta que quede a tu gusto. Y esto no solamente es referente a lo estético, también puedes cambiar aspectos importantes del sistema como lo pueden ser qué programas se ejecutan cada cierto tiempo o la gestión de usuarios. Es como ir al mercado, comprar todas las cosas que te gustan y siempre llevarlas contigo.
 
+Por ejemplo, así luce mi el escritorio de mi computadora. El sistema operativo que uso es Fedora 30.
+
+![Escritorio](./desktop1.png "Escritorio")
+
+![Menu de aplicaciones](./desktop2.png "Menu de aplicaciones")
+
 ### Comodidad al momento de desarrollar
 
 En la mayoría de sistemas Linux, los compiladores y herramientas para empezar a programar ya vienen configuradas. Y si no lo están es muy sencillo de instalarlas, con un par de líneas de comandos en la terminal tendrás perfectamente configurado node js, python, etc. Olvida esos errores de compatibilidad que sucedían en Windows.
@@ -48,8 +54,8 @@ Si lo quieres ver de manera más sencilla, imagina que el kernel de Linux es com
 
 Así que te invito a que seas valiente y pruebes alguna de las muchas distribuciones que existen. Si ya estás completamente decidido de querer usar Linux, te recomiendo algunas de las distribuciones ideales para iniciar.
 
-- Ubuntu
-- Fedora
-- Linux Mint
-- Zorin OS
-- Elementary OS
+- [Ubuntu](https://ubuntu.com/)
+- [Fedora](https://getfedora.org/)
+- [Linux Mint](https://linuxmint.com/)
+- [Zorin OS](https://zorinos.com/)
+- [Elementary OS](https://elementary.io/)
