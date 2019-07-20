@@ -1,8 +1,9 @@
 import Typography from "typography"
 import moragaTheme from "typography-theme-moraga"
 
-const typography = new Typography(moragaTheme)
+moragaTheme.headerFontFamily = ["Open Sans","sans-serif"]
+moragaTheme.headerWeight = 400
 
-export const { scale, rhythm, options } = typography
+const typography = new Typography(moragaTheme)
 
 export default typography
