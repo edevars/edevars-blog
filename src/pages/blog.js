@@ -8,7 +8,7 @@ import ContentWrapper from "../components/BlogComponents/contentWrapper"
 
 
 const HiWrapper = styled.div`
-    max-width: 768px;
+    max-width: 800px;
     margin: 3rem auto;
     margin-bottom: 2rem;
     h1 {
