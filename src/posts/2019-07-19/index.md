@@ -8,7 +8,7 @@
   readTime: 10
 ---
 
-Seguramente has escuchado hablar de Linux, esa alternativa open source que se enfrenta a Windows y Apple en el mundo de los sistemas operativos. Sin embargo lo que muchos no saben es que Linux está en todas partes, desde tu teléfono móvil, router y básicamente la mayor parte del Internet está construido con él. Tan solo en el 2015 más del 67% de servidores públicos en Internet usaban Linux, impresionante ¿no?
+Seguramente has escuchado hablar de Linux, esa alternativa Open Source que se enfrenta a Windows y Apple en el mundo de los sistemas operativos. Sin embargo lo que muchos no saben es que Linux está en todas partes, desde tu teléfono móvil, router y básicamente la mayor parte del Internet está construido con él. Tan solo en el 2015 más del 67% de servidores públicos en Internet usaban Linux, impresionante ¿no?
 
 Linux es una agrupación de diferentes sistemas operativos open source, que son desarrollados por una comunidad enorme de entusiastas programadores, e incluso algunos cuentan con el respaldo de empresas importantes, como es el caso de Fedora que es apoyado por Red Hat.
 
@@ -18,7 +18,7 @@ Como te mencione antes Linux está básicamente en todo, así que mientras más 
 
 El familiarizarte a esta clase de sistemas al inicio puede llegar a ser algo complicado, pues no estamos acostumbrados a revisar diferentes aspectos de nuestro sistema, como lo puede ser configurar los drivers manualmente, usar la terminal o hacer particiones de disco para instalar correctamente el sistema. Normalmente la dinámica que se sigue en Windows o Apple es dar click en “siguiente” a todo, hasta que se instale automáticamente (lo que no siempre pasa).
 
-Sé que en este momento puedes estar pensando ¿para qué necesito aprenderlo si es mucho más complicado? Pero la realidad es que las bondades que nos ofrece Linux son infinitas. Desde la compatibilidad que tiene con diferentes lenguajes de programación, la extrema configuración que llega a tener para adaptarse a tus necesidades, o el simple hecho de que es gratis y abierto a todo el mundo, son cualidades que lo hacen muy atractivo.
+Sé que en este momento puedes estar pensando ¿para qué necesito aprenderlo si es mucho más complicado? Pero la realidad es que las bondades que nos ofrece Linux son infinitas. Desde la compatibilidad que tiene con diferentes lenguajes de programación, la profunda configuración que llega a tener para adaptarse a tus necesidades, o el simple hecho de que es gratis y abierto a todo el mundo, son cualidades que lo hacen muy atractivo.
 
 Pero si aún no estás convencido, aquí te dejo una lista con las cosas que más me gustan de Linux.
 
@@ -28,7 +28,7 @@ Es impresionante el nivel de modificaciones que le puedes hacer. En Windows usua
 
 Al contrario Linux te permite modificar cada aspecto. ¿No te gusta cómo se ve? Entonces lo puedes modificar tú mismo hasta que quede a tu gusto. Y esto no solamente es referente a lo estético, también puedes cambiar aspectos importantes del sistema como lo pueden ser qué programas se ejecutan cada cierto tiempo o la gestión de usuarios. Es como ir al mercado, comprar todas las cosas que te gustan y siempre llevarlas contigo.
 
-Por ejemplo, así luce mi el escritorio de mi computadora. El sistema operativo que uso es Fedora 30.
+Por ejemplo, así luce el escritorio de mi computadora. El sistema operativo que uso es Fedora 30.
 
 ![Escritorio](./desktop1.png "Escritorio")
 
@@ -36,7 +36,7 @@ Por ejemplo, así luce mi el escritorio de mi computadora. El sistema operativo 
 
 ### Comodidad al momento de desarrollar
 
-En la mayoría de sistemas Linux, los compiladores y herramientas para empezar a programar ya vienen configuradas. Y si no lo están es muy sencillo de instalarlas, con un par de líneas de comandos en la terminal tendrás perfectamente configurado node js, python, etc. Olvida esos errores de compatibilidad que sucedían en Windows.
+En la mayoría de sistemas Linux, los compiladores y herramientas para empezar a programar ya vienen configuradas. Y si no lo están es muy sencillo de instalarlas, con un par de líneas de comandos en la terminal tendrás perfectamente configurado Node JS, Python, etc. Olvida esos errores de compatibilidad que sucedían en Windows.
 
 Además la integración con sistemas de control como lo es Git, es muy fácil de configurar, nunca me había sentido tan cómodo programando en un sistema operativo cómo lo hago en Linux.
 
@@ -44,7 +44,7 @@ Además la integración con sistemas de control como lo es Git, es muy fácil de
 
 Si tienes un equipo viejo el cual ya no sea veloz con las nuevas versiones de Windows, no dudes ni un solo instante en darle una nueva vida con Linux. 
 
-Recuerdo que cuando iba en la preparatoria no tenía la mejor computadora del mundo, era una laptop emachines (ya ni siquiera existe esa marca). Sólo contaba con 2 gb de ram y un procesador intel celeron, sin embargo decidí usar ubuntu en ese equipo y hasta el día de hoy sigue funcionando de maravilla. ¿Te imaginas lo rápido que sería tu equipo si usaras Linux?
+Recuerdo que cuando iba en la preparatoria no tenía la mejor computadora del mundo, era una laptop emachines (ya ni siquiera existe esa marca). Sólo contaba con 2 gb de ram y un procesador intel celeron, sin embargo decidí usar Ubuntu en ese equipo y hasta el día de hoy sigue funcionando de maravilla. ¿Te imaginas lo rápido que sería tu equipo si usaras Linux?
 
 ### Gran variedad para elegir
 
