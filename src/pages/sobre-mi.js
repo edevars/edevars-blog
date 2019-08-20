@@ -12,6 +12,10 @@ const Title = styled.h1`
     font-family: "Comfortaa", cursive;
     font-size: 3rem;
     text-align: center;
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        padding: 0px 20px;
+    }
 `
 
 const Subtitle = styled.h2`
@@ -19,6 +23,11 @@ const Subtitle = styled.h2`
     text-align: justify;
     line-height: 2.6rem;
     margin: 50px auto;
+    @media screen and (max-width: 768px) {
+        font-size: 1.4rem;
+        margin: 50px 50px 150px;
+        line-height: 2rem;
+    }
 `
 
 const AboutArticle = styled.article`
@@ -34,16 +43,20 @@ const AboutArticle = styled.article`
         h3 {
             font-family: "Comfortaa", cursive;
             color: white;
-            font-size: 2.4rem;
+            font-size: 2rem;
             text-align: center;
         }
         p {
-            @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
-            font-family: 'Karla', sans-serif;
+            @import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+            font-family: "Karla", sans-serif;
             font-size: 1.2rem;
             font-weight: lighter;
             color: #d1d1d1;
         }
+    }
+
+    @media screen and (max-width: 425px) {
+        padding: 60px 30px;
     }
 `
 
@@ -58,7 +71,7 @@ const About = () => (
             </Title>
 
             <Subtitle>
-                La forma en la que aprendí a programar fue muy complicada y no
+                La forma en la que aprendí a programar fue muy complicada, y no
                 quiero que te pase eso a ti. Espero que juntos aprendamos mucho
                 sobre tecnología y que nos divirtamos haciéndolo.
             </Subtitle>
@@ -75,7 +88,7 @@ const About = () => (
                     el Instituto Politécnico Nacional en la Ciudad de México. Me
                     apasiona crear, innovar y sobre todo transformar con código
                     la vida de las personas, soy un firme creyente que el
-                    software es capaz mejorar nuestra sociedad.
+                    software es capaz de mejorar nuestra sociedad.
                 </p>
                 <p>
                     Mis lenguajes de programación favoritos son Javascript y

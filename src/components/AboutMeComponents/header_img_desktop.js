@@ -8,10 +8,7 @@ export default () => (
             query HeaderAboutMeDesktop {
                 imageHeader: file(relativePath: { eq: "cover-about.jpg" }) {
                     childImageSharp {
-                        fluid(
-                            maxWidth: 1920
-                            quality: 80
-                        ) {
+                        fluid(maxWidth: 3898, quality: 90) {
                             ...GatsbyImageSharpFluid
                         }
                     }
@@ -19,7 +16,15 @@ export default () => (
             }
         `}
         render={data => {
-            return <Img fluid={data.imageHeader.childImageSharp.fluid} />
+            return (
+                <Img
+                    fluid={data.imageHeader.childImageSharp.fluid}
+                    style={{
+                        height: "100%",
+                        width: "100%",
+                    }}
+                />
+            )
         }}
     />
 )
