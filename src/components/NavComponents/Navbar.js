@@ -102,7 +102,7 @@ class Navbar extends Component {
                             to="/sobre-mi"
                             onClick={this.handleChangePage}
                         >
-                            ¿quién soy yo?
+                            Sobre mi
                         </LinkItem>
                     </Item>
                     <Item>
