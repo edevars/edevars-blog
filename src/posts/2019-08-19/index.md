@@ -8,8 +8,6 @@ slug: "/python-introduccion"
 readTime: 10
 ---
 
-![Portada](./coverPython.png)
-
 ## ¡Te doy la bienvenida a este curso de Python! 🎉🐍
 
 

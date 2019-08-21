@@ -8,8 +8,6 @@ slug: "/python-configuracion"
 readTime: 5
 ---
 
-![Portada](./coverPython.png)
-
 Antes de empezar a aprender a programar en Python primero necesitamos hacer unas cuantas cosas para poder usarlo. Lo primero que podemos hacer es ver si lo tenemos instalado. Si usas linux abre tu terminal, si tienes windows abre el símbolo del sistema (lo puedes buscar como CMD) y ejecuta el siguiente comando:
 
 ```bash
