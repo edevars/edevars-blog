@@ -4,6 +4,7 @@ import {
     faTwitter,
     faGithub,
     faInstagram,
+    faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
@@ -129,6 +130,14 @@ const Footer = () => (
             <p className="rights">@2019 | Todos los derechos reservados</p>
         </Message>
         <IconsContainer>
+            <a
+                href="https://www.linkedin.com/in/enrique-devars-a8ab55116"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Sigueme en Instagram"
+            >
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+            </a>
             <a
                 href="https://github.com/edevars"
                 target="_blank"
