@@ -10,7 +10,7 @@ readTime: 10
 
 ![Portada](./coverPython.png)
 
-## ¡Te Doy la bienvenida a este curso de Python! 🎉🐍
+## ¡Te doy la bienvenida a este curso de Python! 🎉🐍
 
 
 Antes de empezar debemos preguntarnos **¿Qué  #$%! es Python?**
