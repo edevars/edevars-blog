@@ -75,3 +75,11 @@ Para comprobar si tu instalación es correcta solo necesitas ejecutar de nuevo e
 python --version
 ```
 
+# Elige un IDE
+
+Por último necesitas tener un IDE para poder programar tus scripts de Python, personalmente prefiero [Visual Studio Code](https://code.visualstudio.com), pero te dejo estas alternativas para que empieces a escribir tus primeros programas:
+
+- [Atom](https://atom.io)
+- [PyCharm](https://www.jetbrains.com/pycharm)
+- [Sublime Text](https://www.sublimetext.com)
+
