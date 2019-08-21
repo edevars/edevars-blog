@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Python"
-date: "2019-08-21"
+date: "2019-08-19"
 tags: ["Python", "Desarrollo", "Programación"]
 category: "Tutoriales"
 imageSlug: "./coverPython.png"
@@ -43,7 +43,7 @@ print('Hola mundo')
 
 Como ya te mencione antes Python es increíblemente versátil, se puede hacer de todo con el, pero aquí hay una lista de las características que lo definen:
 
-- ### Es un lenguaje de propósito general 
+### Es un lenguaje de propósito general 
 
 Esto significa que no está restringido a solo hacer una cosa, puedes desarrollar servidores web, aplicaciones de IOT, web scrappers, ciencia de datos, *Deep Learning*... básicamente sus aplicaciones son infinitas 💚.
 
