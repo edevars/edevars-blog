@@ -70,6 +70,7 @@ const ContentContainer = styled.section`
     padding-top: 4rem;
     margin: 0 auto;
     width: 100%;
+    max-width: 100vw;
     @media screen and (max-width: 768px) {
         padding: 24px;
         padding-top: 20px;
