@@ -24,6 +24,9 @@ const StyledContentWrapper = styled.section`
         top: none;
         padding: 0 10%;
     }
+    @media screen and (max-width: 425px) {
+        padding: 0 15px;
+    }
 `
 
 const ContentWrapper = ({children}) => (

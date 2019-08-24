@@ -1,11 +1,10 @@
 import React, { Component } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogComponent from "../components/BlogComponents/blogComponent"
 import ContentWrapper from "../components/BlogComponents/contentWrapper"
-
 
 const HiWrapper = styled.div`
     max-width: 800px;
@@ -18,6 +17,10 @@ const HiWrapper = styled.div`
 
     p {
         font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    @media screen and (max-width: 425px) {
+        padding: 0 20px;
     }
 `
 
@@ -30,12 +33,12 @@ class Blog extends Component {
                     <HiWrapper>
                         <h1>¡Tutoriales, consejos y mucho más!</h1>
                         <p>
-                            Encuentra posts de todos los temas, sabores y
-                            colores. Siempre me ha encantado escribir así que
-                            espero los disfrutes.
+                            Encuentra posts divertidos con muchas utilidades
+                            para que te vuelvas un mejor desarrollador. Si hay algo que te gustaría 
+                            ver aquí no dudes en <Link to="/contactame">escribirme</Link>
                         </p>
                     </HiWrapper>
-                    <BlogComponent data={this.props.data}/>
+                    <BlogComponent data={this.props.data} />
                 </ContentWrapper>
             </Layout>
         )
