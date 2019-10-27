@@ -51,9 +51,9 @@ class BlogComponent extends Component {
                 },
             },
             start: 0,
-            end: 6,
+            end: 9,
             visibilityButton: "true",
-            limit: 3,
+            limit: 9,
         }
     }
 
