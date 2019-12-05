@@ -1,4 +1,5 @@
 const path = require("path")
+const { config } = require("./config/index")
 
 module.exports = {
     siteMetadata: {
@@ -10,7 +11,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "UA-146217524-1",
+                trackingId: config.googleAnalyticsTrackingId,
             },
         },
         {
