@@ -7,6 +7,7 @@ import { formatShort } from "../utils/dateFormatter"
 import AllTags from "../components/TagsComponents/alltags"
 import DateBlock from "../components/BlogComponents/dateblock"
 import Category from "../components/BlogComponents/category"
+import { DiscussionEmbed } from "disqus-react"
 
 const GridWrapper = styled.div`
     display: grid;
@@ -117,8 +118,14 @@ const Title = styled.h1`
 
 export default ({ data }) => {
     const post = data.markdownRemark
-    const { title, tags, date, readTime, category } = post.frontmatter
+    const { title, tags, date, readTime, category, slug } = post.frontmatter
     const { day, month, year } = formatShort(date)
+    console.log(slug)
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: slug },
+    }
+
     return (
         <Layout header={true}>
             <SEO title={title} description={post.excerpt} keywords={tags} />
@@ -140,6 +147,7 @@ export default ({ data }) => {
                 <ContentContainer>
                     <Title className="desktop">{title}</Title>
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <DiscussionEmbed {...disqusConfig} />
                 </ContentContainer>
                 <div>
                     <RelatedContainer>
@@ -162,6 +170,7 @@ export const query = graphql`
                 tags
                 date
                 readTime
+                slug
             }
             excerpt
         }
