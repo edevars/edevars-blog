@@ -1,10 +1,10 @@
 ---
-title: "Backend con express - Parte 0: Fundamentos"
+title: "Aprende ExpressJS - Parte 0: Fundamentos"
 date: "2019-10-26"
 tags: ["Javascript", "Desarrollo", "Backend","express JS"]
 category: "Tutoriales"
 imageSlug: "./express.png"
-slug: "Backend-con-express-Parte0-Fundamentos"
+slug: "/aprende-express-Parte0-Fundamentos"
 readTime: 15
 ---
 
