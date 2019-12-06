@@ -24,8 +24,9 @@ const GridWrapper = styled.div`
         grid-template-columns: 1fr 500px 1fr;
         grid-column-gap: 50px;
         p {
-            font-size: 18px;
+            font-size: 20px;
         }
+
     }
 
     @media screen and (max-width: 768px) {
@@ -54,7 +55,7 @@ const InfoElements = styled.section`
     }
     @media screen and (max-width: 768px) {
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 35px;
         position: static;
         width: 80%;
         max-width: none;
@@ -109,10 +110,12 @@ const Title = styled.h1`
     display: inline-block;
     color: #030640;
     @media screen and (max-width: 768px) {
-        margin-bottom: 70px;
-    }
-    @media screen and (max-width: 425px) {
-        margin-bottom: 3rem;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        margin-left: 24px;
+        margin-right: 24px;
+        font-size: 1.8rem;
+        text-align: center;
     }
 `
 
@@ -131,8 +134,8 @@ export default ({ data }) => {
             <SEO title={title} description={post.excerpt} keywords={tags} />
             <GridWrapper>
                 <InfoContainer>
+                    <Title className="mobile">{title}</Title>
                     <InfoElements>
-                        <Title className="mobile">{title}</Title>
                         <DateBlock day={day} month={month} year={year} />
                         <Category category={category} />
                         <h4 style={{ marginTop: "1em" }}>
