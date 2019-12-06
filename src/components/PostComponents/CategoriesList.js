@@ -19,9 +19,9 @@ const List = styled.ul`
 const Item = styled.li`
     font-size: 16px;
     text-align: center;
-    background: #070E8C;
+    background: #070e8c;
     border: none;
-    border-radius: 100px;
+    border-radius: 150px;
     list-style-type: none;
     span {
         font-weight: bold;
@@ -38,7 +38,7 @@ const Item = styled.li`
 const StyledLink = styled(Link)`
     color: #ffffff;
     display: inline-block;
-    padding: 5px 15px;
+    padding: 10px 25px;
     &:hover {
         text-decoration: none;
         color: #ffffff;
@@ -47,6 +47,12 @@ const StyledLink = styled(Link)`
 
 const CategoriesList = () => (
     <List>
+        <Item key="todos">
+            <StyledLink to="/blog">
+                <span>Todos</span>
+            </StyledLink>
+        </Item>
+
         {categories.map((category, index) => {
             let slug = slugify(category, {
                 replacement: "-",
