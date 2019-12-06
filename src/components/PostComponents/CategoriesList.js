@@ -19,16 +19,19 @@ const List = styled.ul`
 const Item = styled.li`
     font-size: 16px;
     text-align: center;
+
     background: #070e8c;
     border: none;
     border-radius: 150px;
     list-style-type: none;
+    transition: 1s ease-out;
     span {
         font-weight: bold;
     }
+
     &:hover {
         cursor: pointer;
-        background: #47c9e5;
+        background: #20c6eb;
         color: white;
         border: none;
         transition: 0.5s background;
