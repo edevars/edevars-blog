@@ -13,7 +13,8 @@ const Nav = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(6, 6, 149, 0.376);;
+    background: ${props =>
+        !props.error ? "rgba(6, 6, 149, 0.376)" : "rgba(6, 6, 149, 1)"};
     @media screen and (max-width: 768px) {
         display: none;
     }
@@ -79,13 +80,13 @@ class Navbar extends Component {
         nprogress.done()
     }
 
-    componentWillUpdate(){
+    componentWillUpdate() {
         nprogress.done()
     }
 
     render() {
         return (
-            <Nav>
+            <Nav error={this.props.error}>
                 <List>
                     <Item>
                         <LinkItem to="/" onClick={this.handleChangePage}>

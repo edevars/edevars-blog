@@ -19,7 +19,7 @@ const StyledLayout = styled.div`
 
 class Layout extends Component {
     render() {
-        const { children, header } = this.props
+        const { children, header, error404 } = this.props
         return (
             <StaticQuery
                 query={graphql`
@@ -40,7 +40,7 @@ class Layout extends Component {
                                         isActive={this.props.isActive}
                                     />
                                 ) : (
-                                    <Nav />
+                                    <Nav error={error404} />
                                 )
                             }
                         </Media>
