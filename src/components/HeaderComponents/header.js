@@ -81,22 +81,30 @@ const Subtitle = styled.h2`
     }
 `
 
-const Header = ({ siteTitle }) => (
-    <Wrapper>
-        <Image>
-            <Media query="(max-width: 600px)">
-                {matches =>
-                    matches ? <HeaderImageMobile /> : <HeaderImageDesktop />
-                }
-            </Media>
-        </Image>
-        <TitleWrapper>
-            <Title>
-                e<span id="letter-d">d</span>evars
-            </Title>
-            <Subtitle>de tecnología y más</Subtitle>
-        </TitleWrapper>
-    </Wrapper>
+const Header = ({ siteTitle, isActive }) => (
+    <>
+        {isActive && (
+            <Wrapper>
+                <Image>
+                    <Media query="(max-width: 600px)">
+                        {matches =>
+                            matches ? (
+                                <HeaderImageMobile />
+                            ) : (
+                                <HeaderImageDesktop />
+                            )
+                        }
+                    </Media>
+                </Image>
+                <TitleWrapper>
+                    <Title>
+                        e<span id="letter-d">d</span>evars
+                    </Title>
+                    <Subtitle>de tecnología y más</Subtitle>
+                </TitleWrapper>
+            </Wrapper>
+        )}
+    </>
 )
 
 Header.propTypes = {

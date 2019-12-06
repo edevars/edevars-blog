@@ -45,7 +45,7 @@ class Layout extends Component {
                             }
                         </Media>
                         {header ? (
-                            <Header siteTitle={data.site.siteMetadata.title} />
+                            <Header siteTitle={data.site.siteMetadata.title} isActive={this.props.isActive}/>
                         ) : null}
                         <main>{children}</main>
                         <Footer />

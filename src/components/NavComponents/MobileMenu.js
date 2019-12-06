@@ -92,6 +92,7 @@ class BurgerMenu extends Component {
                     Blog: null,
                     About: null,
                     Contact: null,
+                    disable: true,
                 }
                 break
         }
@@ -111,58 +112,62 @@ class BurgerMenu extends Component {
 
     render() {
         return (
-            <Wrapper>
-                <Menu>
-                    <StyledLink
-                        to="/"
-                        active={this.state.Home}
-                        onClick={this.handleChangePage}
-                    >
-                        <StyledFontAwesome
-                            size="lg"
-                            icon={faHome}
-                            active={this.state.Home}
-                        />
-                        <p>Inicio</p>
-                    </StyledLink>
-                    <StyledLink
-                        to="/blog"
-                        active={this.state.Blog}
-                        onClick={this.handleChangePage}
-                    >
-                        <StyledFontAwesome
-                            size="lg"
-                            icon={faEdit}
-                            active={this.state.Blog}
-                        />
-                        <p>Blog</p>
-                    </StyledLink>
-                    <StyledLink
-                        to="/sobre-mi"
-                        active={this.state.About}
-                        onClick={this.handleChangePage}
-                    >
-                        <StyledFontAwesome
-                            size="lg"
-                            icon={faUser}
-                            active={this.state.About}
-                        />
-                        <p>Sobre mi</p>
-                    </StyledLink>
-                    <StyledLink
-                        to="/contactame"
-                        active={this.state.Contact}
-                        onClick={this.handleChangePage}
-                    >
-                        <StyledFontAwesome
-                            size="lg"
-                            icon={faEnvelope}
-                            active={this.state.Contact}
-                        />
-                        <p>Contacto</p>
-                    </StyledLink>
-                </Menu>
-            </Wrapper>
+            <>
+                {this.props.isActive && (
+                    <Wrapper>
+                        <Menu>
+                            <StyledLink
+                                to="/"
+                                active={this.state.Home}
+                                onClick={this.handleChangePage}
+                            >
+                                <StyledFontAwesome
+                                    size="lg"
+                                    icon={faHome}
+                                    active={this.state.Home}
+                                />
+                                <p>Inicio</p>
+                            </StyledLink>
+                            <StyledLink
+                                to="/blog"
+                                active={this.state.Blog}
+                                onClick={this.handleChangePage}
+                            >
+                                <StyledFontAwesome
+                                    size="lg"
+                                    icon={faEdit}
+                                    active={this.state.Blog}
+                                />
+                                <p>Blog</p>
+                            </StyledLink>
+                            <StyledLink
+                                to="/sobre-mi"
+                                active={this.state.About}
+                                onClick={this.handleChangePage}
+                            >
+                                <StyledFontAwesome
+                                    size="lg"
+                                    icon={faUser}
+                                    active={this.state.About}
+                                />
+                                <p>Sobre mi</p>
+                            </StyledLink>
+                            <StyledLink
+                                to="/contactame"
+                                active={this.state.Contact}
+                                onClick={this.handleChangePage}
+                            >
+                                <StyledFontAwesome
+                                    size="lg"
+                                    icon={faEnvelope}
+                                    active={this.state.Contact}
+                                />
+                                <p>Contacto</p>
+                            </StyledLink>
+                        </Menu>
+                    </Wrapper>
+                )}
+            </>
         )
     }
 }
