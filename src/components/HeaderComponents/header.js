@@ -1,8 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import Media from "react-media"
-import HeaderImageMobile from "./header_img_mobile"
 import HeaderImageDesktop from "./header_img_desktop"
 
 const Wrapper = styled.header`
@@ -20,9 +18,7 @@ const Wrapper = styled.header`
     background-color: #000;
     height: 400px;
     @media screen and (max-width: 768px) {
-        height: 20vh;
-        justify-content: center;
-        min-height: 150px;
+        display: none;
     }
 `
 
@@ -81,30 +77,18 @@ const Subtitle = styled.h2`
     }
 `
 
-const Header = ({ siteTitle, isActive }) => (
-    <>
-        {isActive && (
-            <Wrapper>
-                <Image>
-                    <Media query="(max-width: 600px)">
-                        {matches =>
-                            matches ? (
-                                <HeaderImageMobile />
-                            ) : (
-                                <HeaderImageDesktop />
-                            )
-                        }
-                    </Media>
-                </Image>
-                <TitleWrapper>
-                    <Title>
-                        e<span id="letter-d">d</span>evars
-                    </Title>
-                    <Subtitle>de tecnología y más</Subtitle>
-                </TitleWrapper>
-            </Wrapper>
-        )}
-    </>
+const Header = ({ siteTitle }) => (
+    <Wrapper>
+        <Image>
+            <HeaderImageDesktop />
+        </Image>
+        <TitleWrapper>
+            <Title>
+                e<span id="letter-d">d</span>evars
+            </Title>
+            <Subtitle>de tecnología y más</Subtitle>
+        </TitleWrapper>
+    </Wrapper>
 )
 
 Header.propTypes = {
