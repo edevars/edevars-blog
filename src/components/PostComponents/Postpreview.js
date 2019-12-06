@@ -5,7 +5,6 @@ import nprogress from "nprogress"
 import Tags from "../TagsComponents/tags"
 import PostImage from "./postImage"
 
-
 const FlexWrapper = styled.div`
     display: flex;
     justify-content: center;
@@ -38,6 +37,13 @@ const Content = styled.div`
         color: #dddddd;
         font-weight: normal;
     }
+
+    @media screen and (max-width: 768px) {
+        p{
+            display: none;
+        }
+    }
+
 `
 
 const Title = styled.h4`
@@ -62,9 +68,15 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #030640 0%, #0A13BF 30%, #0A13BF 70%, #030640 100%);
+    background: linear-gradient(
+        to right,
+        #030640 0%,
+        #0a13bf 30%,
+        #0a13bf 70%,
+        #030640 100%
+    );
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
 `
 
