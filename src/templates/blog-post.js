@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Media from "react-media"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
@@ -8,6 +9,7 @@ import AllTags from "../components/TagsComponents/alltags"
 import DateBlock from "../components/BlogComponents/dateblock"
 import Category from "../components/BlogComponents/category"
 import { DiscussionEmbed } from "disqus-react"
+import PostImage from "../components/PostComponents/postImage"
 
 const GridWrapper = styled.div`
     display: grid;
@@ -26,7 +28,6 @@ const GridWrapper = styled.div`
         p {
             font-size: 20px;
         }
-
     }
 
     @media screen and (max-width: 768px) {
@@ -35,7 +36,17 @@ const GridWrapper = styled.div`
     }
 `
 
-const InfoContainer = styled.div``
+const InfoContainer = styled.div`
+    .mobile {
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+        .mobile {
+            display: block;
+            text-align: center;
+        }
+    }
+`
 
 const InfoElements = styled.section`
     margin-top: 100px;
@@ -50,9 +61,7 @@ const InfoElements = styled.section`
     max-width: 300px;
     min-width: 190px;
     top: 70px;
-    .mobile {
-        display: none;
-    }
+
     @media screen and (max-width: 768px) {
         margin: 0 auto;
         margin-top: 35px;
@@ -121,9 +130,18 @@ const Title = styled.h1`
 
 export default ({ data }) => {
     const post = data.markdownRemark
-    const { title, tags, date, readTime, category, slug } = post.frontmatter
+    const {
+        title,
+        tags,
+        date,
+        readTime,
+        category,
+        slug,
+        imageSlug,
+    } = post.frontmatter
+
     const { day, month, year } = formatShort(date)
-    console.log(slug)
+
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
         config: { identifier: slug },
@@ -134,6 +152,12 @@ export default ({ data }) => {
             <SEO title={title} description={post.excerpt} keywords={tags} />
             <GridWrapper>
                 <InfoContainer>
+                    <Media
+                        query="(max-width: 768px)"
+                        render={() => (
+                            <PostImage src={imageSlug.relativePath}></PostImage>
+                        )}
+                    />
                     <Title className="mobile">{title}</Title>
                     <InfoElements>
                         <DateBlock day={day} month={month} year={year} />
@@ -174,6 +198,9 @@ export const query = graphql`
                 date
                 readTime
                 slug
+                imageSlug {
+                    relativePath
+                }
             }
             excerpt
         }
