@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Media from "react-media"
+import Header from "../components/HeaderComponents/header"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
@@ -147,16 +148,16 @@ export default ({ data }) => {
         config: { identifier: slug },
     }
 
-    let showBanner = true;
-    const width = window.innerWidth;
-
-    if(width <= 767){
-        showBanner = false;
-    }
-
     return (
-        <Layout showBanner={showBanner}>
+        <Layout>
             <SEO title={title} description={post.excerpt} keywords={tags} />
+            <Media
+                query="(min-width: 769px)"
+                render={() => (
+                    <Header /> 
+                )}
+            />
+            
             <GridWrapper>
                 <InfoContainer>
                     <Media
