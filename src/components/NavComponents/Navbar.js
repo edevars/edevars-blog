@@ -30,11 +30,8 @@ const Nav = styled.nav`
 `
 
 const Backdrop = styled.div`
-    opacity: 0;
-    transition: 300ms ease-in;
-
     @media screen and (max-width: 768px) {
-        opacity: ${props => (props.open ? "1" : "0")};
+        display: ${props => (props.open ? "inherit" : "none")};
         background:  rgba(0, 0, 0, 0.3);
         width: 100%;
         max-height: 100vh;
