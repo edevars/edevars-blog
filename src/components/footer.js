@@ -127,7 +127,7 @@ const Footer = () => (
                     Gatsby
                 </a>
             </p>
-            <p className="rights">@2019 | Todos los derechos reservados</p>
+            <p className="rights">{new Date().getFullYear()} | Todos los derechos reservados</p>
         </Message>
         <IconsContainer>
             <a
