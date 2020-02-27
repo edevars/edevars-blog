@@ -147,8 +147,15 @@ export default ({ data }) => {
         config: { identifier: slug },
     }
 
+    let showBanner = true;
+    const width = window.innerWidth;
+
+    if(width <= 767){
+        showBanner = false;
+    }
+
     return (
-        <Layout header={true}>
+        <Layout showBanner={showBanner}>
             <SEO title={title} description={post.excerpt} keywords={tags} />
             <GridWrapper>
                 <InfoContainer>

@@ -50,7 +50,7 @@ const SocialMediaContainer = styled.div`
 `
 
 const Contact = () => (
-    <Layout>
+    <Layout showBanner>
         <SEO title="Contáctame" />
         <Title>
             Si quieres contactarme puedes hacerlo en mis diferentes redes

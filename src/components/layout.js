@@ -17,7 +17,7 @@ const StyledLayout = styled.div`
 
 class Layout extends Component {
     render() {
-        const { children, hiddenHeader } = this.props
+        const { children, showBanner } = this.props
         return (
             <StaticQuery
                 query={graphql`
@@ -32,7 +32,7 @@ class Layout extends Component {
                 render={data => (
                     <StyledLayout>
                         <Nav />
-                        {!hiddenHeader && (
+                        {showBanner && (
                             <Header siteTitle={data.site.siteMetadata.title} />
                         )}
 
