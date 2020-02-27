@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import Media from "react-media"
 import HeaderImageDesktop from "./header_img_desktop"
 
 const Wrapper = styled.header`
@@ -78,7 +77,7 @@ const Subtitle = styled.h2`
     }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
     <Wrapper>
         <Image>
             <HeaderImageDesktop />
