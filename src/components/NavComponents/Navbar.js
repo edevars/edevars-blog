@@ -20,12 +20,12 @@ const Nav = styled.nav`
     @media screen and (max-width: 768px) {
         background: rgba(6, 6, 149, 0.95);
         position: fixed;
-        width: 280px;
+        width: 70vw;
         height: 100vh;
-        right: ${props => (props.open ? "0" : "-300px")};
+        right: ${props => (props.open ? "0" : "-70vw")};
         left: inherit;
         opacity: 0.9;
-        transition: 300ms ease-in;
+        transition: 300ms ease-in-out;
     }
 `
 
