@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import Media from "react-media"
 import HeaderImageDesktop from "./header_img_desktop"
 
 const Wrapper = styled.header`
@@ -18,7 +19,7 @@ const Wrapper = styled.header`
     background-color: #000;
     height: 400px;
     @media screen and (max-width: 768px) {
-        display: none;
+        height: 150px;
     }
 `
 

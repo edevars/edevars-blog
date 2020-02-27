@@ -61,9 +61,8 @@ const AboutArticle = styled.article`
 `
 
 const About = () => (
-    <Layout header={false} isActive="Sobre-mi">
+    <Layout>
         <SEO title="Sobre mi" />
-
         <Header />
         <Wrapper>
             <Title>

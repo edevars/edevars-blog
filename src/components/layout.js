@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./HeaderComponents/header"
 import Nav from "./NavComponents/Navbar"
 import Footer from "./footer"
-import styled from 'styled-components';
+import styled from "styled-components"
 
 import "../styles/globalStyles.css"
 
@@ -12,12 +12,12 @@ const StyledLayout = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh; 
-`;
+    min-height: 100vh;
+`
 
 class Layout extends Component {
     render() {
-        const { children, header, error404 } = this.props
+        const { children, hiddenHeader } = this.props
         return (
             <StaticQuery
                 query={graphql`
@@ -32,9 +32,10 @@ class Layout extends Component {
                 render={data => (
                     <StyledLayout>
                         <Nav />
-                        {header ? (
-                            <Header siteTitle={data.site.siteMetadata.title} isActive={this.props.isActive}/>
-                        ) : null}
+                        {!hiddenHeader && (
+                            <Header siteTitle={data.site.siteMetadata.title} />
+                        )}
+
                         <main>{children}</main>
                         <Footer />
                     </StyledLayout>

@@ -27,15 +27,16 @@ const HiWrapper = styled.div`
 class Blog extends Component {
     render() {
         return (
-            <Layout header={true} isActive="Blog">
+            <Layout>
                 <SEO title="Categorías" />
                 <ContentWrapper>
                     <HiWrapper>
                         <h1>¡Tutoriales, consejos y mucho más!</h1>
                         <p>
                             Encuentra posts divertidos con muchas utilidades
-                            para que te vuelvas un mejor desarrollador. Si hay algo que te gustaría 
-                            ver aquí no dudes en <Link to="/contactame">escribirme</Link>
+                            para que te vuelvas un mejor desarrollador. Si hay
+                            algo que te gustaría ver aquí no dudes en{" "}
+                            <Link to="/contactame">escribirme</Link>
                         </p>
                     </HiWrapper>
                     <BlogComponent data={this.props.data} />
