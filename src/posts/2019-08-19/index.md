@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Python"
-date: "2019-08-19"
+date: "2019-11-27"
 tags: ["Python", "Desarrollo", "Programación"]
 category: "Tutoriales"
 imageSlug: "./coverPython.png"
@@ -8,10 +8,10 @@ slug: "/python-introduccion"
 readTime: 10
 ---
 
-## ¡Te doy la bienvenida a este curso de Python! 🎉🐍
+## ¡Te doy la bienvenida a tus primeros pasos en Python! 🎉🐍
 
 
-Antes de empezar debemos preguntarnos **¿Qué  #$%! es Python?**
+Antes de empezar debemos preguntarnos **¿Qué es Python?**
 
 > Python es un lenguaje de programación interpretado de alto nivel, fue creado por Guido van Rossum.
 > Su primer lanzamiento fue en 1991.

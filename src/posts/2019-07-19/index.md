@@ -1,6 +1,6 @@
 ---
   title: "Linux, el motor que mueve al mundo"
-  date: "2019-07-19"
+  date: "2019-11-19"
   tags: ["Linux","Open Source","Fedora","Ubuntu"]
   category: "Tecnología"
   imageSlug: "./cover.png"

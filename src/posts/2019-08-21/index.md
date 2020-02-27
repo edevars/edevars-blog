@@ -1,6 +1,6 @@
 ---
 title: "Configurando nuestro entorno de trabajo para Python"
-date: "2019-08-21"
+date: "2019-12-01"
 tags: ["Python", "Desarrollo", "Programación"]
 category: "Tutoriales"
 imageSlug: "./coverPython.png"
