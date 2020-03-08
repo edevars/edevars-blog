@@ -8,16 +8,19 @@ slug: "/como-usar-styled-components"
 readTime: 10
 ---
 
+El crear una aplicación en React siempre es algo especial. Solemos configurar todos los archivos iniciales que necesitamos como Webpack, CSS, JS, etc. Se prepara todo para que nuestro nuevo proyecto tenga vida.
 
-El crear una aplicación en React siempre es algo especial. Solemos configurar todos los archivos iniciales que necesitamos como Webpack, CSS, JS, etc. Preparando todo para que nuestro nuevo proyecto tenga vida.
-
-Sin embargo, conforme nuestro proyecto crece, la cantidad de errores que puede tener tiende a aumentar. Especialmente el estilizado de componentes puede ser un poco problemático. A medida que más componentes tengamos muchos más estilos haremos.
+Sin embargo, conforme nuestro proyecto crece, la cantidad de errores que puede tener tiende a aumentar. Especialmente el estilizado de componentes, que puede ser un poco problemático. A medida que más componentes tengamos muchos más estilos haremos.
 
 Los problemas que suelen ocurrir es que podemos importar estilos incorrectos, los nombres de nuestras clases se pueden repetir entre diferentes componentes y estos sobrescriben otros estilos generando un desastre.
 
 ¿Y si te dijera que esos problemas los puedes resolver con Javascript? Ha esto se le llama *CSS in JS* y es lo que Styled Components viene a resolver.
 
 Para instalar esta dependencia basta con ejecutar en la terminal de tu proyecto el comando:
+
+```bash
+npm install --save styled-components
+```
 
 Una vez que se acabe de instalar, solo tienes que declarar tus componentes como siempre lo has hecho, pero esta vez, importaremos Styled Components para poder darle algo de estilo. El siguiente ejemplo te muestra claramente como se hace:
 
@@ -60,7 +63,7 @@ Este componente es una página de inicio con un título que se ve de la siguient
 
 ![Hola mundo con Styled Components](https://www.dropbox.com/s/ydn4syvkk3684ny/Screenshot%20from%202020-03-07%2019-36-02.png?raw=1)
 
-Como vez el estilizar una página entera y sus componentes es muy sencillo con esta librería. Podemos usar cualquier etiqueta HTML que queramos, agregarle sus estilos directamente y convertirla en un componente de React.
+Como ves el estilizar una página entera y sus componentes es muy sencillo con esta librería. Podemos usar cualquier etiqueta HTML que queramos, agregarle sus estilos directamente y convertirla en un componente de React.
 
 Las principales mejoras que tiene Styled Components ante el CSS tradicional son:
 
@@ -68,9 +71,9 @@ Las principales mejoras que tiene Styled Components ante el CSS tradicional son:
 
 - **Únicamente carga el CSS necesario:** Styled Components solo carga los estilos de los componentes que se muestran en pantalla, por lo cual no tendrás que cargar desde el inicio todos los estilos de tu aplicación.
 
-- **No más errores en los nombres de clases:** A cada nombre de clase creada se le agrega un *hash* único. Este *hash* sirve para evitar que dos clases se llamen igual evitando que se mezclen sus estilos.
+- **No más errores en los nombres de clases:** A cada nombre de clase creada se le agrega un *hash* único. Este *hash* sirve para evitar que dos clases se llamen igual, evitando que se mezclen sus estilos.
 
-Esta dependencia nos facilita mucho el desarrollo y estilizado de nuestra aplicación. No solo nos sirve para declarar nuestros estilos. Styled Components tiene algunos ases bajo la manga con funciones muy útiles para agilizar nuestro desarrollo. Por ejemplo, un par de ellos son:
+Esta dependencia nos facilita mucho el desarrollo y estilizado de nuestra aplicación. No solo nos sirve para declarar nuestros estilos, Styled Components tiene algunos ases bajo la manga con funciones muy útiles para agilizar nuestro desarrollo. Por ejemplo, un par de ellos son:
 
 ## Propiedades directamente a tu CSS
 
@@ -105,7 +108,7 @@ export default Buttons;
 
 ## Crea temas con el ThemeProvider
 
-Styled Components incluye un componente para agregar temas llamado ThemeProvider. Con el podemos suministrar diferentes colores o tamaños a nuestros componentes. Logrando un diseño mucho más homogéneo de una manera fácil y rápida.
+Styled Components incluye un componente para agregar temas llamado ThemeProvider. Con él podemos suministrar diferentes colores o tamaños a nuestros componentes, logrando un diseño mucho más homogéneo de una manera fácil y rápida.
 
 ```jsx
 // Importamos el Theme Provider
@@ -170,6 +173,6 @@ En general Styled Components está lleno de sorpresas. Se pueden cambiar los est
 
 Por estas increíbles razones muchas compañías como lo son **Airbnb, Patreon, Target y Ticketmaster** ya lo están usando en sus sitios web. Tú no esperes más y descubre todo lo que esta dependencia tiene que ofrecerte.
 
-No te quedes con la duda y aprende a dominar esta librería en el [Curso de React Avanzado](https://platzi.com/cursos/react-avanzado/) en donde encontrarás toda una sección enfocada a el uso de Styled Components.
+No te quedes con la duda y aprende a dominar esta librería en el [Curso de React Avanzado](https://platzi.com/cursos/react-avanzado/) en donde encontrarás toda una sección enfocada al uso de Styled Components.
 
-¡Nunca pares de aprender!
+**¡Nunca pares de aprender!**
