@@ -11,7 +11,7 @@ readTime: 10
 
 El crear una aplicación en React siempre es algo especial. Solemos configurar todos los archivos iniciales que necesitamos como Webpack, CSS, JS, etc. Preparando todo para que nuestro nuevo proyecto tenga vida.
 
-Sin embargo, conforme nuestro proyecto crece la cantidad de errores que puede tener tiende a aumentar. Especialmente el estilizado de componentes puede ser un poco problemático. A medida que más componentes tengamos muchos más estilos haremos.
+Sin embargo, conforme nuestro proyecto crece, la cantidad de errores que puede tener tiende a aumentar. Especialmente el estilizado de componentes puede ser un poco problemático. A medida que más componentes tengamos muchos más estilos haremos.
 
 Los problemas que suelen ocurrir es que podemos importar estilos incorrectos, los nombres de nuestras clases se pueden repetir entre diferentes componentes y estos sobrescriben otros estilos generando un desastre.
 
@@ -64,11 +64,11 @@ Como vez el estilizar una página entera y sus componentes es muy sencillo con e
 
 Las principales mejoras que tiene Styled Components ante el CSS tradicional son:
 
-- **Encapsula tu CSS: ** Solo el CSS que declares en tu componente afectará a este y no se verá mezclado con ningún otro estilo.
+- **Encapsula tu CSS:** Solo el CSS que declares en tu componente afectará a este y no se verá mezclado con ningún otro estilo.
 
-- **Únicamente carga el CSS necesario: ** Styled Components solo carga los estilos de los componentes que se muestran en pantalla, por lo cual no tendrás que cargar desde el inicio todos los estilos de tu aplicación.
+- **Únicamente carga el CSS necesario:** Styled Components solo carga los estilos de los componentes que se muestran en pantalla, por lo cual no tendrás que cargar desde el inicio todos los estilos de tu aplicación.
 
-- **No más errores en los nombres de clases: ** A cada nombre de clase creada se le agrega un *hash* único. Este *hash* sirve para evitar que dos clases se llamen igual evitando que se mezclen sus estilos.
+- **No más errores en los nombres de clases:** A cada nombre de clase creada se le agrega un *hash* único. Este *hash* sirve para evitar que dos clases se llamen igual evitando que se mezclen sus estilos.
 
 Esta dependencia nos facilita mucho el desarrollo y estilizado de nuestra aplicación. No solo nos sirve para declarar nuestros estilos. Styled Components tiene algunos ases bajo la manga con funciones muy útiles para agilizar nuestro desarrollo. Por ejemplo, un par de ellos son:
 
@@ -103,9 +103,9 @@ const Buttons = () => {
 export default Buttons;
 ```
 
-## Crea temas con el *ThemeProvider*
+## Crea temas con el ThemeProvider
 
-Styled Components incluye un componente para agregar temas llamado *ThemeProvider*. Con el podemos suministrar diferentes colores o tamaños a nuestros componentes. Logrando un diseño mucho más homogéneo de una manera fácil y rápida.
+Styled Components incluye un componente para agregar temas llamado ThemeProvider. Con el podemos suministrar diferentes colores o tamaños a nuestros componentes. Logrando un diseño mucho más homogéneo de una manera fácil y rápida.
 
 ```jsx
 // Importamos el Theme Provider
