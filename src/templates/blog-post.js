@@ -14,7 +14,7 @@ import PostImage from "../components/PostComponents/postImage"
 
 const GridWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 630px 1fr;
+    grid-template-columns: 1fr 800px 1fr;
     grid-template-areas: "Info Content Related";
     margin: 0px auto;
     grid-column-gap: 100px;
