@@ -1,28 +1,22 @@
 ---
 title: "Mejora los estilos de tu aplicación con Styled Components"
 date: "2020-03-08"
-tags: ["Javascript", "Styled Components", "React"]
+tags: ["JavaScript", "Styled Components", "React"]
 category: "Tecnología"
 imageSlug: "./styled-components.png"
 slug: "/como-usar-styled-components"
 readTime: 10
 ---
 
-El crear una aplicación en React siempre es algo especial. Solemos configurar todos los archivos iniciales que necesitamos como Webpack, CSS, JS, etc. Se prepara todo para que nuestro nuevo proyecto tenga vida.
+El estilizado en React siempre ha sido algo complicado. Te puedes equivocar al momento de importar los archivos CSS, poner los nombres de tus clases mal o sobrescribir los estilos de tu aplicación. ¿Y si pudiéramos hacer CSS con Javascript para evitarnos todos estos problemas?
 
-Sin embargo, conforme nuestro proyecto crece, la cantidad de errores que puede tener tiende a aumentar. Especialmente el estilizado de componentes, que puede ser un poco problemático. A medida que más componentes tengamos muchos más estilos haremos.
-
-Los problemas que suelen ocurrir es que podemos importar estilos incorrectos, los nombres de nuestras clases se pueden repetir entre diferentes componentes y estos sobrescriben otros estilos generando un desastre.
-
-¿Y si te dijera que esos problemas los puedes resolver con Javascript? Ha esto se le llama *CSS in JS* y es lo que Styled Components viene a resolver.
-
-Para instalar esta dependencia basta con ejecutar en la terminal de tu proyecto el comando:
+Styled Components es una dependencia que nos permite hacer *CSS in JS*. Esto significa que podemos declarar código de CSS directamente en nuestros archivos de JavaScript. Para instalar esta dependencia basta con ejecutar en la terminal de tu proyecto el comando:
 
 ```bash
 npm install --save styled-components
 ```
 
-Una vez que se acabe de instalar, solo tienes que declarar tus componentes como siempre lo has hecho, pero esta vez, importaremos Styled Components para poder darle algo de estilo. El siguiente ejemplo te muestra claramente como se hace:
+Una vez que se acabe de instalar, solo tienes que declarar tus componentes como siempre lo has hecho, pero esta vez, importaremos Styled Components para poder darles algo de estilo. El siguiente ejemplo te muestra claramente cómo se hace:
 
 ```jsx
 import React from "react";
@@ -63,7 +57,7 @@ Este componente es una página de inicio con un título que se ve de la siguient
 
 ![Hola mundo con Styled Components](https://www.dropbox.com/s/ydn4syvkk3684ny/Screenshot%20from%202020-03-07%2019-36-02.png?raw=1)
 
-Como ves el estilizar una página entera y sus componentes es muy sencillo con esta librería. Podemos usar cualquier etiqueta HTML que queramos, agregarle sus estilos directamente y convertirla en un componente de React.
+Como ves, el estilizar una página entera y sus componentes es muy sencillo con esta librería. Podemos usar cualquier etiqueta HTML que queramos, agregarle sus estilos directamente y convertirla en un componente de React.
 
 Las principales mejoras que tiene Styled Components ante el CSS tradicional son:
 
@@ -77,14 +71,14 @@ Esta dependencia nos facilita mucho el desarrollo y estilizado de nuestra aplica
 
 ## Propiedades directamente a tu CSS
 
-Esta es una de las características más geniales que tiene. Al ser únicamente Javascript puedes pasar propiedades a tu componente para modificar su CSS. Esto vuelve el estilizado completamente dinámico al igual que tus componentes.
+Esta es una de las características más geniales que tiene. Al ser únicamente JavaScript puedes pasar propiedades a tu componente para modificar su CSS. Esto vuelve el estilizado completamente dinámico al igual que tus componentes.
 
 ```jsx
 import React from "react";
 import styled from "styled-components";
 
 /* Si el botón recibe la propiedad de "isRed" se pondrá
-   de color rojo, si no tendrá un color azúl. */
+   de color rojo, si no tendrá un color azul. */
 
 const Button = styled.button`
 	background: ${props => (props.isRed ? "red" : "blue")};
@@ -98,7 +92,7 @@ const Buttons = () => {
 	return (
 		<>
 			<Button isRed>Soy de color rojo</Button>
-			<Button>Soy de color azúl</Button>
+			<Button>Soy de color azul</Button>
 		</>
 	);
 };
@@ -148,7 +142,7 @@ const Wrapper = styled.div`
 const ThemedPage = () => {
 	return (
 		<div>
-		{// Agregamos el tema con el ThemeProvider}
+		{/* Agregamos el tema con el ThemeProvider */}
 			<ThemeProvider theme={theme}>
 				<Wrapper>
 					<h1>Tema claro</h1>
@@ -162,8 +156,6 @@ const ThemedPage = () => {
 };
 ```
 
-&nbsp;
-
 ![Tema claro y oscuro](https://www.dropbox.com/s/4sy6rvq594br9eo/Screenshot%20from%202020-03-08%2000-18-17.png?raw=1)
 
 
@@ -173,6 +165,6 @@ En general Styled Components está lleno de sorpresas. Se pueden cambiar los est
 
 Por estas increíbles razones muchas compañías como lo son **Airbnb, Patreon, Target y Ticketmaster** ya lo están usando en sus sitios web. Tú no esperes más y descubre todo lo que esta dependencia tiene que ofrecerte.
 
-No te quedes con la duda y aprende a dominar esta librería en el [Curso de React Avanzado](https://platzi.com/cursos/react-avanzado/) en donde encontrarás toda una sección enfocada al uso de Styled Components.
+No te quedes con la duda y aprende a dominar esta librería en el [Curso de React Avanzado](https://platzi.com/cursos/react-avanzado/) en donde encontrarás todo un módulo enfocado al uso de Styled Components.
 
 **¡Nunca pares de aprender!**
