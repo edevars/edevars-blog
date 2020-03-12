@@ -8,9 +8,11 @@ slug: "/como-usar-styled-components"
 readTime: 10
 ---
 
-El estilizado en React siempre ha sido algo complicado. Te puedes equivocar al momento de importar los archivos CSS, poner los nombres de tus clases mal o sobrescribir los estilos de tu aplicación. ¿Y si pudiéramos hacer CSS con Javascript para evitarnos todos estos problemas?
+El estilizado en React siempre ha sido algo problemático. Es muy común que importemos los estilos incorrectos, pongamos los nombres de nuestras clases mal o sobrescribamos otros estilos. ¿Y si te dijera que estos problemas los puedes resolver solo usando JavaScript?
 
-Styled Components es una dependencia que nos permite hacer *CSS in JS*. Esto significa que podemos declarar código de CSS directamente en nuestros archivos de JavaScript. Para instalar esta dependencia basta con ejecutar en la terminal de tu proyecto el comando:
+Styled Components es una librería que nos ayuda a resolver estos problemas a través de *CSS in JS*, pues nos permite escribir código de CSS directamente en JavaScript. 
+
+Para instalar esta dependencia basta con ejecutar en la terminal de tu proyecto el comando:
 
 ```bash
 npm install --save styled-components
