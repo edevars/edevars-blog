@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -28,7 +29,7 @@ const HiWrapper = styled.div`
 class Category extends Component {
     render() {
         return (
-            <Layout header={true}>
+            <Layout showBanner>
                 <SEO title="Categorías" />
                 <ContentWrapper>
                     <HiWrapper>
