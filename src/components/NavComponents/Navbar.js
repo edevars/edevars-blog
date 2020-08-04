@@ -116,11 +116,11 @@ class Navbar extends Component {
         nprogress.start()
     }
 
-    componentWillUnmount() {
+    componentDidMount() {
         nprogress.done()
     }
 
-    componentWillUpdate() {
+    componentDidUpdate() {
         nprogress.done()
     }
 
