@@ -5,6 +5,7 @@ tags: ["JavaScript", "Styled Components", "React"]
 category: "Tecnología"
 imageSlug: "./styled-components.png"
 slug: "/como-usar-styled-components"
+ogImage: './default_og.png'
 readTime: 10
 ---
 
