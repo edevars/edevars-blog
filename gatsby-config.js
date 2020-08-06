@@ -1,14 +1,13 @@
 const path = require("path")
 const { config } = require("./config")
 
-const dev = process.env.NODE_ENV && "development"
 const siteURl = process.env.SITE_URL
 module.exports = {
     siteMetadata: {
         title: `edevars`,
         description: `Cambiemos el mundo con código. Encuentra increíbles tips y tutoriales sobre los lenguajes de programación más usados`,
         author: `Enrique Devars`,
-        siteUrl: dev ? "http://localhost:8000" : siteURl
+        siteUrl: siteURl
     },
     plugins: [
         {
