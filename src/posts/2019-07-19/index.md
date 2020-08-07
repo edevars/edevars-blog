@@ -4,6 +4,7 @@
   tags: ["Linux","Open Source","Fedora","Ubuntu"]
   category: "Tecnología"
   imageSlug: "./cover.png"
+  ogImage: './cover.png'
   slug: "/linux-el-motor-de-internet"
   readTime: 10
 ---

@@ -4,6 +4,7 @@
   tags: ["Motivación","Salud Mental"]
   category: "Crecimiento Personal"
   imageSlug: "./cover.jpg"
+  ogImage: "./cover.jpg"
   slug: "/que-hacer-cuando-te-sientes-mal"
   readTime: 5
 ---

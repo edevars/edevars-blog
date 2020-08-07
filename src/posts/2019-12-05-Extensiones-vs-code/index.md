@@ -4,6 +4,7 @@ date: "2019-12-05"
 tags: ["Javascript", "VS Code", "Utilidades","IDE","Desarrollo"]
 category: "Hacks"
 imageSlug: "./vscode.png"
+ogImage: './vscode.png'
 slug: "/extensiones-geniales-de-vs-code-para-tus-proyectos-en-javascript"
 readTime: 10
 ---

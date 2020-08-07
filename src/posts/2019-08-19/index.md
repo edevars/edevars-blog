@@ -4,6 +4,7 @@ date: "2019-11-27"
 tags: ["Python", "Desarrollo", "Programación"]
 category: "Tutoriales"
 imageSlug: "./coverPython.png"
+ogImage: './coverPython.png'
 slug: "/python-introduccion"
 readTime: 10
 ---
