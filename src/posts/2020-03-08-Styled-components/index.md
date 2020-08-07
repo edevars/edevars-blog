@@ -5,7 +5,11 @@ tags: ["JavaScript", "Styled Components", "React"]
 category: "Tecnología"
 imageSlug: "./styled-components.png"
 slug: "/como-usar-styled-components"
+<<<<<<< HEAD:src/posts/2020-03-08-Styled-components/index.md
 ogImage: './styled-components.png'
+=======
+ogImage: './default_og.png'
+>>>>>>> Develop:src/posts/2020-03-08/index.md
 readTime: 10
 ---
 

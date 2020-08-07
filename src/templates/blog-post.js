@@ -139,6 +139,7 @@ export default ({ data }) => {
         category,
         slug,
         imageSlug,
+        ogImage
     } = post.frontmatter
 
     const { day, month, year } = formatShort(date)
@@ -148,16 +149,18 @@ export default ({ data }) => {
         config: { identifier: slug },
     }
 
+    const ogImagePath = ogImage && ogImage.childImageSharp.fixed.src
+
     return (
         <Layout>
-            <SEO title={title} description={post.excerpt} keywords={tags} />
+            <SEO title={title} description={post.excerpt} keywords={tags} image={ogImagePath}/>
             <Media
                 query="(min-width: 769px)"
                 render={() => (
-                    <Header /> 
+                    <Header />
                 )}
             />
-            
+
             <GridWrapper>
                 <InfoContainer>
                     <Media
@@ -198,19 +201,26 @@ export default ({ data }) => {
 export const query = graphql`
     query($slug: String!) {
         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-            html
-            frontmatter {
-                title
-                category
-                tags
-                date
-                readTime
-                slug
-                imageSlug {
-                    relativePath
-                }
-            }
-            excerpt
+          html
+          frontmatter {
+             title
+             category
+             tags
+             date
+             readTime
+             slug
+             ogImage {
+               childImageSharp {
+                 fixed {
+                   src
+                 }
+               }
+             }
+             imageSlug {
+               relativePath
+             }
+          }
+          excerpt
         }
     }
 `
