@@ -9,9 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import user from "../images/sobre-mi.jpg"
+import icon from "../images/icon.png"
+import OgDefaultImage from "../images/og-default.jpg"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -20,6 +21,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                         title
                         description
                         author
+                        siteUrl
                     }
                 }
             }
@@ -27,6 +29,7 @@ function SEO({ description, lang, meta, keywords, title }) {
     )
 
     const metaDescription = description || site.siteMetadata.description
+    const ogImage =  site.siteMetadata.siteUrl + (image || OgDefaultImage);
 
     return (
         <Helmet
@@ -50,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 },
                 {
                     property: `og:logo`,
-                    content: user,
+                    content: icon,
                     size: "120x120",
                 },
                 {
@@ -73,13 +76,25 @@ function SEO({ description, lang, meta, keywords, title }) {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
+                {
+                    property: `og:image`,
+                    content: ogImage,
+                },
+                {
+                    property: `twitter:image`,
+                    content: ogImage,
+                },
+                {
+                    property: `image`,
+                    content: ogImage,
+                },
             ]
                 .concat(
                     keywords.length > 0
                         ? {
-                              name: `keywords`,
-                              content: keywords.join(`, `),
-                          }
+                            name: `keywords`,
+                            content: keywords.join(`, `),
+                        }
                         : []
                 )
                 .concat(meta)}

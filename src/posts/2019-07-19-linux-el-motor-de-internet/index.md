@@ -3,7 +3,8 @@
   date: "2019-11-19"
   tags: ["Linux","Open Source","Fedora","Ubuntu"]
   category: "Tecnología"
-  imageSlug: "./cover.png"
+  imageSlug: "./linux-el-motor-de-internet.png"
+  ogImage: './linux-el-motor-de-internet.png'
   slug: "/linux-el-motor-de-internet"
   readTime: 10
 ---

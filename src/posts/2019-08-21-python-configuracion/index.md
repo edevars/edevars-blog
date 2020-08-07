@@ -3,7 +3,8 @@ title: "Configurando nuestro entorno de trabajo para Python"
 date: "2019-12-01"
 tags: ["Python", "Desarrollo", "Programación"]
 category: "Tutoriales"
-imageSlug: "./coverPython.png"
+imageSlug: "./python-configuracion.png"
+ogImage: './python-configuracion.png'
 slug: "/python-configuracion"
 readTime: 5
 ---

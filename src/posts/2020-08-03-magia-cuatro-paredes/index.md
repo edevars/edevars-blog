@@ -3,7 +3,8 @@
   date: "2020-08-03"
   tags: ["Motivación","Salud Mental", "Creatividad"]
   category: "Crecimiento Personal"
-  imageSlug: "./cover.jpeg"
+  imageSlug: "./magia-cuatro-paredes.jpeg"
+  ogImage: './magia-cuatro-paredes.jpeg'
   slug: "/magia-cuatro-paredes"
   readTime: 5
 ---
