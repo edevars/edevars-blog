@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import user from "../images/sobre-mi.jpg"
+import icon from "../images/icon.png"
+import OgDefaultImage from "../images/og-default.jpg"
 
 function SEO({ description, lang, meta, keywords, title, image }) {
     const { site } = useStaticQuery(
@@ -28,6 +29,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
     )
 
     const metaDescription = description || site.siteMetadata.description
+    const ogImage =  site.siteMetadata.siteUrl + (image || OgDefaultImage);
 
     return (
         <Helmet
@@ -51,12 +53,8 @@ function SEO({ description, lang, meta, keywords, title, image }) {
                 },
                 {
                     property: `og:logo`,
-                    content: user,
+                    content: icon,
                     size: "120x120",
-                },
-                {
-                    property: `og:image`,
-                    content: site.siteMetadata.siteUrl + image
                 },
                 {
                     property: `og:type`,
@@ -77,6 +75,18 @@ function SEO({ description, lang, meta, keywords, title, image }) {
                 {
                     name: `twitter:description`,
                     content: metaDescription,
+                },
+                {
+                    property: `og:image`,
+                    content: ogImage,
+                },
+                {
+                    property: `twitter:image`,
+                    content: ogImage,
+                },
+                {
+                    property: `image`,
+                    content: ogImage,
                 },
             ]
                 .concat(
