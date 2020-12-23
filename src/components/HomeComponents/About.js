@@ -15,14 +15,14 @@ const StyledAbout = styled.article`
         grid-area: Title;
         color: white;
         font-size: 2.5rem;
-        font-weight: bold;
         width: 80%;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 
     p {
-        font-size: 1rem;
-        text-align: justify;
+        font-size: 1.3rem;
+        line-height: 2rem;
     }
 
     a {
@@ -35,7 +35,7 @@ const StyledAbout = styled.article`
         margin: 0 auto;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
         grid-template-areas:
             "Title"
             "ProfileImage"
@@ -62,6 +62,9 @@ const ProfileBox = styled.div`
     border-radius: 50%;
     min-width: 300px;
     min-height: 300px;
+    @media screen and (max-width: 768px) {
+        margin: 30px auto;
+    }
     @media screen and (max-width: 425px) {
         min-width: 200px;
         min-height: 200px;
@@ -86,26 +89,23 @@ const About = () => (
                 <ProfileImage />
             </ProfileBox>
         </ProfileFlex>
-        <h5>¿Por qué edevars?</h5>
+        <h5>¿Por qué hice este sitio?</h5>
         <div className="Description">
             <p>
-                ¡Hola! Mi nombre es <strong>Enrique Devars</strong>, y mi
-                nickname en todo lo relacionado con la web es{" "}
-                <strong>edevars</strong>, llevo más de 7 años dedicándome a
-                desarrollar software en diferentes lenguajes de programación.
-                Amo el mundo de la tecnología y me encantaría poder compartir
-                esta pasión contigo.
+                ¡Hola! Mi nombre es <strong>Enrique Devars</strong>, a.k.a <i>Devars</i> o {" "}
+                 <strong>@codevars</strong> en Internet. Me encanta la educación y la tecnología. Actualmente 
+                trabajando en Platzi 💚 creando eduación online efectiva.
             </p>
             <p>
-                Es por eso que he creado este espacio, para que encuentres
-                muchas utilidades, consejos y trucos sobre cómo ser un mejor
-                desarrollador.
+                He creado este espacio, para compartirte lo que sé de tecnología a través de tutoriales, consejos y 
+                trucos para mejorar tus habilidades técnicas. Me encanta motivar a las personas por lo que
+                encontrarás mucho más que código.  Espero aprender tanto de ti como tú de mi. 
             </p>
             <p>
-                De todo corazón espero poderte ayudarte a que tu camino para ser
-                programador sea mucho más sencillo. Si hay algo en lo que te
+                De todo corazón espero poderte ayudarte a que tu camino en el mundo de la 
+                tecnología sea mucho más sencillo. Si hay algo en lo que te
                 pueda ayudar, no dudes en
-                <a href="mailto:enrique.devars@gmail.com"> escribirme</a>.
+                <a href="mailto:enrique.devars@gmail.com"> escribirme</a>. Estamos a un click de distancia. 😉 
             </p>
         </div>
     </StyledAbout>

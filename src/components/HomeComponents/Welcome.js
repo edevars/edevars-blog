@@ -60,7 +60,6 @@ const Message = styled.div`
 
         p {
             font-size: 1.2rem;
-            font-weight: 300;
             text-align: justify;
         }
         h4 {
