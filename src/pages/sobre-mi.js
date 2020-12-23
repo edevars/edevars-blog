@@ -120,7 +120,7 @@ const About = () => (
                     <div>
                     <br />
                         <p>Me encantan los videojuegos y la ciencia ficción. Mal bailarín con gran actitud 🕺. 
-                            Mi mayor hobbie es aprender 🤓 y soy acumulador de hechos irrelevantes pero interesantes. 
+                            Mi mayor hobby es aprender 🤓 y soy acumulador de hechos irrelevantes pero interesantes. 
                         </p>
                         <p>
                             Entusiasta de la tecnología y apasionado por el código 👨‍💻, fanático de 
