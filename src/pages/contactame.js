@@ -85,7 +85,7 @@ const Contact = () => (
                 aria-label="Sigueme en twitter"
             >
                 <FontAwesomeIcon className="icon" icon={faTwitter} />
-                <h3>@enrique_devars</h3>
+                <h3>@codevars</h3>
             </a>
             <a
                 href="https://www.instagram.com/codevars/"
@@ -94,7 +94,7 @@ const Contact = () => (
                 aria-label="Sigueme en Instagram"
             >
                 <FontAwesomeIcon className="icon" icon={faInstagram} />
-                <h3>edevars</h3>
+                <h3>codevars</h3>
             </a>
             <h4>
                 O si eres más tradicional, puedes enviarme un correo a:
