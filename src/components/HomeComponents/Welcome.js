@@ -45,11 +45,12 @@ const Message = styled.div`
 
     p {
         font-size: 1.5rem;
-        font-weight: 300;
         text-align: justify;
+        color:  #efefef;
     }
     h4 {
         font-size: 3rem;
+        font-weight: bold;
         color: white;
     }
 
@@ -79,15 +80,11 @@ const Welcome = () => (
             <img className="programmer" src={programmer} alt="programmer" />
         </picture>
         <Message>
-            <h4>¿Te gustaría ser un developer? </h4>
+            <h4>¿Te gustaría ser mejor programando? </h4>
             <p>
                 Iniciemos juntos este viaje para dominar una de las profesiones
                 más solicitadas del mundo. Créeme, no es tan difícil como
-                parece. Así que innova, desarrolla y crea con todo lo que he
-                hecho para ti.
-                <br />
-                <br /> Y si ya eres developer, siempre se puede aprender algo
-                nuevo.
+                parece. Así que innovemos, desarrollemos y creemos con nuestras tecnologías favoritas.
                 <br />
                 <br />
                 <span>¡Empieza ahora mismo!</span>
