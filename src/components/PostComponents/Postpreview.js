@@ -56,28 +56,24 @@ const Title = styled.h4`
 `
 
 const Button = styled.button`
-    font-family: "Comfortaa", cursive !important;
-    font-weight: 300;
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
     text-align: center;
     margin-top: 2rem;
     width: 100%;
-    height: 3rem;
-    margin-bottom: 2rem;
+    padding: 1rem 0px;
     outline: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
-        to right,
-        #030640 0%,
-        #0a13bf 30%,
-        #0a13bf 70%,
-        #030640 100%
-    );
+    background: #0a13bf;
     border: none;
     color: #ffffff;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        padding: 2rem 0px;
+    }
 `
 
 const TagContainer = styled.div`
