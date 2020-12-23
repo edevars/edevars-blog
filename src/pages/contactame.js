@@ -79,7 +79,7 @@ const Contact = () => (
                 <h3>edevars</h3>
             </a>
             <a
-                href="https://twitter.com/enrique_devars"
+                href="https://twitter.com/codevars"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sigueme en twitter"
@@ -88,7 +88,7 @@ const Contact = () => (
                 <h3>@enrique_devars</h3>
             </a>
             <a
-                href="https://www.instagram.com/edevars/"
+                href="https://www.instagram.com/codevars/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sigueme en Instagram"

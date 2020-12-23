@@ -147,7 +147,7 @@ const Footer = () => (
                 <FontAwesomeIcon className="icon" icon={faGithub} />
             </a>
             <a
-                href="https://twitter.com/enrique_devars"
+                href="https://twitter.com/codevars"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sigueme en twitter"
@@ -155,7 +155,7 @@ const Footer = () => (
                 <FontAwesomeIcon className="icon" icon={faTwitter} />
             </a>
             <a
-                href="https://www.instagram.com/edevars/"
+                href="https://www.instagram.com/codevars/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sigueme en Instagram"
