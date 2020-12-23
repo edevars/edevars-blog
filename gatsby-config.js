@@ -1,19 +1,19 @@
 const path = require("path")
 const { config } = require("./config")
 
-const siteURl = process.env.SITE_URL
+
 module.exports = {
     siteMetadata: {
-        title: `edevars`,
-        description: `Cambiemos el mundo con código. Encuentra increíbles tips y tutoriales sobre los lenguajes de programación más usados`,
+        title: `codevars`,
+        description: `Cambiemos el mundo con código. Encuentra increíbles tips y tutoriales sobre los lenguajes de programación más usados.`,
         author: `Enrique Devars`,
-        siteUrl: siteURl
+        siteUrl: config.siteURL
     },
     plugins: [
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: config.googleAnalyticsTrackingId,
+                trackingId: config.googleAnalyticsTrackingId || 'placeholder',
             },
         },
         {
@@ -69,7 +69,7 @@ module.exports = {
                 name: `edevars Blog`,
                 short_name: `edevars`,
                 start_url: `/`,
-                background_color: `#ffffff`,
+                background_color: `#07034e`,
                 theme_color: `#07034e`,
                 display: "standalone",
                 icon: `src/images/icon.png`,
