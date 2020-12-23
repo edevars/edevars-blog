@@ -8,9 +8,7 @@ const StyledContentWrapper = styled.section`
     grid-template-areas: "Content" "Posts";
     margin: 0px auto;
     background: white;
-    -webkit-box-shadow: 0px 31px 31px 9px rgba(102, 102, 102, 1);
-    -moz-box-shadow: 0px 31px 31px 9px rgba(102, 102, 102, 1);
-    box-shadow: 0px 31px 31px 9px rgba(102, 102, 102, 1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     position: relative;
     border-radius: 10px;
     top: -100px;
