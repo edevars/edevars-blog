@@ -75,12 +75,8 @@ const Title = styled.h1`
     }
 
     @media screen and (max-width: 425px) {
-        font-size: 5rem;
-        margin-top: 0px;
-    }
-
-    @media screen and (max-width: 320px) {
         font-size: 4rem;
+        margin-top: 0px;
     }
 `
 
@@ -93,7 +89,7 @@ const Subtitle = styled.h2`
     letter-spacing: 10px;
 
     @media screen and (max-width: 425px) {
-        font-size: 1.12rem;
+        font-size: 1rem;
         letter-spacing: 4px;
     }
 
