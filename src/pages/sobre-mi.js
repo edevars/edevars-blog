@@ -128,7 +128,7 @@ const About = () => (
                         </p>
                         <p>
                             No importa si es con JavaScript, Python 🐍 o cualquier otro lenguaje me gusta 
-                            materializar ideas, especialmente todo en la web.
+                            materializar ideas con unos y ceros usando la web como plataforma.
                         </p>
                         <p>
                             Actualmente aprendiendo <i>data science</i>, ciberseguridad y 
