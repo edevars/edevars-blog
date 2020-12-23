@@ -84,7 +84,7 @@ const Header = () => (
         </Image>
         <TitleWrapper>
             <Title>
-                e<span id="letter-d">d</span>evars
+                co<span id="letter-d">d</span>evars
             </Title>
             <Subtitle>de tecnología y más</Subtitle>
         </TitleWrapper>
