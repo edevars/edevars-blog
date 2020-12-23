@@ -38,10 +38,10 @@ const StyledSections = styled.article`
 
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20vw;
-    grid-row-gap: 5vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-self: center;
+    width: 100%;
+    margin: 0 auto;
 
     .Description {
         width: 100%;
@@ -51,25 +51,25 @@ const GridContainer = styled.div`
         h5 {
             color: #0f3572;
             font-size: 1.5rem;
+            margin: 1rem auto;
             max-width: 320px;
             text-align: center;
             font-weight: bold;
         }
 
         p {
-            margin-top: 2rem;
-            max-width: 320px;
-            font-size: 21px;
+            margin: 2rem auto 0px;
+            max-width: 240px;
+            font-size: 1em;
             text-align: center;
-            line-height: 2rem;
         }
 
         .IconContainer {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 320px;
-            height: 320px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             background: -webkit-linear-gradient(
                 -30deg,
@@ -80,9 +80,15 @@ const GridContainer = styled.div`
 
             .Icon {
                 color: white;
-                font-size: 150px;
+                font-size: 112px;
             }
         }
+    }
+
+    @media screen and (max-width: 1440px) {
+        grid-template-columns: 1fr 1fr;
+        width: 70%;
+        row-gap: 50px;
     }
 
     @media screen and (max-width: 768px) {
