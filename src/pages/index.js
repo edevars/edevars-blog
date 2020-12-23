@@ -37,7 +37,7 @@ const Quote = styled.p`
 
 const IndexPage = () => (
     <Layout>
-        <SEO title="Home" keywords={[`desarrollo web`,`developer`, `react`,'web development','programacion','javascript','python']} />
+        <SEO title="Blog, artículos y tutoriales" keywords={[`desarrollo web`,`developer`, `react`,'web development','programacion','javascript','python']} />
         <Content>
             <Hero />
             <Quote>Eres lo que aprendes</Quote>
