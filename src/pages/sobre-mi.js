@@ -6,7 +6,7 @@ import styled from "styled-components"
 import PostImage from "../components/PostComponents/postImage"
 
 const Wrapper = styled.section`
-    max-width: 900px;
+    max-width: 1200px;
     margin: 100px auto 0px;
 `
 
@@ -21,7 +21,7 @@ const AboutArticle = styled.article`
     box-shadow: 0px 0px 30px 20px #b8b8b8;
 
     .aboutMe {
-        max-width: 900px;
+        max-width: 1200px;
         h3 {
             color: white;
             font-size: 2rem;
