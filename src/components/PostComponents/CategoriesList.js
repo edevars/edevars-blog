@@ -7,8 +7,9 @@ import slugify from "slugify"
 const List = styled.ul`
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
     flex-flow: row wrap;
-    width: 80%;
+    width: 100%;
     padding: 0;
     margin: 0 auto;
     margin-bottom: 100px;
@@ -17,24 +18,29 @@ const List = styled.ul`
     }
 `
 const Item = styled.li`
-    font-size: 16px;
+    font-size: 32px;
     text-align: center;
-
-    background: #070e8c;
+    background: linear-gradient(
+                -30deg,
+                #0e4bdb 30%,
+                #2dddf4 85%
+            );
     border: none;
-    border-radius: 150px;
     list-style-type: none;
-    transition: 1s ease-out;
     span {
         font-weight: bold;
     }
 
+    transition: 0.45s;
+
     &:hover {
-        cursor: pointer;
-        background: #20c6eb;
-        color: white;
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         border: none;
-        transition: 0.5s background;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 21px;
     }
 `
 
