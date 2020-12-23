@@ -18,13 +18,12 @@ const Nav = styled.nav`
         !props.error ? "rgba(6, 6, 149, 0.376)" : "rgba(6, 6, 149, 1)"};
 
     @media screen and (max-width: 768px) {
-        background: rgba(6, 6, 149, 0.95);
+        background: rgb(0, 0, 133);
         position: fixed;
-        width: 70vw;
+        width: 80vw;
         height: 100vh;
-        right: ${props => (props.open ? "0" : "-70vw")};
+        right: ${props => (props.open ? "0" : "-80vw")};
         left: inherit;
-        opacity: 0.9;
         transition: 300ms ease-in-out;
     }
 `
@@ -114,6 +113,7 @@ class Navbar extends Component {
 
     handleChangePage = () => {
         nprogress.start()
+        this.handleClose()
     }
 
     componentDidMount() {
