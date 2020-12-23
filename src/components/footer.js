@@ -107,7 +107,7 @@ const IconsContainer = styled.div`
 
 const Footer = () => (
     <StyledFooter>
-        <Logo>edevars</Logo>
+        <Logo>codevars</Logo>
         <Message>
             <h6>
                 {" "}
