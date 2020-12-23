@@ -13,6 +13,7 @@ const HiWrapper = styled.div`
     h1 {
         font-weight: bold;
         text-align: center;
+        line-height: 3rem;
     }
 
     p {
@@ -31,12 +32,11 @@ class Blog extends Component {
                 <SEO title="Categorías" />
                 <ContentWrapper>
                     <HiWrapper>
-                        <h1>¡Tutoriales, consejos y mucho más!</h1>
+                        <h1>Lee y aprende algo nuevo 📚 <br/>¡Es gratis! </h1>
                         <p>
-                            Encuentra posts divertidos con muchas utilidades
-                            para que te vuelvas un mejor desarrollador. Si hay
-                            algo que te gustaría ver aquí no dudes en{" "}
-                            <Link to="/contactame">escribirme</Link>
+                            Me encanta escribir sobre tecnología, tendencias y mis pensamientos. 
+                            Si hay algo que te gustaría leer aquí no dudes en {" "}
+                            <Link to="/contactame">escribirme.</Link>
                         </p>
                     </HiWrapper>
                     <BlogComponent data={this.props.data} />
