@@ -10,6 +10,13 @@ const FlexWrapper = styled.div`
     justify-content: center;
     flex-direction: column;
     background-color: #001749;
+    transition: 0.4s;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        border: none;
+    }
 `
 
 const Cover = styled.div`
