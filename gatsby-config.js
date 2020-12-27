@@ -61,6 +61,12 @@ module.exports = {
                         },
                     },
                     `gatsby-remark-responsive-iframe`,
+                    {
+                        resolve: "gatsby-remark-copy-linked-files",
+                        options: {
+                            ignoreFileExtensions: [],
+                        },
+                    },
                 ],
             },
         },
