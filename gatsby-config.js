@@ -67,9 +67,9 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `edevars Blog`,
-                short_name: `edevars`,
-                start_url: `/`,
+                name: `codevars`,
+                short_name: `codevars`,
+                start_url: `/blog`,
                 background_color: `#07034e`,
                 theme_color: `#07034e`,
                 display: "standalone",
