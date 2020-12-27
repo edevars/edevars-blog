@@ -87,13 +87,13 @@ Ahora búscala dentro de tus aplicaciones y ábrela. Al inicio lucirá como cual
 
 Como ves en el vídeo es muy sencillo configurar la imagen de fondo, ajustar la transparencia y crear una paleta de colores. Cada uno de los colores que se muestra en la sección de `colors` se puede modificar.  Experimenta con todas  las configuraciones posibles hasta que quede a tu gusto. La gran ventaja que tiene Tilix es que puedes guardar varios perfiles. 😉
 
-## La cereza del pastel, agrega un tema a tu nueva y flamante terminal 
+## 🍒 La cereza del pastel: agrega un tema a tu nueva y flamante terminal 
 
 Para finalizar, instalarás un tema muy especial a tu nueva terminal: **el  Powerlevel10k**. Este tema es súper lindo además de altamente personalizable. Muestra íconos, secciones, directorios y diferentes formas en las que se agrupa la información dentro de la terminal. Para poder instalar este tema y tener tu terminal tal y como quieres, solo debes instalar dos cosas: una *nerd font* y el tema en sí. 
 
 La *nerd font* es una fuente de letra especial que contienen cientos (o miles) de íconos para mostrar en forma de texto, como lo son cuando estás en un repositorio de Git (esto es súper útil), archivos en dropbox, ramas remotas, etc. Te recomiendo que descargues e instales la fuente recomendada para este tema que es [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). Los enlaces de descarga los encuentras dentro del proyecto original, son cuatro archivos `.ttf` los que debes descargar e instalar.  También si lo deseas puedes instalar cualquiera de las otras [nerd fonts disponibles](https://www.nerdfonts.com/font-downloads). 
 
-Una vez tengas instalada las fuentes úsalas como fuente predeterminada en Tilix, para ello ve este Gif que te lo explica de manera sencilla :happy:
+Una vez tengas instalada las fuentes úsalas como fuente predeterminada en Tilix, para ello ve este Gif que te lo explica de manera sencilla. 😄
 
 
 
