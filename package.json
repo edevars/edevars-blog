@@ -39,11 +39,8 @@
         "react-dom": "^16.14.0",
         "react-helmet": "^5.2.0",
         "react-media": "^1.9.2",
-        "react-typography": "^0.16.19",
         "slugify": "^1.4.6",
-        "styled-components": "^4.2.0",
-        "typography": "^0.16.19",
-        "typography-theme-moraga": "^0.16.19"
+        "styled-components": "^4.2.0"
     },
     "devDependencies": {
         "prettier": "^1.17.0"
