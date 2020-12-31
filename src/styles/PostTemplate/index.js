@@ -89,6 +89,21 @@ export const ContentContainer = styled.section`
         font-size: 18px;
     }
 
+    blockquote {
+        margin-left: 0;
+        margin-right: 1.56rem;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 1.17rem;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.56rem;
+        font-size: 1.20112rem;
+        line-height: 1.56rem;
+        color: hsla(0,0%,0%,0.6);
+        border-left: 0.39rem solid hsla(0,0%,0%,0.13);
+    }
+
     @media screen and (max-width: 768px) {
             p {
                 line-height: 1.9;
