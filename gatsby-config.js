@@ -53,11 +53,10 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
-                            classPrefix: "language-",
+                            classPrefix: "language-bash",
                             inlineCodeMarker: null,
-                            aliases: {},
                             showLineNumbers: false,
-                            noInlineHighlight: false,
+                            noInlineHighlight: true,
                         },
                     },
                     `gatsby-remark-responsive-iframe`,
