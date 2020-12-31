@@ -6,17 +6,10 @@ export const GridWrapper = styled.div`
     grid-template-areas: "Info Content Related";
     margin: 0px auto;
     grid-column-gap: 100px;
-    p {
-        font-size: 21px;
-        line-height: 1.5;
-    }
 
     @media screen and (max-width: 1200px) {
         grid-template-columns: 1fr 500px 1fr;
         grid-column-gap: 50px;
-        p {
-            font-size: 20px;
-        }
     }
 
     @media screen and (max-width: 768px) {
@@ -66,17 +59,45 @@ export const InfoElements = styled.section`
 
 export const ContentContainer = styled.section`
     grid-area: Content;
-    padding: 0.5rem;
     padding-top: 4rem;
     margin: 0 auto;
     width: 100%;
     max-width: 100vw;
+
+    h2, h3, h4, h5 {
+        color: #292929;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
     @media screen and (max-width: 768px) {
-        padding: 24px;
         padding-top: 20px;
+        width: 85%;
         .desktop {
             display: none;
         }
+    } 
+
+    p {
+        line-height: 1.8;
+        font-size: 21px;
+    }
+
+    code {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 768px) {
+            p {
+                line-height: 1.9;
+                font-size: 19px;
+            }
+
+            code {
+                font-size: 18px;
+            }
     }
 `
 
@@ -106,7 +127,8 @@ export const RelatedContainer = styled.section`
 
 export const Title = styled.h1`
     display: inline-block;
-    color: #030640;
+    color: #242c72;
+    font-size: 48px;
     @media screen and (max-width: 768px) {
         margin-top: 30px;
         margin-bottom: 0px;
