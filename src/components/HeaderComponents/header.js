@@ -49,6 +49,7 @@ const TitleWrapper = styled.div`
 
 const Title = styled.h1`
     font-family: "Comfortaa", cursive !important;
+    font-weight: 400;
     color: white;
     font-size: 4rem;
     display: inline-block;

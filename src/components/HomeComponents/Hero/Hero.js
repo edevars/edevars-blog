@@ -63,6 +63,7 @@ const Title = styled.h1`
     font-family: "Comfortaa", cursive !important;
     color: white;
     font-size: 8rem;
+    font-weight: 400;
     display: inline-block;
     padding: 0;
     margin: 0;
