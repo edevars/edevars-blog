@@ -10,12 +10,15 @@ const FlexWrapper = styled.div`
     justify-content: center;
     flex-direction: column;
     background-color: #001749;
+    padding-bottom: 2rem;
     transition: 0.4s;
+    border-radius: 8px;
 
     &:hover {
-        transform: scale(1.03);
+        transform: scale(1.04);
         box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
         border: none;
+        cursor: pointer;
     }
 `
 
@@ -36,13 +39,9 @@ const Content = styled.div`
     padding: 16px 16px 0px 16px;
     p {
         margin: 0px;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         margin-top: 1em;
-    }
-
-    h5 {
-        color: #dddddd;
-        font-weight: normal;
+        color: #F1F2F4;
     }
 
     @media screen and (max-width: 768px) {
@@ -62,27 +61,6 @@ const Title = styled.h4`
     line-height: 2rem;
 `
 
-const Button = styled.button`
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
-    width: 100%;
-    padding: 1rem 0px;
-    outline: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0a13bf;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-
-    @media screen and (max-width: 768px) {
-        padding: 2rem 0px;
-    }
-`
-
 const TagContainer = styled.div`
     display: flex;
     flex-flow: row wrap;
@@ -97,26 +75,14 @@ const PostPreview = props => {
     }
 
     return (
-        <FlexWrapper>
+        <FlexWrapper onClick={handleClick}>
             <Cover>
                 <PostImage src={relativePath} />
             </Cover>
             <Content>
                 <Title>{title}</Title>
-                <h5>
-                    {date} <span>•</span> {readTime} min read
-                </h5>
-                <TagContainer>
-                    {tags.map((tag, index) => {
-                        return <Tags key={index} tag={tag} />
-                    })}
-                </TagContainer>
-
                 <p>{excerpt}</p>
             </Content>
-            <Button onClick={handleClick} name="Leer más">
-                Leer más
-            </Button>
         </FlexWrapper>
     )
 }
