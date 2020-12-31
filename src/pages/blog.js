@@ -10,10 +10,12 @@ const HiWrapper = styled.div`
     max-width: 800px;
     margin: 3rem auto;
     margin-bottom: 2rem;
-    h1 {
+    h2 {
         font-weight: bold;
         text-align: center;
-        line-height: 3rem;
+        line-height: 4rem;
+        font-size: 48px;
+        color: #1F2933;
     }
 
     p {
@@ -22,6 +24,15 @@ const HiWrapper = styled.div`
     }
     @media screen and (max-width: 425px) {
         padding: 0 20px;
+        h2 {
+            font-size: 32px;
+            line-height: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
     }
 `
 
@@ -32,7 +43,7 @@ class Blog extends Component {
                 <SEO title="Categorías" />
                 <ContentWrapper>
                     <HiWrapper>
-                        <h1>Lee y aprende algo nuevo 📚 <br/>¡Es gratis! </h1>
+                        <h2>Lee y aprende algo nuevo 📚 <br/>¡Es gratis! </h2>
                         <p>
                             Me encanta escribir sobre tecnología, tendencias y mis pensamientos. 
                             Si hay algo que te gustaría leer aquí no dudes en {" "}
