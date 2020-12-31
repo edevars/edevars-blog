@@ -59,7 +59,7 @@ export default ({ data }) => {
 
                 <ContentContainer>
                     <Title className="desktop">{title}</Title>
-                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <main dangerouslySetInnerHTML={{ __html: post.html }} />
                     <DiscussionEmbed {...disqusConfig} />
                 </ContentContainer>
                 <div>
