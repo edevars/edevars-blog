@@ -46,7 +46,7 @@ const Content = styled.div`
 
     @media screen and (max-width: 768px) {
         p{
-            font-size: 1rem;
+            display: none;
         }
     }
 
@@ -81,6 +81,11 @@ const PostPreview = props => {
             </Cover>
             <Content>
                 <Title>{title}</Title>
+                <TagContainer>
+                    {tags.map((tag, index) => {
+                        return <Tags key={index} tag={tag} />
+                    })}
+                </TagContainer>
                 <p>{excerpt}</p>
             </Content>
         </FlexWrapper>
