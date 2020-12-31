@@ -113,7 +113,7 @@ const GridContainer = styled.div`
             p {
                 margin-top: 2rem;
                 max-width: 240px;
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
 
             .IconContainer {
