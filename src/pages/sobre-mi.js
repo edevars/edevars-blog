@@ -28,11 +28,9 @@ const AboutArticle = styled.article`
             text-align: center;
         }
         p {
-            @import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
-            font-family: "Karla", sans-serif;
-            font-size: 1.2rem;
-            font-weight: lighter;
+            font-size: 21px;
             color: #d1d1d1;
+            line-height: 2.1rem;
         }
     }
 
@@ -45,7 +43,6 @@ const AboutInfo = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
     }
