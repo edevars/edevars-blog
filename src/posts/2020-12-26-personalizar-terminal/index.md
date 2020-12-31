@@ -111,7 +111,15 @@ Ahora configura el tema como el tema de Zsh principal. Para ello abre el archivo
 gedit ~/.zshrc
 ```
 
-Cambia la linea que dice `ZSH_THEME="robbyrussell"` por `ZSH_THEME="powerlevel10k/powerlevel10k"` y guarda el archivo. Esto configurará Powerlevel10k como el tema por defecto. 
+Cambia la linea que dice 
+```bash
+ZSH_THEME="robbyrussell"
+``` 
+por:
+```
+ZSH_THEME= "powerlevel10k/powerlevel10k"
+``` 
+y guarda el archivo. Esto configurará Powerlevel10k como el tema por defecto. 
 
 Por último cierra y abre tu terminal. El *wizard* de instalación se activará automáticamente y te guiará para configurar el tema para que quede increíble. Si no se inicia automáticamente por alguna extraña razón, solo ejecuta  `p10k configure` en tu terminal y el asistente te guiará para iniciar la configuración. Al final tu terminal quedará con todas las opciones que elegiste, en mi caso quedó de la siguiente manera. 
 
