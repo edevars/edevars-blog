@@ -23,7 +23,7 @@ const GridPosts = props => {
             <Media query="(max-width: 1390px)">
                 {matches =>
                     !matches ? (
-                        <MasonryLayout columns={3} gap={40} class="extra-big">
+                        <MasonryLayout columns={2} gap={100} class="extra-big">
                             {renderPosts}
                         </MasonryLayout>
                     ) : (
@@ -32,7 +32,7 @@ const GridPosts = props => {
                                 !matches ? (
                                     <MasonryLayout
                                         columns={2}
-                                        gap={40}
+                                        gap={54}
                                         class="big"
                                     >
                                         {renderPosts}
