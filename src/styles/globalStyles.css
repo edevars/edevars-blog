@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Ubuntu:wght@300;400&display=swap');
 
 body{
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   line-height: 1.5;
   font-size: 21px;
   color: #1F2933;
