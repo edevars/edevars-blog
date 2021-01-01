@@ -103,7 +103,10 @@ const About = () => (
         <Header />
         <Wrapper>
             <Quote>
-                Quiero transmitirte la misma pasión que tengo por la tecnología, y de paso, que aprendas algo nuevo. 😉
+                Quiero transmitirte la misma pasión que tengo por la tecnología, y de paso, que aprendas algo nuevo.
+                <span role="img" aria-label="wink">
+                    😉
+                </span>
             </Quote>
         </Wrapper>
         <AboutArticle>
@@ -113,23 +116,23 @@ const About = () => (
                     <ProfileBox>
                         <PostImage src='new_profile.jpg' />
                     </ProfileBox>
-                  
+
                     <div>
-                    <br />
-                        <p>Me encantan los videojuegos y la ciencia ficción. Mal bailarín con gran actitud 🕺. 
-                            Mi mayor hobby es aprender 🤓 y soy acumulador de hechos irrelevantes pero interesantes. 
+                        <br />
+                        <p>Me encantan los videojuegos y la ciencia ficción. Mal bailarín con gran actitud <span role="img" aria-label="dance">🕺</span>.
+                        Mi mayor hobby es aprender <span role="img" aria-label="nerd">🤓</span> y soy acumulador de hechos irrelevantes pero interesantes.
                         </p>
                         <p>
-                            Entusiasta de la tecnología y apasionado por el código 👨‍💻, fanático de 
+                            Entusiasta de la tecnología y apasionado por el código <span role="img" aria-label="computer">👨‍💻</span>, fanático de
                             las comunidades y obsesionado con cambiar la educación.
                         </p>
                         <p>
-                            No importa si es con JavaScript, Python 🐍 o cualquier otro lenguaje me gusta 
+                            No importa si es con JavaScript, Python <span role="img" aria-label="snake">🐍</span> o cualquier otro lenguaje me gusta
                             materializar ideas con unos y ceros usando la web como plataforma.
                         </p>
                         <p>
-                            Actualmente aprendiendo <i>data science</i>, ciberseguridad y 
-                            constantemente sobre ciencias de la computación. Mi sueño es crear un sistema operativo. 🐧
+                            Actualmente aprendiendo <i>data science</i>, ciberseguridad y
+                            constantemente sobre ciencias de la computación. Mi sueño es crear un sistema operativo. <span role="img" aria-label="penguin">🐧</span>
                         </p>
                     </div>
                 </AboutInfo>

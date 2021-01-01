@@ -43,7 +43,7 @@ class Blog extends Component {
                 <SEO title="Categorías" />
                 <ContentWrapper>
                     <HiWrapper>
-                        <h2>Lee y aprende algo nuevo 📚 <br/>¡Es gratis! </h2>
+                        <h2>Lee y aprende algo nuevo <span role="img" aria-label="books">📚</span> <br/>¡Es gratis! </h2>
                         <p>
                             Me encanta escribir sobre tecnología, tendencias y mis pensamientos. 
                             Si hay algo que te gustaría leer aquí no dudes en {" "}
