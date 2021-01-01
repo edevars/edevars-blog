@@ -67,7 +67,7 @@ const TagContainer = styled.div`
 `
 
 const PostPreview = props => {
-    const { title, date, tags, excerpt, slug, readTime, relativePath } = props
+    const { title, tags, excerpt, slug, relativePath } = props
     const handleClick = () => {
         const nav = "/blog" + slug
         nprogress.start()
