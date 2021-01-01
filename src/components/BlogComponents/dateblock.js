@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `
 
 const Square = styled.div`
-    background: -webkit-linear-gradient(90deg, #001749 0%, #0e4bdb 70%);
+    background: -webkit-linear-gradient(90deg, #001749 0%, #0e4bdb 45%);
     line-height: 1;
     width: 110px;
     height: 110px;
