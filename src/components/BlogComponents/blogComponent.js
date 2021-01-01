@@ -3,10 +3,7 @@ import styled from "styled-components"
 import GridPosts from "../PostComponents/gridposts"
 import CategoriesList from "../PostComponents/CategoriesList"
 
-//Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSyncAlt } from "@fortawesome/free-solid-svg-icons"
-import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css"
+import sync from '../../images/icons/sync.png'
 
 const Button = styled.button`
     display: ${props => (props.visibility === "true" ? "flex" : "none")};
@@ -29,6 +26,8 @@ const Button = styled.button`
     .Icon {
         align-self: center;
         margin-left: 20px;
+        display: inline-block;
+        width: 28px;
     }
 
     @media screen and (max-width: 768px) {
@@ -137,7 +136,7 @@ class BlogComponent extends Component {
                     visibility={this.state.visibilityButton}
                 >
                     Ver más posts
-                    <FontAwesomeIcon icon={faSyncAlt} className="Icon" />
+                    <img src={sync} alt="sync icon" className="Icon"/>
                 </Button>
             </>
         )

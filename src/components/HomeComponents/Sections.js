@@ -1,14 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-// Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-    faCode,
-    faFileAlt,
-    faSeedling,
-    faFlask,
-} from "@fortawesome/free-solid-svg-icons"
+
+import code from '../../images/icons/code.png'
+import file from '../../images/icons/file.png'
+import flask from '../../images/icons/flask.png'
+import seedling from '../../images/icons/seedling.png'
 
 
 const StyledSections = styled.article`
@@ -78,9 +75,12 @@ const GridContainer = styled.div`
                 #2dddf4 85%
             );
 
-            .Icon {
-                color: white;
-                font-size: 112px;
+            img {
+                width: 100px;
+            }
+
+            .code {
+                width: 150px;
             }
         }
     }
@@ -117,24 +117,9 @@ const GridContainer = styled.div`
             }
 
             .IconContainer {
-                align-self: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 width: 200px;
                 height: 200px;
                 border-radius: 50%;
-                background: -webkit-linear-gradient(
-                    -30deg,
-                    #001749 0%,
-                    #0e4bdb 30%,
-                    #2dddf4 85%
-                );
-
-                .Icon {
-                    color: white;
-                    font-size: 100px;
-                }
             }
         }
     }
@@ -153,7 +138,7 @@ const Sections = () => (
                     to="/blog"
                 >
                     <div className="IconContainer">
-                        <FontAwesomeIcon icon={faCode} className="Icon" />
+                        <img src={code} alt="code icon" className="code" />
                     </div>
                 </Link>
                 <p>
@@ -171,7 +156,7 @@ const Sections = () => (
                     to="/blog"
                 >
                     <div className="IconContainer">
-                        <FontAwesomeIcon icon={faFileAlt} className="Icon" />
+                        <img src={file} alt="file icon" />
                     </div>
                 </Link>
                 <p>
@@ -188,7 +173,7 @@ const Sections = () => (
                     to="/blog"
                 >
                     <div className="IconContainer">
-                        <FontAwesomeIcon icon={faSeedling} className="Icon" />
+                        <img src={seedling} alt="seedling icon" />
                     </div>
                 </Link>
                 <p>
@@ -205,7 +190,7 @@ const Sections = () => (
                     to="/blog"
                 >
                     <div className="IconContainer">
-                        <FontAwesomeIcon icon={faFlask} className="Icon" />
+                        <img src={flask} alt="flask icon" />
                     </div>
                 </Link>
                 <p>
