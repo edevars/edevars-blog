@@ -2,13 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-    faTwitter,
-    faGithub,
-    faInstagram,
-    faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
+import { GihubIcon } from "../components/IconsComponents/GithubIcon"
+import { InstagramIcon } from "../components/IconsComponents/InstagramIcon"
+import { LinkedinIcon } from "../components/IconsComponents/LinkedinIcon"
+import { TwitterIcon } from "../components/IconsComponents/TwitterIcon"
 
 const Title = styled.h1`
     font-weight: bold;
@@ -36,14 +33,11 @@ const SocialMediaContainer = styled.div`
             font-size: 21px;
             margin: 0;
             margin-left: 20px;
+            font-weight: 500;
         }
     }
 
-    .icon {
-        font-size: 51px;
-        color: black;
-    }
-    h4 {
+    p {
         margin-top: 80px;
         font-size: 21px;
     }
@@ -66,7 +60,7 @@ const Contact = () => (
                 rel="noopener noreferrer"
                 aria-label="Sigueme en Instagram"
             >
-                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                <LinkedinIcon color="black" width="45px"/>
                 <h3>Enrique Devars</h3>
             </a>
             <a
@@ -75,7 +69,7 @@ const Contact = () => (
                 rel="noopener noreferrer"
                 aria-label="Conoce mi Github"
             >
-                <FontAwesomeIcon className="icon" icon={faGithub} />
+                <GihubIcon color="black" width="45px"/>
                 <h3>edevars</h3>
             </a>
             <a
@@ -84,7 +78,7 @@ const Contact = () => (
                 rel="noopener noreferrer"
                 aria-label="Sigueme en twitter"
             >
-                <FontAwesomeIcon className="icon" icon={faTwitter} />
+                <TwitterIcon color="black" width="45px"/>
                 <h3>@codevars</h3>
             </a>
             <a
@@ -93,15 +87,15 @@ const Contact = () => (
                 rel="noopener noreferrer"
                 aria-label="Sigueme en Instagram"
             >
-                <FontAwesomeIcon className="icon" icon={faInstagram} />
+                <InstagramIcon color="black" width="45px"/>
                 <h3>codevars</h3>
             </a>
-            <h4>
-                O si eres más tradicional, puedes enviarme un correo a:
+            <p>
+                Si eres algo tímido, te leo en:
                 <a href="mailto: enrique.devars@gmail.com">
                     enrique.devars@gmail.com
                 </a>
-            </h4>
+            </p>
         </SocialMediaContainer>
     </Layout>
 )

@@ -1,13 +1,12 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-    faTwitter,
-    faGithub,
-    faInstagram,
-    faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
+
+
 import styled from "styled-components"
+import { HeartIcon } from "./IconsComponents/HeartIcon"
+import { GihubIcon } from "./IconsComponents/GithubIcon"
+import { InstagramIcon } from "./IconsComponents/InstagramIcon"
+import { LinkedinIcon } from "./IconsComponents/LinkedinIcon"
+import { TwitterIcon } from "./IconsComponents/TwitterIcon"
 
 const StyledFooter = styled.footer`
     background: #030526;
@@ -69,8 +68,10 @@ const Message = styled.div`
         }
     }
 
-    .icon {
-        color: #2dddf4;
+    .heart {
+        display: inline-block;
+        margin: 0px 4px;
+        width: 17px;
     }
 
     .rights {
@@ -93,10 +94,6 @@ const IconsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    .icon {
-        font-size: 2rem;
-        color: white;
-    }
 
     @media screen and (max-width: 768px) {
         padding-bottom: 70px;
@@ -110,12 +107,10 @@ const Footer = () => (
         <Logo>codevars</Logo>
         <Message>
             <h6>
-                {" "}
-                Hecho con &nbsp;
-                <span role="img" aria-label="blue heart">
-                    <FontAwesomeIcon className="icon" icon={faHeart} />
-                </span>
-                &nbsp; por Enrique Devars
+                Hecho con {" "}
+                    <HeartIcon color="#2dddf4" className="heart"/>
+                    {" "}
+                 por Enrique Devars
             </h6>
             <p>
                 Desarrollado con{" "}
@@ -136,7 +131,7 @@ const Footer = () => (
                 rel="noopener noreferrer"
                 aria-label="Sigueme en Instagram"
             >
-                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                <LinkedinIcon />
             </a>
             <a
                 href="https://github.com/edevars"
@@ -144,7 +139,7 @@ const Footer = () => (
                 rel="noopener noreferrer"
                 aria-label="Conoce mi Github"
             >
-                <FontAwesomeIcon className="icon" icon={faGithub} />
+                <GihubIcon />
             </a>
             <a
                 href="https://twitter.com/codevars"
@@ -152,7 +147,7 @@ const Footer = () => (
                 rel="noopener noreferrer"
                 aria-label="Sigueme en twitter"
             >
-                <FontAwesomeIcon className="icon" icon={faTwitter} />
+                <TwitterIcon />
             </a>
             <a
                 href="https://www.instagram.com/codevars/"
@@ -160,7 +155,7 @@ const Footer = () => (
                 rel="noopener noreferrer"
                 aria-label="Sigueme en Instagram"
             >
-                <FontAwesomeIcon className="icon" icon={faInstagram} />
+                <InstagramIcon />
             </a>
         </IconsContainer>
     </StyledFooter>
