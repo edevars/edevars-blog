@@ -2,23 +2,20 @@ import styled from "styled-components"
 
 export const GridWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 800px 1fr;
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-template-columns: 20% 60% 20%;
     grid-template-areas: "Info Content Related";
-    margin: 0px auto;
-    grid-column-gap: 100px;
 
-    @media screen and (max-width: 1200px) {
-        grid-template-columns: 1fr 500px 1fr;
-        grid-column-gap: 50px;
-    }
 
     @media screen and (max-width: 768px) {
         grid-template-areas: "Info" "Content" "Related";
-        grid-template-columns: 1fr;
+        grid-template-columns: 100vw;
     }
 `
 
 export const InfoContainer = styled.div`
+    width: 100%;
     .mobile {
         display: none;
     }
@@ -40,8 +37,6 @@ export const InfoElements = styled.section`
     position: -webkit-sticky;
     position: sticky;
     z-index: 0;
-    max-width: 300px;
-    min-width: 190px;
     top: 70px;
 
     @media screen and (max-width: 768px) {
@@ -61,9 +56,8 @@ export const ContentContainer = styled.section`
     grid-area: Content;
     padding-top: 4rem;
     margin: 0 auto;
-    width: 100%;
-    max-width: 100vw;
-
+    width: 85%;
+    max-width: 800px;
     h2, h3, h4, h5 {
         color: #292929;
     }
@@ -123,20 +117,15 @@ export const RelatedContainer = styled.section`
     position: sticky;
     z-index: 0;
     top: 50px;
-    max-width: 400px;
-    min-width: 200px;
     h4 {
         font-weight: bold;
     }
     @media screen and (max-width: 768px) {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         padding: 0;
         padding-top: 20px;
         max-width: none;
-    }
-    @media screen and (max-width: 425px) {
-        width: 90%;
     }
 `
 

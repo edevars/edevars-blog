@@ -48,7 +48,7 @@ export default ({ data }) => {
                     <InfoElements>
                         <DateBlock day={day} month={month} year={year} />
                         <Category category={category} />
-                        <h4 style={{ marginTop: "1em" }}>
+                        <h4 style={{ marginTop: "1em", textAlign: "center" }}>
                             <span role="img" aria-label="coffee">
                                 ☕
                             </span>{" "}
