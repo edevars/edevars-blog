@@ -78,5 +78,5 @@ Smashing Magazine es un sitio donde encontrarás las últimas tendencias sobre d
 
 Si tú al igual que yo no tienes una Mac Pro y te gustaría conservar tu riñón para probar tus páginas web en Safari sin necesidad de tener que comprar una, tengo la solución para ti. [Browser Stack](https://www.browserstack.com/) es un sitio que te permite probar tu página web en muchos dispositivos reales, desde diferentes versiones de macOS hasta iPhones. Tiene un periodo de prueba de un minuto con cada versión y dispositivo diarios pero es suficiente si quieres inspeccionar un bug. Sus precios son accesibles a comparación de comprar un equipo de Apple.
 
-Estoy seguro que estos sitios te ayudarán a lo largo de tu camino como desarrolladora frontend. ¿Cuál fue tu sitio favorito? ¿Conoces algún otro que sea de utilidad? Déjalo en los comentarios y aprender de ti. Me encantaría leerte 😄
+Estoy seguro que estos sitios te ayudarán a lo largo de tu camino como desarrolladora frontend. ¿Cuál fue tu sitio favorito? ¿Conoces algún otro que sea de utilidad? Déjalo en los comentarios. Me encantaría leerte y aprender de ti. 😄
 
