@@ -15,7 +15,7 @@ Por ello, si estás iniciando tu camino para ser una desarrolladora frontend, o 
 
 ## FontPair
 
-Elegir un tipo de fuente para tus proyectos es algo que siempre puede ser tedioso. Las típicoss pensamienos sobre "¿Debería usar Serif o Sans Serif? Seguro se vería bien con Comic Sans, nunca falla". **Lo último por favor jamás lo hagas (¬_¬)**. 
+Elegir un tipo de fuente para tus proyectos es algo que siempre puede ser tedioso. Los típicos pensamientos sobre "¿Debería usar Serif o Sans Serif? Seguro se vería bien con Comic Sans, nunca falla". **Lo último por favor jamás lo hagas (¬_¬)**. 
 
 Para resolver este problema te presento [FontPair](https://fontpair.co/). Este sitio me voló la cabeza al encontrarlo. Te muestra las fuentes más utilizadas en Internet, sus usos y hasta combinaciones para titulares y cuerpos. Además de llevarte directamente a [Google Fonts](https://fonts.google.com/) para seleccionar los tipos de fuentes que te recomienda. El elegir un estilo es mucho más sencillo gracias a esta herramienta.
 
@@ -25,7 +25,7 @@ Para resolver este problema te presento [FontPair](https://fontpair.co/). Este s
 
 ## Can I Use
 
-Es normal que las propiedades que usas en CSS o tus etiquetas de HTML puedan ser no compatibles en algunos navegadores (Sí, te estoy viendo a ti Internet Explorer). Para verficar la compatibilidad de tu CSS y HTML, y asegurar que no se rompa nada de layout *layout* usa [Can I Use](https://caniuse.com/). De manera rápida, verifica si propiedades como **flexbox** son compatibles en los clásicos navegadores de escritorio como Chrome, hasta los navegadores móviles por defecto de marcas desconocidas. Lo genial de este sitio es que si tu propiedad o etiqueta no es compatible te da una serie de recomendaciones y documentación para que lo sea parcialmente.
+Es normal que las propiedades que usas en CSS o tus etiquetas de HTML puedan ser no compatibles en algunos navegadores (Sí, te estoy viendo a ti Internet Explorer). Para verificar la compatibilidad de tu CSS y HTML, y asegurar que no se rompa nada de tu *layout* usa [Can I Use](https://caniuse.com/). De manera rápida, verifica si propiedades como **flexbox** son compatibles en los clásicos navegadores de escritorio como Chrome, hasta los navegadores móviles por defecto de marcas desconocidas. Lo genial de este sitio es que si tu propiedad o etiqueta no es compatible te da una serie de recomendaciones y documentación para que lo sea parcialmente.
 
 
 ## Coolors
@@ -44,8 +44,6 @@ Pongámonos *fancys*. Los degradados han sido un recurso que ha marcado el dise�
 
 Un lugar donde encontrarás todo lo que quieras saber sobre CSS con increíbles artículos, tutoriales y gráficos de la mejor forma explicada. Tiene una de las mejores guías sobre flexbox y grid que hay en todo Internet. Deberías darte una vuelta, acaban de renovar todo el diseño de su sitio. 😉
 
-
-
 ## Freepik and Flaticon
 
 Bueno, estos son básicamente dos sitios pero *who cares* **¯\\_(ツ)_/¯**. Si alguna vez te has encontrado con la dificultad de encontrar buenos íconos o ilustraciones para tu web tanto [Freepik](https://www.freepik.es/) como [Flaticon](https://www.flaticon.es/). Cada uno respectivamente ofrece una enorme, pero en serio una ENORME cantidad de recursos gráficos: ilustraciones, fondos, packs de íconos, etc. La mayoría son completamente editables . En Freepik los recursos tienen un cierto límite de descarga diaria así que elige bien que te gustaría tener. Recuerda siempre dar crédito a su autor. 
@@ -59,7 +57,7 @@ Ya sea que quieras imágenes asombrosas para tu web o un nuevo fondo de pantalla
 
 ## Smashing Magazine
 
-Si quieres enterarte de los más nuevo sobre desarrollo web y estar diciendo con tus amigos**"that is so hot right now 🔥"** [Smashing Magazine](https://www.smashingmagazine.com/) es el sitio indicado.
+Si quieres enterarte de los más nuevo sobre desarrollo web y estar diciendo con tus amigos **"that is so hot right now 🔥"** [Smashing Magazine](https://www.smashingmagazine.com/) es el sitio indicado.
 
 <p align="center">
   <img src="https://media3.giphy.com/media/tBb19eUNiEjBsYeZPhu/giphy.gif?cid=ecf05e47i380aprtzl9k31lh9mg1vn3e8ujy3uq0cm1w41c7&rid=giphy.gif" alt="so hot friend" />
@@ -72,13 +70,13 @@ Smashing Magazine es un sitio donde encontrarás las últimas tendencias sobre d
 
 ## Beautiful CSS box-shadow examples
 
-Esta [página](https://getcssscan.com/css-box-shadow-examples) es una colección de más de 85 efectos de sombras para tus componentes. Es una lista completamente curada con los mejores sitios y efectos desde Sketch hasta Stripe. Es un recurso muy útil si necesitas algo de inspiración o quieres lograr un efecto similar. 
+Ésta [página](https://getcssscan.com/css-box-shadow-examples) es una colección de más de 85 efectos de sombras para tus componentes. Es una lista completamente curada de los mejores sitios y efectos desde Sketch hasta Stripe. Es un recurso muy útil si necesitas algo de inspiración o quieres lograr un estilo similar. 
 
 ![nice box shadows](./niceboxshadows.png)
 
 ## Browser Stack
 
-Si tú al igual que a mi no tienes una Mac Pro y te gustaría conservar tu riñón para probar tus páginas web en Safari sin necesidad de tener que comprar una, tengo la solución para ti. [Browser Stack](https://www.browserstack.com/) es un sitio que te permite probar tu página web en muchos dispositivos reales, desde diferentes versiones de macOS hasta iPhones. Tiene un periodo de prueba de un minuto con cada version y dispositivo diarios pero es suficiente si quieres inspeccionar un bug. Sus precios son accesibles a comparación de comprar un equipo de Apple.
+Si tú al igual que yo no tienes una Mac Pro y te gustaría conservar tu riñón para probar tus páginas web en Safari sin necesidad de tener que comprar una, tengo la solución para ti. [Browser Stack](https://www.browserstack.com/) es un sitio que te permite probar tu página web en muchos dispositivos reales, desde diferentes versiones de macOS hasta iPhones. Tiene un periodo de prueba de un minuto con cada versión y dispositivo diarios pero es suficiente si quieres inspeccionar un bug. Sus precios son accesibles a comparación de comprar un equipo de Apple.
 
 Estoy seguro que estos sitios te ayudarán a lo largo de tu camino como desarrolladora frontend. ¿Cuál fue tu sitio favorito? ¿Conoces algún otro que sea de utilidad? Déjalo en los comentarios y aprender de ti. Me encantaría leerte 😄
 
