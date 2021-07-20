@@ -2,7 +2,7 @@
   title: "¿Qué hacer cuando te sientes mal?"
   date: "2020-05-19"
   tags: ["Motivación","Salud Mental"]
-  category: "Crecimiento Personal"
+  category: "Crecimiento personal"
   imageSlug: "./que-hacer-cuando-te-sientes-mal.jpg"
   ogImage: "./que-hacer-cuando-te-sientes-mal.jpg"
   slug: "/que-hacer-cuando-te-sientes-mal"

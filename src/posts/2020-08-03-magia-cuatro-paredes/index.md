@@ -2,7 +2,7 @@
   title: "La magia de cuatro paredes"
   date: "2020-08-03"
   tags: ["Motivación","Salud Mental", "Creatividad"]
-  category: "Crecimiento Personal"
+  category: "Crecimiento personal"
   imageSlug: "./magia-cuatro-paredes.jpeg"
   ogImage: './magia-cuatro-paredes.jpeg'
   slug: "/magia-cuatro-paredes"

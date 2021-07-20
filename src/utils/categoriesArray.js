@@ -1,7 +1,7 @@
 module.exports = {
     categories: [
         "Tecnología",
-        "Crecimiento Personal",
+        "Crecimiento personal",
         "Tutoriales",
         "Hacks",
     ],

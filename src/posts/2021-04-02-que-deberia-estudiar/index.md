@@ -2,7 +2,7 @@
 title: "¿Qué debería estudiar?"
 date: "2021-04-02"
 tags: ["Opinión", "Motivación"]
-category: "Crecimiento Personal"
+category: "Crecimiento personal"
 slug: "/que-deberia-estudiar"
 imageSlug: "./cover.png"
 ogImage: './cover.png'
