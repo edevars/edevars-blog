@@ -92,10 +92,14 @@ export const ContentContainer = styled.section`
         padding-right: 0;
         padding-top: 0;
         margin-bottom: 1.56rem;
-        font-size: 1.20112rem;
         line-height: 1.56rem;
         color: hsla(0,0%,0%,0.6);
-        border-left: 0.39rem solid hsla(0,0%,0%,0.13);
+        border-left: 0.5rem solid hsla(0,0%,0%,0.13);
+    }
+
+    blockquote p {
+        font-size: 1.5rem;
+        font-style: italic;
     }
 
     @media screen and (max-width: 768px) {
