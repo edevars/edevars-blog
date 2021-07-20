@@ -14,7 +14,6 @@ const GridPosts = props => {
             tags={node.frontmatter.tags}
             relativePath={node.frontmatter.imageSlug.relativePath}
             excerpt={node.excerpt}
-            readTime={node.frontmatter.readTime}
         />
     ))
 

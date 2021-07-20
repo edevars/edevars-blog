@@ -9,7 +9,16 @@ import DateBlock from "../components/BlogComponents/dateblock"
 import Category from "../components/BlogComponents/category"
 import { DiscussionEmbed } from "disqus-react"
 import PostImage from "../components/PostComponents/postImage"
-import { GridWrapper, InfoContainer, InfoElements, ContentContainer, RelatedContainer, Title, HeaderContainer, PostImageContainer } from '../styles/PostTemplate'
+import {
+    GridWrapper,
+    InfoContainer,
+    InfoElements,
+    ContentContainer,
+    RelatedContainer,
+    Title,
+    HeaderContainer,
+    PostImageContainer,
+} from "../styles/PostTemplate"
 
 export default ({ data }) => {
     const post = data.markdownRemark
@@ -17,11 +26,10 @@ export default ({ data }) => {
         title,
         tags,
         date,
-        readTime,
         category,
         slug,
         imageSlug,
-        ogImage
+        ogImage,
     } = post.frontmatter
 
     const { day, month, year } = formatShort(date)
@@ -32,10 +40,16 @@ export default ({ data }) => {
     }
 
     const ogImagePath = ogImage && ogImage.childImageSharp.fixed.src
-
+    const readTime = Math.round(post.wordCount.words / 165);
+    
     return (
         <Layout>
-            <SEO title={title} description={post.excerpt} keywords={tags} image={ogImagePath} />
+            <SEO
+                title={title}
+                description={post.excerpt}
+                keywords={tags}
+                image={ogImagePath}
+            />
             <HeaderContainer>
                 <Header />
             </HeaderContainer>
@@ -76,26 +90,28 @@ export default ({ data }) => {
 export const query = graphql`
     query($slug: String!) {
         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-          html
-          frontmatter {
-             title
-             category
-             tags
-             date
-             readTime
-             slug
-             ogImage {
-               childImageSharp {
-                 fixed {
-                   src
-                 }
-               }
-             }
-             imageSlug {
-               relativePath
-             }
-          }
-          excerpt
+            html
+            frontmatter {
+                title
+                category
+                tags
+                date
+                slug
+                ogImage {
+                    childImageSharp {
+                        fixed {
+                            src
+                        }
+                    }
+                }
+                imageSlug {
+                    relativePath
+                }
+            }
+            wordCount {
+                words
+            }
+            excerpt
         }
     }
 `
