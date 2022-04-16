@@ -57,6 +57,7 @@ export const InfoElements = styled.section`
 export const ContentContainer = styled.section`
     grid-area: Content;
     margin: 0 auto;
+    max-width: 100%;
 
     h2, h3, h4, h5 {
         color: #292929;
