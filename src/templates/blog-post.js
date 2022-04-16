@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Header from "../components/HeaderComponents/header"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { formatShort } from "../utils/dateFormatter"
@@ -16,7 +15,6 @@ import {
     ContentContainer,
     RelatedContainer,
     Title,
-    HeaderContainer,
     PostImageContainer,
 } from "../styles/PostTemplate"
 
@@ -41,23 +39,20 @@ export default ({ data }) => {
 
     const ogImagePath = ogImage && ogImage.childImageSharp.fixed.src
     const readTime = Math.round(post.wordCount.words / 165);
-    
+
     return (
-        <Layout>
+        <Layout solidHeader>
             <SEO
                 title={title}
                 description={post.excerpt}
                 keywords={tags}
                 image={ogImagePath}
             />
-            <HeaderContainer>
-                <Header />
-            </HeaderContainer>
             <GridWrapper>
+                <PostImageContainer>
+                    <PostImage src={imageSlug.relativePath}></PostImage>
+                </PostImageContainer>
                 <InfoContainer>
-                    <PostImageContainer>
-                        <PostImage src={imageSlug.relativePath}></PostImage>
-                    </PostImageContainer>
                     <Title className="mobile">{title}</Title>
                     <InfoElements>
                         <DateBlock day={day} month={month} year={year} />
@@ -70,18 +65,15 @@ export default ({ data }) => {
                         </h4>
                     </InfoElements>
                 </InfoContainer>
-
                 <ContentContainer>
                     <Title className="desktop">{title}</Title>
                     <main dangerouslySetInnerHTML={{ __html: post.html }} />
                     <DiscussionEmbed {...disqusConfig} />
                 </ContentContainer>
-                <div>
-                    <RelatedContainer>
-                        <h4>Encuentra más de lo que buscabas...</h4>
-                        <AllTags />
-                    </RelatedContainer>
-                </div>
+                <RelatedContainer>
+                    <h4>Encuentra más de lo que buscabas...</h4>
+                    <AllTags />
+                </RelatedContainer>
             </GridWrapper>
         </Layout>
     )

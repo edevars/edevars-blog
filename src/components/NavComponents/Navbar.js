@@ -15,7 +15,7 @@ const Nav = styled.nav`
     left: 0;
     right: 0;
     background: ${props =>
-        !props.error ? "rgba(6, 6, 149, 0.376)" : "rgba(6, 6, 149, 1)"};
+        props.solidHeader ? "#001749 " : "rgba(6, 6, 149, 0.376)"};
 
     @media screen and (max-width: 768px) {
         background: rgb(0, 0, 133);
@@ -141,7 +141,9 @@ class Navbar extends Component {
             <>
                 <Backdrop onClick={this.handleClose} open={this.state.open} />
                 <MenuBars handleOpen={this.handleOpen} open={this.state.open} />
-                <Nav error={this.props.error} open={this.state.open}>
+                <Nav
+                    solidHeader={this.props.solidHeader}
+                    open={this.state.open}>
                     <List>
                         <Item>
                             <LinkItem to="/" onClick={this.handleChangePage}>

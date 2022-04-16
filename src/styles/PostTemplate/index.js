@@ -2,14 +2,16 @@ import styled from "styled-components"
 
 export const GridWrapper = styled.div`
     display: grid;
-    max-width: 1600px;
-    margin: 0 auto;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-areas: "Info Content Related";
-
+    max-width: 1320px;
+    margin: 3rem auto 0;
+    grid-template-columns: auto 60% auto;
+    grid-column-gap: 3rem;
+    grid-template-areas:"Info Cover Related"
+                        "Info Content Related";
 
     @media screen and (max-width: 768px) {
-        grid-template-areas: "Info" "Content" "Related";
+        margin: 0 auto;
+        grid-template-areas: "Cover" "Info" "Content" "Related";
         grid-template-columns: 100vw;
     }
 `
@@ -54,10 +56,8 @@ export const InfoElements = styled.section`
 
 export const ContentContainer = styled.section`
     grid-area: Content;
-    padding-top: 4rem;
     margin: 0 auto;
-    width: 85%;
-    max-width: 800px;
+
     h2, h3, h4, h5 {
         color: #292929;
     }
@@ -137,6 +137,7 @@ export const Title = styled.h1`
     display: inline-block;
     color: #242c72;
     font-size: 48px;
+    margin-bottom: 0;
     @media screen and (max-width: 768px) {
         margin-top: 30px;
         margin-bottom: 0px;
@@ -155,9 +156,14 @@ export const HeaderContainer = styled.div`
 `
 
 export const PostImageContainer = styled.div`
-    width: 100%;
-    display: none;
-    @media screen and (max-width: 768px) {
-        display: inherit;
+    grid-area: Cover;
+    .gatsby-image-wrapper {
+        margin: 0 auto;
+        display: block;
+        margin-top: 6rem;
+
+        @media screen and (max-width: 768px) {
+            margin: 0 auto;
+        }
     }
 `

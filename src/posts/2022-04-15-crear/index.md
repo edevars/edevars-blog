@@ -8,8 +8,6 @@ imageSlug: "./cover.png"
 ogImage: "./cover.png"
 ---
 
-![portada de artículo: empieza a crear](./cover.png)
-
 Te va a pasar, va a existir un momento en en el que no vas a dejar de pensar en crear algo. Un blog, un video o un pequeño escrito que nazca desde tus ideas. 
 
 Sin embargo, aunque tu cabeza se sienta como un coche de formula uno todo el tiempo, con cientos de ideas disparadas a mil kilómetros por hora, estas rara vez llegan a ver la luz... y es normal. 

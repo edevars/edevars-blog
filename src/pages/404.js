@@ -94,7 +94,7 @@ const Message = styled.div`
 `
 
 const NotFoundPage = () => (
-    <Layout header={true} error404={true}>
+    <Layout header={true} solidHeader>
         <SEO title="404: Not found" />
         <GridWrapper>
             <Logo>

@@ -31,7 +31,7 @@ class Layout extends Component {
                 `}
                 render={data => (
                     <StyledLayout>
-                        <Nav />
+                        <Nav solidHeader={this.props.solidHeader}/>
                         {showBanner && (
                             <Header siteTitle={data.site.siteMetadata.title} />
                         )}
