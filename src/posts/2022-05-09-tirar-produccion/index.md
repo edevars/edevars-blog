@@ -3,7 +3,7 @@ title: "¿Qué hacer cuando tirar producción?"
 date: "2022-05-09"
 tags: ["Ingeniería", "Consejos", "Desarrollo profesional"]
 category: "Tecnología"
-slug: "/tirar-producción"
+slug: "/tirar-produccion"
 imageSlug: "./cover.png"
 ogImage: "./cover.png"
 ---
