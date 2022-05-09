@@ -15,7 +15,7 @@ Todo va bien en tu día de trabajo, asistes a juntas como todos los días y te p
 
 En el entorno local todo se ve bien, tu QA te ha dado la revisión, todos los tests pasaron y tu *pull request* está listo para ver la luz. 
 
-Después de un largo día de trabajo te sientes feliz de terminar y por fin liberar a producción el código que has estado elaborando. 
+Después de un largo día de trabajo te sientes feliz de terminar y por fin liberar a producción el código que haz estado elaborando. 
 
 Todo sale bien en el despliegue y te sientes genial hasta que... ves un error que está rompiendo la plataforma. **¡Haz tirado por primera vez producción!**
 
@@ -66,7 +66,7 @@ Una vez estés en la llamada con tu equipo determinen qué sería lo mejor para 
 
 - **Revert**
 
-  ##### El revert consiste en deshacer el commit o la serie de commits que iban durante el último despliegue. Esto se hace con el comando `revert` de git.
+  El revert consiste en deshacer el commit o la serie de commits que iban durante el último despliegue. Esto se hace con el comando `revert` de git.
 
   Esta solución es buena cuando no tienes claridad en qué está fallando en el sistema o sabes que la solución involucrará mucho tiempo y esfuerzo.
 
