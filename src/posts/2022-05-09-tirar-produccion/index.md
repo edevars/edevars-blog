@@ -1,5 +1,5 @@
 ---
-title: "¿Qué hacer cuando tirar producción?"
+title: "¿Qué hacer cuando tiras producción?"
 date: "2022-05-09"
 tags: ["Ingeniería", "Consejos", "Desarrollo profesional"]
 category: "Tecnología"
